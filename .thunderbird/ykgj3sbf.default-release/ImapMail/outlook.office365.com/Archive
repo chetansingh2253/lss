@@ -1,0 +1,2216 @@
+From - Mon Feb  6 23:34:34 2023
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from BN8NAM11HT084.eop-nam11.prod.protection.outlook.com
+ (2603:1096:4:90::24) by SG2PR06MB3338.apcprd06.prod.outlook.com with HTTPS
+ via SG2PR02CA0084.APCPRD02.PROD.OUTLOOK.COM; Thu, 3 Dec 2020 15:49:28 +0000
+Received: from BN8NAM11FT041.eop-nam11.prod.protection.outlook.com
+ (2a01:111:e400:fc4b::43) by
+ BN8NAM11HT084.eop-nam11.prod.protection.outlook.com (2a01:111:e400:fc4b::162)
+ with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3632.17; Thu, 3 Dec
+ 2020 15:49:27 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.208.177)
+ smtp.mailfrom=zsecurity.org; hotmail.com; dkim=pass (signature was verified)
+ header.d=zsecurity.org;hotmail.com; dmarc=pass action=none
+ header.from=zsecurity.org;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of zsecurity.org designates
+ 209.85.208.177 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.208.177; helo=mail-lj1-f177.google.com;
+Received: from mail-lj1-f177.google.com (209.85.208.177) by
+ BN8NAM11FT041.mail.protection.outlook.com (10.13.177.18) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.3632.17 via Frontend Transport; Thu, 3 Dec 2020 15:49:26 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:21D8AE0ECF3AE2334CC4F52E3C6C82398B21778D4B1201F4F18EC2BF3796EF07;UpperCasedChecksum:FC7B90E77875476B73B94A6CF35E52C13982D37D36BD4BFDF930BB5C75787E08;SizeAsReceived:2305;Count:15
+Received: by mail-lj1-f177.google.com with SMTP id y7so3005377lji.8
+        for <chetansingh2341@hotmail.com>; Thu, 03 Dec 2020 07:49:26 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=zsecurity.org; s=google;
+        h=from:mime-version:date:message-id:subject:to;
+        bh=JfUAQb7n1usN4ZknetY1EgzVgSHjgmGT67DHE+7busE=;
+        b=bTT1mfCMlygwmdElhTFhOOZOO3i5xv/84vTvGDxLhlpaEOg/ce4gs0QMqKxBYKBLzF
+         8VJ9WruumU/Q6oJWwwZJ6bCF/IimiQX40yMBhjYpp2STG47T8OCrI9etP1OGUX4U+FiC
+         VyvbyQA2uK3kczHzDzD93hKI+r3RpOHf2wWXIfpb2nd0zZblwbR7BR+Xsq1U6NOQMe8J
+         614sj/hjafsrduXoDCbMakfCGvlIRgqwJ36HnRHUPTBBTQiOu7wcdrxDQhrzWunQ+LtF
+         601/LRN/v5sZq09CX/1A0mTaOzim2qfecRe3ZpmTAVYMYM01FiEl7O3U7i3xvFW952Ea
+         nKPg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:mime-version:date:message-id:subject:to;
+        bh=JfUAQb7n1usN4ZknetY1EgzVgSHjgmGT67DHE+7busE=;
+        b=pG4AYESCbuIR7mjA1lO5EmVdS3zUQ4i9g9ClIJkKQAoWqPOIgPkIHse0yu394WwrFk
+         q4kture8fRXjTU+vwah8n77QWYLIeU4CrCtQ0K4EPXHBZPTjIuzrc8ICp8YK6vm4hvAr
+         4XWLBEePRlFBNg2bpXhOA6DaXpq89hXtScgZ2zC2YJTtrCtkL5HKQjrBYRqnvk3m56FQ
+         /6KCqSW07gLhEAsffVFZTlknbY+Zh8jxKbYMGaB4C/7UOjq1r+mLsOKsekpdb3vOkKLT
+         +IJyMeg9xibdRC+MD4p4fl8ofxTCOrqDyLMCrtrUimVRQqMy+P5aM5H/lOSxJXKvh4nm
+         dS4A==
+X-Gm-Message-State: AOAM532GWwz4dbPhABZcklRLW6X0JjFVaFBKfKS+QpuORWcGHXd01HtG
+	pcUBpe9lpk63mq84G2JYDVN530wGoxAf8+Lk9ZskzVMXgZhtWQ==
+X-Google-Smtp-Source: ABdhPJz4Bg/dtl1fCsQq03u9BjSBL+YhxDXM3cZpoiGW9z6F3nq+PrQItlcaY8R+fvVbyzT8O/b2RZHkw0SCzTbgmjo=
+X-Received: by 2002:a2e:8e79:: with SMTP id t25mr1421774ljk.133.1607010566427;
+ Thu, 03 Dec 2020 07:49:26 -0800 (PST)
+Received: from 1064054015723 named unknown by gmailapi.google.com with
+ HTTPREST; Thu, 3 Dec 2020 09:49:26 -0600
+From: zSecurity <info@zsecurity.org>
+X-Mailer: WPMailSMTP/Mailer/gmail 2.4.0
+Date: Thu, 3 Dec 2020 09:49:26 -0600
+Message-ID: <CAMqH1+Weue38vQ3CG0hxJ=pToQgGgxPhuKpqTsRiYaX0rOjjtA@mail.gmail.com>
+Subject: =?UTF-8?Q?You=E2=80=99re_on_your_way_to_becoming_an_ethical_hacker?=
+To: chetansingh2341@hotmail.com
+Content-Type: multipart/alternative; boundary="000000000000f6638905b5914d47"
+X-IncomingHeaderCount: 15
+Return-Path: info@zsecurity.org
+X-MS-Exchange-Organization-ExpirationStartTime: 03 Dec 2020 15:49:26.9862
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 0ea371c7-e2fb-422d-02bf-08d897a303aa
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-AuthSource:
+ BN8NAM11FT041.eop-nam11.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 12/3/2020 3:41:57 PM
+X-MS-Office365-Filtering-Correlation-Id: 0ea371c7-e2fb-422d-02bf-08d897a303aa
+X-MS-TrafficTypeDiagnostic: BN8NAM11HT084:
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 209.85.208.177
+X-SID-PRA: INFO@ZSECURITY.ORG
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-MS-Exchange-Organization-SCL: 0
+X-Microsoft-Antispam: BCL:0;
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 03 Dec 2020 15:49:26.9442
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 0ea371c7-e2fb-422d-02bf-08d897a303aa
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ BN8NAM11FT041.eop-nam11.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BN8NAM11HT084
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.0838829
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.3632.021
+X-Microsoft-Antispam-Mailbox-Delivery:
+	abwl:0;wl:0;pcwl:0;kl:0;iwl:0;ijl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000282)(90000117)(90005022)(91005020)(91035115)(9000001)(9010001)(9050020)(9100272)(5061607266)(5061608174)(4900115)(2008001094)(2008000189)(2008019284)(2008120284)(8390226)(8377080)(8403011)(98390106)(58390106)(8391040)(4920090)(6515079)(4950131)(4990090);
+X-Message-Info:
+	5vMbyqxGkdcyqEWi+2hl24m3oCcqyCB555V+i4PpR2TrihEsgtJ4GKYfxKz5EINl9vQU9SXYL1z3SBzqRwi8ZP56WhQIweBXSuc+MtR3aoz0KbEGWTHJhfxdgjCQfl7ezetXTpk0IVrm3quDi+Scy2PlRhFjxGC9sumgvQA/4OyVehA3zIfkJN0VhTmqeo5TNitexqofnu4HIVbZ4ZAc8A==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MTtHRD0xO1NDTD0z
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?OUlzNFI3ZWY0a1ZXMzZqeWVoaHpMU2RCUU1sWTYrRkNJaTJKWDA4V29UbnhQ?=
+ =?utf-8?B?d1htZFdvaXZBQUVTMytRMWxFTHkwTjJEcFlDRVJ4cGtxTkFNb1pyaExNaUM5?=
+ =?utf-8?B?aXk5Z1ZSSzBjSUo5bTd5dno2TmtUZzl6REM2cDVNY0N3cjkyUGF0cUZEQ1Ba?=
+ =?utf-8?B?bjJGa3hOaVZIRG94VUZYWmtwN3ZTUDRKN2ZJUjI2RlY3S3FPYjJLdXJ3K29O?=
+ =?utf-8?B?SlEwd3UwY0V1Nk1ZclZqVUpiYUY5NFQwUGU2QzZBZWxqQlNtRlFoL0NVY0p0?=
+ =?utf-8?B?eUladzAvOXI0WVp5OWp2M29lOUFWanRTdWo3ZWs0cXdGeDdrSWgxQ28rSjJk?=
+ =?utf-8?B?VXZXdEtpU0MwWS9ueHVVZ1VrbjZpY0g2TXBYQ0dOWWNzNzZ2d1MzV0h0b0p5?=
+ =?utf-8?B?SDJnajVNQ2VuNng5cXE3ejdUUng1Q0hFdkE2S3AyWlE4UGVXUFY1R0xLeGNH?=
+ =?utf-8?B?d2kxeHRXSlJLVWtkQkNMQWxxbUU0TjB4ZjJQU3ZPMm8xckRjNis1Rm5uMXh6?=
+ =?utf-8?B?aG9uTlFaRi85ckdTWVJvaTBaZXZMdTJCR1lsUEFMa01oaE9QSlRJSmUwNEpR?=
+ =?utf-8?B?SDl6d1k1YWgxYzFPY2o4NkVXb3loZ25JU2JMUmhKMytVcXVZRFBId2NselAv?=
+ =?utf-8?B?cEQ3S1NhUEEvSTBMajFrVmh2STV0ZnhNMCtDNHB5bG8xa2JVNWo2b0xLMkU4?=
+ =?utf-8?B?SEU2d2xucmdBTkZ6cUMwKzV3OTE1NkJkWnJmY3MwdGgwcjZNTCtDZ3NOT3ZF?=
+ =?utf-8?B?TWFmMFVvTnlrbE1QY0JscGJET050TUNON0RCQ1RQNFdxMktoRS9ickZxb3BJ?=
+ =?utf-8?B?Ly9Ra2JEamhHM1ZoWWljQTkxWjg2cmZBbytnM1ZhZjBlS2RiazRVZ2pEOGpw?=
+ =?utf-8?B?L21QTDBTTkkrMzBtNTlWdGx1SGJJZ0RGMjIvYkN1alJtV3A1S3J5NVo2YzNF?=
+ =?utf-8?B?U0p3WERhS0ZiTS9oVjVUMnUzakllc0hkWTJYdithNDRmRFJLWG9La0twaklj?=
+ =?utf-8?B?eWIreTgyaGpmM1BGalNmdlFwcTNUSjFVQko0UFA1ZHk1WHhDeGxZOUFDeTBE?=
+ =?utf-8?B?WHBES2JWZEpZcmhsMmVib1QzME5ZWVk4Y1ZUMXRPam9CczBGbHBTaW5XUzRm?=
+ =?utf-8?B?cytpeUd2bTVPNnQxZ2U4azc0UFFjZ2xCZUp2bGNrbGh5QlZ4alpzb3NOeVgr?=
+ =?utf-8?B?ZjUveFFpMkRmT2xBMG9YZDkwNlhtYlR3SXAydnN4QUlNZ1JEWWtIQnlCZlFE?=
+ =?utf-8?B?c3VyZXVPRVBjVlZOeFd1bDNaWXlENkduV2MvR3NwNjdseGlDdFc0d3BDdjJJ?=
+ =?utf-8?B?WTNXZ2lUaUZ0QzNCK1RSaFlyL053VWZkQTNzcHF1M1ROSTBxbDdESkh0OVdV?=
+ =?utf-8?B?NkwyNUNEVGNlN2ZRVVAvRHZVOU5yZTdGZ3VDaThXN1RtR1grT1hiVUZ1aU11?=
+ =?utf-8?B?MjlMbWwzOUJZd2xBZXZUMW9jRXBQanZUam9KMUpsekxkYlUzeTVLQ3JtQ1lE?=
+ =?utf-8?Q?FIWdG8=3D?=
+MIME-Version: 1.0
+
+--000000000000f6638905b5914d47
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Chetan
+
+
+Congrats! You=E2=80=99ve just taken the first step toward becoming an ethic=
+al
+hacker by requesting our ebook - here
+<https://zsecurity.org/how-to-become-an-ethical-hacker.pdf>=E2=80=99s your =
+free
+copy.
+
+zSecurity is a leading provider of ethical hacking and cybersecurity
+training and resources. We make it easy to start a career in cybersecurity
+and ethical hacking, or teach you to secure your systems yourself to save
+time and money.
+
+To keep learning about ethical hacking from the experts, check out the free
+resources on the zSecurity website.
+https://zsecurity.org/hacking-and-security/
+
+
+Thanks,
+Zaid Sabih,
+zSecurity CTO
+
+--000000000000f6638905b5914d47
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">Hi=
+ Chetan<br>
+<br>
+<br>
+Congrats! You=E2=80=99ve just taken the first step toward becoming an ethic=
+al hacker by requesting our ebook - <a href=3D"https://zsecurity.org/how-to=
+-become-an-ethical-hacker.pdf">here</a>=E2=80=99s your free copy. <br>
+<br>
+zSecurity is a leading provider of ethical hacking and cybersecurity traini=
+ng and resources. We make it easy to start a career in cybersecurity and et=
+hical hacking, or teach you to secure your systems yourself to save time an=
+d money. <br>
+<br>
+To keep learning about ethical hacking from the experts, check out the free=
+ resources on the zSecurity website. <a href=3D"https://zsecurity.org/hacki=
+ng-and-security/">https://zsecurity.org/hacking-and-security/</a><br>
+<br>
+<br>
+Thanks, <br>
+Zaid Sabih,<br>
+zSecurity CTO
+
+--000000000000f6638905b5914d47--
+From - Mon Feb  6 23:36:44 2023
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from DB3EUR04HT114.eop-eur04.prod.protection.outlook.com
+ (2603:1096:404:7e::20) by TY2PR02MB3232.apcprd02.prod.outlook.com with HTTPS
+ via TYAPR01CA0152.JPNPRD01.PROD.OUTLOOK.COM; Mon, 29 Apr 2019 14:31:33 +0000
+Received: from DB3EUR04FT061.eop-eur04.prod.protection.outlook.com
+ (10.152.24.52) by DB3EUR04HT114.eop-eur04.prod.protection.outlook.com
+ (10.152.24.237) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1835.13; Mon, 29 Apr
+ 2019 14:31:31 +0000
+Authentication-Results: spf=pass (sender IP is 66.220.155.146)
+ smtp.mailfrom=facebookmail.com; hotmail.com; dkim=pass (signature was
+ verified) header.d=facebookmail.com;hotmail.com; dmarc=pass action=none
+ header.from=facebookmail.com;
+Received-SPF: Pass (protection.outlook.com: domain of facebookmail.com
+ designates 66.220.155.146 as permitted sender)
+ receiver=protection.outlook.com; client-ip=66.220.155.146;
+ helo=mx-out.facebook.com;
+Received: from mx-out.facebook.com (66.220.155.146) by
+ DB3EUR04FT061.mail.protection.outlook.com (10.152.24.72) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1835.13 via Frontend Transport; Mon, 29 Apr 2019 14:31:31 +0000
+X-IncomingTopHeaderMarker: OriginalChecksum:3837C9BC1C7E2697819EA59BA0A20BA975E985CFFA9692BBE4EDF9989C4ACDBB;UpperCasedChecksum:440CBF2C3C2A007D89A07F36C04F4DD58F06D971B8A75CA66F5BB9AB0ABF7C2E;SizeAsReceived:1661;Count:20
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=facebookmail.com;
+	s=s1024-2013-q3; t=1556548290;
+	bh=K9VTqvmVtc18slnUvbpA4kPXuWa2fMr3YM01eRVwrlg=;
+	h=Date:To:Subject:From:MIME-Version:Content-Type;
+	b=vB3Ma1MZk7t2YWdwUM6YFTQR00O9N4Y02+0zKjKVwu2/WzqVBxrryMMq9y2oHu/Mg
+	 jv0LktLsjKadXWLXuffKWHdbXQjxrggtIenXdrG8Rf0ucdvHK1YsGpk+FdpS7EZ/rF
+	 91pvQHIYA3dh7vJOv5M51CuNlxRzBAr3TTWhiKjI=
+Received: from facebook.com (202t3LiRZnsGT5xER7T3Yv7Q2SU3Fl52/4PuLF5MhsxYNfuE86xer/t+t7jKOo4M 2401:db00:3020:b009:face:0000:000f:0000)
+ by facebook.com with Thrift id 7b0f19806a8b11e983c2000af79d613a-5cdbe570;
+ Mon, 29 Apr 2019 07:31:30 -0700
+X-Facebook: from 2401:db00:3011:106c:face:0:89:0 ([MTI3LjAuMC4x]) 
+	by www.facebook.com with HTTPS (ZuckMail);
+Date: Mon, 29 Apr 2019 07:31:30 -0700
+To: Chetan Singh Shekhawat <chetansingh2341@hotmail.com>
+Subject: New email address added on Facebook
+X-Mailer: ZuckMail [version 1.00]
+Return-Path: security@facebookmail.com
+From: "Facebook" <security@facebookmail.com>
+Reply-To: noreply <noreply@facebookmail.com>
+Errors-To: security@facebookmail.com
+X-Facebook-Notify: contact_confirm; mailid=587abda58ee13G5af3f0281afbG587ac23eef0e5G142
+List-Unsubscribe: <https://www.facebook.com/o.php?k=AS3rdpo4wNjK_LkG&u=100003752712955&mid=587abda58ee13G5af3f0281afbG587ac23eef0e5G142>
+Feedback-ID: 0:contact_confirm:Facebook
+X-FACEBOOK-PRIORITY: 0
+X-Auto-Response-Suppress: All
+Message-ID: <21f23895edece57f5e4fba578196096b@3e723b591bdb95ce8f5c9b7032dc572ca97351d0da5efc73459c1fbaf438e43b>
+Content-Type: multipart/alternative;
+	boundary="b1_21f23895edece57f5e4fba578196096b"
+X-IncomingHeaderCount: 20
+X-MS-Exchange-Organization-ExpirationStartTime: 29 Apr 2019 14:31:31.6336
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 2a08c21f-182b-4ac1-d316-08d6ccaf5fb1
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report: EFV:NLI;
+X-MS-Exchange-Organization-AuthSource:
+ DB3EUR04FT061.eop-eur04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-UserLastLogonTime: 4/29/2019 12:57:43 PM
+X-MS-Office365-Filtering-Correlation-Id: 2a08c21f-182b-4ac1-d316-08d6ccaf5fb1
+X-Microsoft-Antispam:
+ BCL:1;PCL:0;RULEID:(2390118)(5000113)(711020)(4605104)(610169)(650170)(651021)(8291501072);SRVR:DB3EUR04HT114;
+X-MS-TrafficTypeDiagnostic: DB3EUR04HT114:
+X-MS-Exchange-PUrlCount: 5
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 66.220.155.146
+X-SID-PRA: SECURITY@FACEBOOKMAIL.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 29 Apr 2019 14:31:31.3804
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 2a08c21f-182b-4ac1-d316-08d6ccaf5fb1
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DB3EUR04HT114
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.7864113
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1835.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	abwl:0;wl:0;pcwl:0;kl:0;iwl:0;ijl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000261)(5061607266)(5061608174)(4900115)(4920090)(6250004)(4950130)(4990090);
+X-Message-Info:
+	5vMbyqxGkdewluZrkisWzp97OXPExd9NDoCu5yx/M/2J5cxIwHPFcpqOKBtURc/q54K2UdYDMrilgN9O5tVL2Q3Zf61mNnW7s96f6gi/M0LlW6nKdndwMdlV1z6VfKGrm05V1eOlPpjcqibz4S0cIQJY+jwWIHOOfGommjVdTGi5HlqQ+SRS/w+H8N5jiTmSkbrRmhfpJkrhV6mskiSOOw==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MDtHRD0wO1NDTD0tMQ==
+X-Microsoft-Antispam-Message-Info:
+	GZpbcKzqmYRUrPkiOVFZeX8ma/r+A+O3VriybG+pJVd1kNJH+tG2k1/GnC3mTg7QcW7MM3KgsjiC4NqZaW60W71uyddbflkUT2dPd1f6+nCzcdvpXnoo8QbcSN+fomOx7e5g45fzIseIYJ3Wr+0FR7ts8dvk8c1HRbY8l5gJzhS8amARY10nnVpfx/C4H4bu+dj91vEvXbF9d5LzwS40tizGa1namkS5rAzo1cvd404RTd/MnyZe32ZlSSw/XPdmT8o1CUar+53sM5KuvZx1zHCuJIGzTdjOJfunTq5rXt58U23rXxd21UWh9dknj1fiosIn0jOYwap3L9cjzE6cma71QPxlpcbM2y8fvBWfiJPGblt0y+aN23UIh1G6dRzM6VDdpqkXWnySBpouYxGUaGtoc1dYbbVhoVHuu8lo14103Vos0sOocDNT5xDVKE19TQyB/FCfBxiFVKGCsXqa/sP0FaJyQNGLBnvARsxiXotkN/Gxt0u44gjg1KVY8JEThbnYxCeUeL4mCBIL4S82SEY6LLp42gKeqBiDRz8gZinhl0tSbEs0i7XTcSUOQCgiDIx6+SF2qAYxvBv4gxFFYfcy+qZu6FezlaJlWP7+AJ9t4JzCQ9v6TrqqBFhROgdDWQl4OSh4o2PN8UNCWdZcZVDSGwHbBRXIOazQRpDK14Wx3JHd2YiiY2Z3teJgylsKNEVih9yvaF4yhZI0ud0qQiKp8ufDtPF09yafka9nDXBdX4C4qlaSyJ4bocAtrjuxTMUEMBoZj05US0BF5G6Olsd+oZ0NahZKNX/9/Z64DF0=
+MIME-Version: 1.0
+
+--b1_21f23895edece57f5e4fba578196096b
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Chetan,
+
+Hi Chetan,
+
+You recently added chetansingh2341@hotmail.com to your Facebook account.
+
+Please confirm this email address so that we can update your contact =
+details.
+
+You may be asked to enter this confirmation code: 56561.Confirm =
+https://www.facebook.com/confirmcontact.php?c=3D56561&x=3D1&z=3D0&gfid=3DA=
+QDGdpEOx2aHMaKX
+
+Thanks, The Facebook Team
+
+Thanks,
+The Facebook Team
+
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+This message was sent to chetansingh2341@hotmail.com. If you don't want to =
+receive these emails from Facebook in the future, please follow the link =
+below to unsubscribe.
+https://www.facebook.com/o.php?k=3DAS3rdpo4wNjK_LkG&u=3D100003752712955&mi=
+d=3D587abda58ee13G5af3f0281afbG587ac23eef0e5G142
+Facebook, Inc., Attention: Community Support, 1 Facebook Way, Menlo Park, =
+CA 94025
+To help keep your account secure, please don't forward this email. Follow =
+the link below to learn more.
+https://www.facebook.com/email_forward_notice/?mid=3D587abda58ee13G5af3f02=
+81afbG587ac23eef0e5G142
+
+
+--b1_21f23895edece57f5e4fba578196096b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional //EN"><html><head=
+>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Facebook</title><style>@media all and (max-width: 480px){*[class].ib_t=
+{min-width:100% !important}*[class].ib_row{display:block !important}*[class=
+].ib_ext{display:block !important;padding:10px 0 5px 0;vertical-align:top !=
+important;width:100% !important}*[class].ib_img,*[class].ib_mid{vertical-al=
+ign:top !important}*[class].mb_blk{display:block !important;padding-bottom:=
+10px;width:100% !important}*[class].mb_hide{display:none !important}*[class=
+].mb_inl{display:inline !important}*[class].d_mb_flex{display:block !import=
+ant}}.d_mb_show{display:none}.d_mb_show_center{display:table;margin:auto}.d=
+_mb_flex{display:flex}@media only screen and (max-device-width: 480px){.d_m=
+b_hide{display:none !important}.d_mb_show{display:block !important}.d_mb_fl=
+ex{display:block !important}}.mb_text h1,.mb_text h2,.mb_text h3,.mb_text h=
+4,.mb_text h5,.mb_text h6{line-height:normal}.mb_work_text h1{font-size:18p=
+x;line-height:normal;margin-top:4px}.mb_work_text h2,.mb_work_text h3{font-=
+size:16px;line-height:normal;margin-top:4px}.mb_work_text h4,.mb_work_text =
+h5,.mb_work_text h6{font-size:14px;line-height:normal}.mb_work_text a{color=
+:#1270e9}.mb_work_text p{margin-top:4px}</style></head><body style=3D"margi=
+n:0;padding:0;" dir=3D"ltr" bgcolor=3D"#ffffff"><table border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" align=3D"center" id=3D"email_table" style=3D"b=
+order-collapse:collapse;"><tr><td id=3D"email_content" style=3D"font-family=
+:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;bac=
+kground:#ffffff;"><table border=3D"0" width=3D"100%" cellspacing=3D"0" cell=
+padding=3D"0" style=3D"border-collapse:collapse;"><tr style=3D""><td height=
+=3D"20" style=3D"line-height:20px;" colspan=3D"3">&nbsp;</td></tr><tr><td h=
+eight=3D"1" colspan=3D"3" style=3D"line-height:1px;"><span style=3D"color:#=
+FFFFFF;font-size:1px;">&nbsp; Hi Chetan, &nbsp; You recently added chetansi=
+ngh2341@hotmail.com to your Facebook account. &nbsp; Please confirm this em=
+ail address so that we can update your contact details. &nbsp; You may be a=
+sked to enter this confirmation code: 56561. &nbsp; Confirm &nbsp; &nbsp; T=
+hanks, The Facebook Team &nbsp;</span></td></tr><tr><td width=3D"15" style=
+=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td style=3D""><table=
+ border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"b=
+order-collapse:collapse;"><tr style=3D""><td height=3D"15" style=3D"line-he=
+ight:15px;" colspan=3D"3">&nbsp;</td></tr><tr><td width=3D"32" align=3D"lef=
+t" valign=3D"middle" style=3D"height:32;line-height:0px;"><a href=3D"https:=
+//www.facebook.com/n/?help%2Fsignup&amp;aref=3D1556548290539749&amp;medium=
+=3Demail&amp;mid=3D587abda58ee13G5af3f0281afbG587ac23eef0e5G142&amp;n_m=3Dc=
+hetansingh2341%40hotmail.com" style=3D"color:#3b5998;text-decoration:none;"=
+><img src=3D"https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/nblMrq1jYuK.png" =
+width=3D"32" height=3D"32" style=3D"border:0;"></a></td><td width=3D"15" st=
+yle=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td width=3D"100%"=
+ style=3D""><a href=3D"https://www.facebook.com/n/?help%2Fsignup&amp;aref=
+=3D1556548290539749&amp;medium=3Demail&amp;mid=3D587abda58ee13G5af3f0281afb=
+G587ac23eef0e5G142&amp;n_m=3Dchetansingh2341%40hotmail.com" style=3D"color:=
+#3b5998;text-decoration:none;font-family:Helvetica Neue,Helvetica,Lucida Gr=
+ande,tahoma,verdana,arial,sans-serif;font-size:19px;line-height:32px;">Conf=
+irm email address</a></td></tr><tr style=3D"border-bottom:solid 1px #e5e5e5=
+;"><td height=3D"15" style=3D"line-height:15px;" colspan=3D"3">&nbsp;</td><=
+/tr></table></td><td width=3D"15" style=3D"display:block;width:15px;">&nbsp=
+;&nbsp;&nbsp;</td></tr><tr><td width=3D"15" style=3D"display:block;width:15=
+px;">&nbsp;&nbsp;&nbsp;</td><td style=3D""><table border=3D"0" width=3D"100=
+%" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collapse;">=
+<tr style=3D""><td height=3D"28" style=3D"line-height:28px;">&nbsp;</td></t=
+r><tr><td style=3D""><span class=3D"mb_text" style=3D"font-family:Helvetica=
+ Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:16p=
+x;line-height:21px;color:#141823;">Hi Chetan,</span></td></tr><tr style=3D"=
+"><td height=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr><tr><td sty=
+le=3D""><span class=3D"mb_text" style=3D"font-family:Helvetica Neue,Helveti=
+ca,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:16px;line-height=
+:21px;color:#141823;">You recently added <span class=3D"mb_text" style=3D"f=
+ont-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans=
+-serif;font-size:16px;line-height:21px;font-weight:bold;color:#141823;">che=
+tansingh2341@hotmail.com</span> to your Facebook account.</span></td></tr><=
+tr style=3D""><td height=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr=
+><tr><td style=3D""><span class=3D"mb_text" style=3D"font-family:Helvetica =
+Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:16px=
+;line-height:21px;color:#141823;">Please confirm this email address so that=
+ we can update your contact details.</span></td></tr><tr style=3D""><td hei=
+ght=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr><tr><td style=3D""><=
+span class=3D"mb_text" style=3D"font-family:Helvetica Neue,Helvetica,Lucida=
+ Grande,tahoma,verdana,arial,sans-serif;font-size:16px;line-height:21px;col=
+or:#141823;">You may be asked to enter this confirmation code: 56561.<table=
+ border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"b=
+order-collapse:collapse;"><tr style=3D""><td height=3D"2" style=3D"line-hei=
+ght:2px;" colspan=3D"3">&nbsp;</td></tr><tr><td class=3D"mb_blk" style=3D""=
+><a href=3D"https://www.facebook.com/confirmcontact.php?c=3D56561&amp;x=3D1=
+&amp;z=3D0&amp;gfid=3DAQDGdpEOx2aHMaKX" style=3D"color:#3b5998;text-decorat=
+ion:none;"><table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"border-collapse:collapse;"><tr><td style=3D"border-collapse=
+:collapse;border-radius:2px;text-align:center;display:block;border:solid 1p=
+x #344c80;box-shadow:inset 0 1px 1px rgba(255, 255, 255, 0.1),0 1px 0 rgba(=
+0, 0, 0, 0.1);background:#4c649b;padding:7px 16px 11px 16px;"><a href=3D"ht=
+tps://www.facebook.com/confirmcontact.php?c=3D56561&amp;x=3D1&amp;z=3D0&amp=
+;gfid=3DAQDGdpEOx2aHMaKX" style=3D"color:#3b5998;text-decoration:none;displ=
+ay:block;"><center><font size=3D"3"><span style=3D"font-family:Helvetica Ne=
+ue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;white-space:nowr=
+ap;font-weight:bold;vertical-align:middle;color:#ffffff;text-shadow:0 -1px =
+0 #415686;font-size:14px;line-height:14px;">Confirm</span></font></center><=
+/a></td></tr></table></a></td><td width=3D"100%" class=3D"mb_hide" style=3D=
+""></td></tr><tr style=3D""><td height=3D"32" style=3D"line-height:32px;" c=
+olspan=3D"3">&nbsp;</td></tr></table></span></td></tr><tr style=3D""><td he=
+ight=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr><tr><td style=3D"">=
+<span class=3D"mb_text" style=3D"font-family:Helvetica Neue,Helvetica,Lucid=
+a Grande,tahoma,verdana,arial,sans-serif;font-size:16px;line-height:21px;co=
+lor:#141823;">Thanks,<br>The Facebook Team</span></td></tr><tr style=3D""><=
+td height=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr></table></td><=
+td width=3D"15" style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td>=
+</tr><tr><td width=3D"15" style=3D"display:block;width:15px;">&nbsp;&nbsp;&=
+nbsp;</td><td style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"=
+0" cellpadding=3D"0" align=3D"left" style=3D"border-collapse:collapse;"><tr=
+ style=3D"border-top:solid 1px #e5e5e5;"><td height=3D"19" style=3D"line-he=
+ight:19px;">&nbsp;</td></tr><tr><td style=3D"font-family:Helvetica Neue,Hel=
+vetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:11px;color:#=
+aaaaaa;line-height:16px;">This message was sent to <a href=3D"mailto:chetan=
+singh2341@hotmail.com" style=3D"color:#3b5998;text-decoration:none;">chetan=
+singh2341@hotmail.com</a>. If you don't want to receive these emails from F=
+acebook in the future, please <a href=3D"https://www.facebook.com/o.php?k=
+=3DAS3rdpo4wNjK_LkG&amp;u=3D100003752712955&amp;mid=3D587abda58ee13G5af3f02=
+81afbG587ac23eef0e5G142" style=3D"color:#3b5998;text-decoration:none;">unsu=
+bscribe</a>. If you didn't create a Facebook account using this email addre=
+ss, <a href=3D"https://www.facebook.com/disavow_contact/?data=3DAaKujZwCZNB=
+9nT_aax_vWM0r96_DnRD7E4m00UhHKhdar0xRWt7mDx_nPX2QcWVVdGZ9fV48cek9Gid8E99Nda=
+FAReV4w0JsLEalb-DkBv6ArhzfKHxNdkKRrwALdRdqR-Lw9HAr2Pbb94_SwsmQrY_GMrU1okgLO=
+4fRDGBNXM6TA7dKj0vJ1TKUeIt9G50J_D8" style=3D"color:#3b5998;text-decoration:=
+none;">please let us know</a>.<br>Facebook, Inc., Attention: Community Supp=
+ort, 1 Facebook Way, Menlo Park, CA 94025</td></tr></table></td><td width=
+=3D"15" style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr=
+><td width=3D"15" style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</t=
+d><td style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" cellp=
+adding=3D"0" style=3D"border-collapse:collapse;"><tr><td style=3D"font-fami=
+ly:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;f=
+ont-size:11px;color:#aaaaaa;line-height:16px;"><span style=3D"font-family:H=
+elvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-=
+size:11px;color:#aaaaaa;line-height:16px;">To help keep your account secure=
+, please don't forward this email. <a href=3D"https://www.facebook.com/emai=
+l_forward_notice/?mid=3D587abda58ee13G5af3f0281afbG587ac23eef0e5G142" style=
+=3D"color:#3b5998;text-decoration:none;">Learn more.</a></span></td></tr></=
+table></td><td width=3D"15" style=3D"display:block;width:15px;">&nbsp;&nbsp=
+;&nbsp;</td></tr><tr style=3D""><td height=3D"20" style=3D"line-height:20px=
+;" colspan=3D"3">&nbsp;</td></tr></table><span style=3D""><img src=3D"https=
+://www.facebook.com/email_open_log_pic.php?cn=3D8qTwaP67ZK&amp;mid=3D587abd=
+a58ee13G5af3f0281afbG587ac23eef0e5G142" style=3D"border:0;width:1px;height:=
+1px;"></span></td></tr></table></body></html>
+
+
+
+--b1_21f23895edece57f5e4fba578196096b--
+From - Mon Feb  6 23:36:45 2023
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from VE1EUR01HT139.eop-EUR01.prod.protection.outlook.com
+ (2603:1096:404:92::15) by TY2PR02MB3232.apcprd02.prod.outlook.com with HTTPS
+ via TY2PR0101CA0003.APCPRD01.PROD.EXCHANGELABS.COM; Fri, 26 Apr 2019 15:14:49
+ +0000
+Received: from VE1EUR01FT053.eop-EUR01.prod.protection.outlook.com
+ (10.152.2.54) by VE1EUR01HT139.eop-EUR01.prod.protection.outlook.com
+ (10.152.3.67) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1792.25; Fri, 26 Apr
+ 2019 15:14:48 +0000
+Authentication-Results: spf=pass (sender IP is 66.220.144.145)
+ smtp.mailfrom=facebookmail.com; hotmail.com; dkim=pass (signature was
+ verified) header.d=facebookmail.com;hotmail.com; dmarc=pass action=none
+ header.from=facebookmail.com;
+Received-SPF: Pass (protection.outlook.com: domain of facebookmail.com
+ designates 66.220.144.145 as permitted sender)
+ receiver=protection.outlook.com; client-ip=66.220.144.145;
+ helo=mx-out.facebook.com;
+Received: from mx-out.facebook.com (66.220.144.145) by
+ VE1EUR01FT053.mail.protection.outlook.com (10.152.3.37) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1835.14 via Frontend Transport; Fri, 26 Apr 2019 15:14:47 +0000
+X-IncomingTopHeaderMarker: OriginalChecksum:8006D98E4F1D0DBB3BD1D89C1EF34330E94AE42FBD1009CD60654EE43814232B;UpperCasedChecksum:C478F877EC8056467AD0AA6ED0B1406D657F31F9929243F7501FDEDC688E2665;SizeAsReceived:1659;Count:20
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=facebookmail.com;
+	s=s1024-2013-q3; t=1556291687;
+	bh=xQOOrqQVh4LxWrzv4B1n0rymwy1ZEK1qdco9H+tWruI=;
+	h=Date:To:Subject:From:MIME-Version:Content-Type;
+	b=c4ejPkN6hTNLbAZBElydNJEBrYAoUR5yRGh4EV/61qF8od38BGdiBBxK9hkOAYXmx
+	 8BD1qsBo9TDwDS0ZUc7vKKrf57JoK5xZ3Pw31LTUf1DuN9yTvH6dxlTJMy7v84EIr2
+	 8RDYhJEHvxDSVWs1HwuZ5B39X+fDtpHtDJaS9a2w=
+Received: from facebook.com (nzVJHMHT2Dtomf3Bc9nq6OSAKkDMG95ppg1qikmEIZFT90R933glLI28vK9MLuTP 2401:db00:0030:8064:face:0000:0001:0000)
+ by facebook.com with Thrift id 0753f6de683611e998bc248a07b107a0-f7cbd570;
+ Fri, 26 Apr 2019 08:14:47 -0700
+X-Facebook: from 2401:db00:12:91da:face:0:28:0 ([MTI3LjAuMC4x]) 
+	by www.facebook.com with HTTPS (ZuckMail);
+Date: Fri, 26 Apr 2019 08:14:47 -0700
+To: Chetan Singh Shekhawat <chetansingh2341@hotmail.com>
+Subject: New email address added on Facebook
+X-Mailer: ZuckMail [version 1.00]
+Return-Path: security@facebookmail.com
+From: "Facebook" <security@facebookmail.com>
+Reply-To: noreply <noreply@facebookmail.com>
+Errors-To: security@facebookmail.com
+X-Facebook-Notify: contact_confirm; mailid=587701b921902G5af3f0281afbG5877065281bd4G142
+List-Unsubscribe: <https://www.facebook.com/o.php?k=AS2qO_cONevKf3pO&u=100003752712955&mid=587701b921902G5af3f0281afbG5877065281bd4G142>
+Feedback-ID: 0:contact_confirm:Facebook
+X-FACEBOOK-PRIORITY: 0
+X-Auto-Response-Suppress: All
+Message-ID: <f5bede3405b37d49fc177de7c36d2261@3e723b591bdb95ce8f5c9b7032dc572ca97351d0da5efc73459c1fbaf438e43b>
+Content-Type: multipart/alternative;
+	boundary="b1_f5bede3405b37d49fc177de7c36d2261"
+X-IncomingHeaderCount: 20
+X-MS-Exchange-Organization-ExpirationStartTime: 26 Apr 2019 15:14:48.2415
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 97ab55bd-bf04-4fc4-7faa-08d6ca59ec27
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report: EFV:NLI;
+X-MS-Exchange-Organization-AuthSource:
+ VE1EUR01FT053.eop-EUR01.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-UserLastLogonTime: 4/26/2019 3:13:15 PM
+X-MS-Office365-Filtering-Correlation-Id: 97ab55bd-bf04-4fc4-7faa-08d6ca59ec27
+X-Microsoft-Antispam:
+ BCL:1;PCL:0;RULEID:(2390118)(5000113)(711020)(4605104)(610169)(650170)(651021)(8291501072);SRVR:VE1EUR01HT139;
+X-MS-TrafficTypeDiagnostic: VE1EUR01HT139:
+X-MS-Exchange-PUrlCount: 5
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 66.220.144.145
+X-SID-PRA: SECURITY@FACEBOOKMAIL.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 26 Apr 2019 15:14:47.7281
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 97ab55bd-bf04-4fc4-7faa-08d6ca59ec27
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: VE1EUR01HT139
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.6131258
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1835.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	abwl:0;wl:0;pcwl:0;kl:0;iwl:0;ijl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000261)(5061607266)(5061608174)(4900115)(4920090)(6250004)(4950130)(4990090);
+X-Message-Info:
+	5vMbyqxGkddXE6EkGyVRrqGf2yi+a3km9DNz8q8JW3XUZ5mAjoTq6OQpG4bt3FF4XM+4oTqdWh0CqCFGjKLsuaakv5jMh3GKiA72VxUayOh3QXaI747i9lQaDRSheMwTPP4/p2m/rc4RaaiueNGhGwjE/Q/NWR7gYuicwZb3bHnUlOyDECFRZ+u1NLTHrrWvIQwcKicB0qQLyLcP32Ukew==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MDtHRD0wO1NDTD0tMQ==
+X-Microsoft-Antispam-Message-Info:
+	vKBUniuUzbZcWukBy/xfhyFXXzXrwelZ34qNyF50fWZn1FlntFbxlgwDGopV/Wlyr5Xxw+ilUx3ugcTa1rR14aUPSLAFKRH1GAJIUxG5l87JmnS3Q921KQ+Hx2gEEE1XihbfFKWtRIxHlTOiG4DVBRwuMpZx5V47REgGQkA8TCDCAOxgZCk6kIvyuHUN7a0Lzn2BtJHgqbcuqfbjFNMforn4GbOpSxT6e7ToAjGLMzyTGMBj4dO2wdrdLyFjW/plKdd2PGtvCPB5L/fYxJr2bJ4jJDuzIJIAKIfKD6+KvYLzlXit1/pClgvdKbw/XD9iPb87Eh2wS8l5DXn3k9stDDVR/8GMOSWyipW3oeSf12yn1HAzCuPqt5wuqSioEgn4lHCZmbl4mB0Q4OGBoVLa+k4SeRXeH5zIIKtBK7w23478F4uoEo3lS7edYaMkFWRu590PkZCO6s4pb7ETi/vSAvB5bt7fSMVmT8bIDnvn4q9Qx+VjrLkyg+y2QrpDx0YMN9MxHKPCGDPyiOeeFhJho+g89h/3+RbsDRvM6+ho1x7bnYhV2729rV2gi4mPiqAJm/z/Y9oEB7ZRFxrzZpHxtbdTUvlQXaKraKH8RdqpGX9ERL7l8noEOgfuPm6oTfap/hD8k3dU8ehIUByA7aVdMXTeYRTWnZcqbgqx6vr0BdnqbyHV6tPmDGqaeEJPDAE4CRcjcxraZA7/t3K0kJsazASV4HF3bkEHKFB7XdIFzZ8fhQgZFZPfa/MnwYI9GgLXG7Yd0YCP9JGg3lTDwKvOIlvaiOeIwQ+Y/KUoTtOs/rw=
+MIME-Version: 1.0
+
+--b1_f5bede3405b37d49fc177de7c36d2261
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Chetan,
+
+Hi Chetan,
+
+You recently added chetansingh2341@hotmail.com to your Facebook account.
+
+Please confirm this email address so that we can update your contact =
+details.
+
+You may be asked to enter this confirmation code: 92536.Confirm =
+https://www.facebook.com/confirmcontact.php?c=3D92536&x=3D1&z=3D0&gfid=3DA=
+QB3G_9_QboyjVhd
+
+Thanks, The Facebook Team
+
+Thanks,
+The Facebook Team
+
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+This message was sent to chetansingh2341@hotmail.com. If you don't want to =
+receive these emails from Facebook in the future, please follow the link =
+below to unsubscribe.
+https://www.facebook.com/o.php?k=3DAS2qO_cONevKf3pO&u=3D100003752712955&mi=
+d=3D587701b921902G5af3f0281afbG5877065281bd4G142
+Facebook, Inc., Attention: Community Support, 1 Facebook Way, Menlo Park, =
+CA 94025
+To help keep your account secure, please don't forward this email. Follow =
+the link below to learn more.
+https://www.facebook.com/email_forward_notice/?mid=3D587701b921902G5af3f02=
+81afbG5877065281bd4G142
+
+
+--b1_f5bede3405b37d49fc177de7c36d2261
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional //EN"><html><head=
+>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Facebook</title><style>@media all and (max-width: 480px){*[class].ib_t=
+{min-width:100% !important}*[class].ib_row{display:block !important}*[class=
+].ib_ext{display:block !important;padding:10px 0 5px 0;vertical-align:top !=
+important;width:100% !important}*[class].ib_img,*[class].ib_mid{vertical-al=
+ign:top !important}*[class].mb_blk{display:block !important;padding-bottom:=
+10px;width:100% !important}*[class].mb_hide{display:none !important}*[class=
+].mb_inl{display:inline !important}*[class].d_mb_flex{display:block !import=
+ant}}.d_mb_show{display:none}.d_mb_show_center{display:table;margin:auto}.d=
+_mb_flex{display:flex}@media only screen and (max-device-width: 480px){.d_m=
+b_hide{display:none !important}.d_mb_show{display:block !important}.d_mb_fl=
+ex{display:block !important}}.mb_text h1,.mb_text h2,.mb_text h3,.mb_text h=
+4,.mb_text h5,.mb_text h6{line-height:normal}.mb_work_text h1{font-size:18p=
+x;line-height:normal;margin-top:4px}.mb_work_text h2,.mb_work_text h3{font-=
+size:16px;line-height:normal;margin-top:4px}.mb_work_text h4,.mb_work_text =
+h5,.mb_work_text h6{font-size:14px;line-height:normal}.mb_work_text a{color=
+:#1270e9}.mb_work_text p{margin-top:4px}</style></head><body style=3D"margi=
+n:0;padding:0;" dir=3D"ltr" bgcolor=3D"#ffffff"><table border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" align=3D"center" id=3D"email_table" style=3D"b=
+order-collapse:collapse;"><tr><td id=3D"email_content" style=3D"font-family=
+:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;bac=
+kground:#ffffff;"><table border=3D"0" width=3D"100%" cellspacing=3D"0" cell=
+padding=3D"0" style=3D"border-collapse:collapse;"><tr style=3D""><td height=
+=3D"20" style=3D"line-height:20px;" colspan=3D"3">&nbsp;</td></tr><tr><td h=
+eight=3D"1" colspan=3D"3" style=3D"line-height:1px;"><span style=3D"color:#=
+FFFFFF;font-size:1px;">&nbsp; Hi Chetan, &nbsp; You recently added chetansi=
+ngh2341@hotmail.com to your Facebook account. &nbsp; Please confirm this em=
+ail address so that we can update your contact details. &nbsp; You may be a=
+sked to enter this confirmation code: 92536. &nbsp; Confirm &nbsp; &nbsp; T=
+hanks, The Facebook Team &nbsp;</span></td></tr><tr><td width=3D"15" style=
+=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td style=3D""><table=
+ border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"b=
+order-collapse:collapse;"><tr style=3D""><td height=3D"15" style=3D"line-he=
+ight:15px;" colspan=3D"3">&nbsp;</td></tr><tr><td width=3D"32" align=3D"lef=
+t" valign=3D"middle" style=3D"height:32;line-height:0px;"><a href=3D"https:=
+//www.facebook.com/n/?help%2Fsignup&amp;aref=3D1556291686767572&amp;medium=
+=3Demail&amp;mid=3D587701b921902G5af3f0281afbG5877065281bd4G142&amp;n_m=3Dc=
+hetansingh2341%40hotmail.com" style=3D"color:#3b5998;text-decoration:none;"=
+><img src=3D"https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/nblMrq1jYuK.png" =
+width=3D"32" height=3D"32" style=3D"border:0;"></a></td><td width=3D"15" st=
+yle=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td width=3D"100%"=
+ style=3D""><a href=3D"https://www.facebook.com/n/?help%2Fsignup&amp;aref=
+=3D1556291686767572&amp;medium=3Demail&amp;mid=3D587701b921902G5af3f0281afb=
+G5877065281bd4G142&amp;n_m=3Dchetansingh2341%40hotmail.com" style=3D"color:=
+#3b5998;text-decoration:none;font-family:Helvetica Neue,Helvetica,Lucida Gr=
+ande,tahoma,verdana,arial,sans-serif;font-size:19px;line-height:32px;">Conf=
+irm email address</a></td></tr><tr style=3D"border-bottom:solid 1px #e5e5e5=
+;"><td height=3D"15" style=3D"line-height:15px;" colspan=3D"3">&nbsp;</td><=
+/tr></table></td><td width=3D"15" style=3D"display:block;width:15px;">&nbsp=
+;&nbsp;&nbsp;</td></tr><tr><td width=3D"15" style=3D"display:block;width:15=
+px;">&nbsp;&nbsp;&nbsp;</td><td style=3D""><table border=3D"0" width=3D"100=
+%" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collapse;">=
+<tr style=3D""><td height=3D"28" style=3D"line-height:28px;">&nbsp;</td></t=
+r><tr><td style=3D""><span class=3D"mb_text" style=3D"font-family:Helvetica=
+ Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:16p=
+x;line-height:21px;color:#141823;">Hi Chetan,</span></td></tr><tr style=3D"=
+"><td height=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr><tr><td sty=
+le=3D""><span class=3D"mb_text" style=3D"font-family:Helvetica Neue,Helveti=
+ca,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:16px;line-height=
+:21px;color:#141823;">You recently added <span class=3D"mb_text" style=3D"f=
+ont-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans=
+-serif;font-size:16px;line-height:21px;font-weight:bold;color:#141823;">che=
+tansingh2341@hotmail.com</span> to your Facebook account.</span></td></tr><=
+tr style=3D""><td height=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr=
+><tr><td style=3D""><span class=3D"mb_text" style=3D"font-family:Helvetica =
+Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:16px=
+;line-height:21px;color:#141823;">Please confirm this email address so that=
+ we can update your contact details.</span></td></tr><tr style=3D""><td hei=
+ght=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr><tr><td style=3D""><=
+span class=3D"mb_text" style=3D"font-family:Helvetica Neue,Helvetica,Lucida=
+ Grande,tahoma,verdana,arial,sans-serif;font-size:16px;line-height:21px;col=
+or:#141823;">You may be asked to enter this confirmation code: 92536.<table=
+ border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"b=
+order-collapse:collapse;"><tr style=3D""><td height=3D"2" style=3D"line-hei=
+ght:2px;" colspan=3D"3">&nbsp;</td></tr><tr><td class=3D"mb_blk" style=3D""=
+><a href=3D"https://www.facebook.com/confirmcontact.php?c=3D92536&amp;x=3D1=
+&amp;z=3D0&amp;gfid=3DAQB3G_9_QboyjVhd" style=3D"color:#3b5998;text-decorat=
+ion:none;"><table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"border-collapse:collapse;"><tr><td style=3D"border-collapse=
+:collapse;border-radius:2px;text-align:center;display:block;border:solid 1p=
+x #344c80;box-shadow:inset 0 1px 1px rgba(255, 255, 255, 0.1),0 1px 0 rgba(=
+0, 0, 0, 0.1);background:#4c649b;padding:7px 16px 11px 16px;"><a href=3D"ht=
+tps://www.facebook.com/confirmcontact.php?c=3D92536&amp;x=3D1&amp;z=3D0&amp=
+;gfid=3DAQB3G_9_QboyjVhd" style=3D"color:#3b5998;text-decoration:none;displ=
+ay:block;"><center><font size=3D"3"><span style=3D"font-family:Helvetica Ne=
+ue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;white-space:nowr=
+ap;font-weight:bold;vertical-align:middle;color:#ffffff;text-shadow:0 -1px =
+0 #415686;font-size:14px;line-height:14px;">Confirm</span></font></center><=
+/a></td></tr></table></a></td><td width=3D"100%" class=3D"mb_hide" style=3D=
+""></td></tr><tr style=3D""><td height=3D"32" style=3D"line-height:32px;" c=
+olspan=3D"3">&nbsp;</td></tr></table></span></td></tr><tr style=3D""><td he=
+ight=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr><tr><td style=3D"">=
+<span class=3D"mb_text" style=3D"font-family:Helvetica Neue,Helvetica,Lucid=
+a Grande,tahoma,verdana,arial,sans-serif;font-size:16px;line-height:21px;co=
+lor:#141823;">Thanks,<br>The Facebook Team</span></td></tr><tr style=3D""><=
+td height=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr></table></td><=
+td width=3D"15" style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td>=
+</tr><tr><td width=3D"15" style=3D"display:block;width:15px;">&nbsp;&nbsp;&=
+nbsp;</td><td style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"=
+0" cellpadding=3D"0" align=3D"left" style=3D"border-collapse:collapse;"><tr=
+ style=3D"border-top:solid 1px #e5e5e5;"><td height=3D"19" style=3D"line-he=
+ight:19px;">&nbsp;</td></tr><tr><td style=3D"font-family:Helvetica Neue,Hel=
+vetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:11px;color:#=
+aaaaaa;line-height:16px;">This message was sent to <a href=3D"mailto:chetan=
+singh2341@hotmail.com" style=3D"color:#3b5998;text-decoration:none;">chetan=
+singh2341@hotmail.com</a>. If you don't want to receive these emails from F=
+acebook in the future, please <a href=3D"https://www.facebook.com/o.php?k=
+=3DAS2qO_cONevKf3pO&amp;u=3D100003752712955&amp;mid=3D587701b921902G5af3f02=
+81afbG5877065281bd4G142" style=3D"color:#3b5998;text-decoration:none;">unsu=
+bscribe</a>. If you didn't create a Facebook account using this email addre=
+ss, <a href=3D"https://www.facebook.com/disavow_contact/?data=3DAaLUszhGvh8=
+BRUyPWs-TFdeyayxUmxRfTnNHzsXEJrnbmPvhO4VjY9DXylC1vky2p2F4Q_oc_tNc6R-9PI7lvG=
+wMIU5390nX9Q1iji6fF18BKWjT6_Ajn9A96TUGYjfKOHHq708t2VGyNkXMPOG4Bq7_XBEoahWdW=
+GErkn9j0NFxTJNa6aWsC9D62L_4rSUI4H4" style=3D"color:#3b5998;text-decoration:=
+none;">please let us know</a>.<br>Facebook, Inc., Attention: Community Supp=
+ort, 1 Facebook Way, Menlo Park, CA 94025</td></tr></table></td><td width=
+=3D"15" style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr=
+><td width=3D"15" style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</t=
+d><td style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" cellp=
+adding=3D"0" style=3D"border-collapse:collapse;"><tr><td style=3D"font-fami=
+ly:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;f=
+ont-size:11px;color:#aaaaaa;line-height:16px;"><span style=3D"font-family:H=
+elvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-=
+size:11px;color:#aaaaaa;line-height:16px;">To help keep your account secure=
+, please don't forward this email. <a href=3D"https://www.facebook.com/emai=
+l_forward_notice/?mid=3D587701b921902G5af3f0281afbG5877065281bd4G142" style=
+=3D"color:#3b5998;text-decoration:none;">Learn more.</a></span></td></tr></=
+table></td><td width=3D"15" style=3D"display:block;width:15px;">&nbsp;&nbsp=
+;&nbsp;</td></tr><tr style=3D""><td height=3D"20" style=3D"line-height:20px=
+;" colspan=3D"3">&nbsp;</td></tr></table><span style=3D""><img src=3D"https=
+://www.facebook.com/email_open_log_pic.php?cn=3DwH0mckjeMt&amp;mid=3D587701=
+b921902G5af3f0281afbG5877065281bd4G142" style=3D"border:0;width:1px;height:=
+1px;"></span></td></tr></table></body></html>
+
+
+
+--b1_f5bede3405b37d49fc177de7c36d2261--
+From - Mon Feb  6 23:36:45 2023
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from SN1NAM04HT103.eop-NAM04.prod.protection.outlook.com
+ (2603:1096:4:40::27) by SG2PR02MB3227.apcprd02.prod.outlook.com with HTTPS
+ via SG2PR01CA0123.APCPRD01.PROD.EXCHANGELABS.COM; Thu, 4 Apr 2019 07:56:13
+ +0000
+Received: from SN1NAM04FT063.eop-NAM04.prod.protection.outlook.com
+ (10.152.88.59) by SN1NAM04HT103.eop-NAM04.prod.protection.outlook.com
+ (10.152.89.8) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1750.16; Thu, 4 Apr
+ 2019 07:56:12 +0000
+Authentication-Results: spf=pass (sender IP is 52.37.178.91)
+ smtp.mailfrom=outbound.research.net; hotmail.com; dkim=pass (signature was
+ verified) header.d=outbound.research.net;hotmail.com; dmarc=pass action=none
+ header.from=outbound.research.net;
+Received-SPF: Pass (protection.outlook.com: domain of outbound.research.net
+ designates 52.37.178.91 as permitted sender) receiver=protection.outlook.com;
+ client-ip=52.37.178.91; helo=mta1b5.outbound.surveymonkey.com;
+Received: from mta1b5.outbound.surveymonkey.com (52.37.178.91) by
+ SN1NAM04FT063.mail.protection.outlook.com (10.152.89.83) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id
+ 15.20.1750.16 via Frontend Transport; Thu, 4 Apr 2019 07:56:11 +0000
+X-IncomingTopHeaderMarker: OriginalChecksum:2A3EC1E5DBDD545ABD60F2894E8C4A93D10831803B498BDE314BE981993992CD;UpperCasedChecksum:17D3880605C6E8FA572B8B422D5DFDB3ED9C3B3DDFF3100551609AA893C04A4F;SizeAsReceived:1624;Count:14
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=outbound.research.net; s=scph0716; t=1554364571;
+	i=@outbound.research.net;
+	bh=+7VcyHlHOmz6vaQl1doHT9z96Yv/Ani8TZ8T8Y+xw8k=;
+	h=Content-Type:Message-ID:From:To:Subject:Date;
+	b=bd29PLwJuV2R5mJLVeF8YSzkhl3hgaKdQhyxBZuDLZFVB4GvEoDMYmGN1OspLr47r
+	 rBzrSeg1kgZGP9kr2iM4ijAvih3BZRh2AFu92dVGqej2GvGTPpNGPldxfO+8U6kh5a
+	 znl9E/cbh7SB+srWZKPF3nCK8RMBFKa5+UY7Ap5Q=
+X-MSFBL: VjoPOnGFb2dZ2Qw2iSeHNy3X0D7d2/SQ56XtSPcNU9g=|eyJtZXNzYWdlX2lkIjo
+	iMDAwMDliYjhhNTVjMjU3ODQ5NzYiLCJyIjoiY2hldGFuc2luZ2gyMzQxQGhvdG1
+	haWwuY29tIiwidGVuYW50X2lkIjoic3VydmV5bW9ua2V5Iiwic3ViYWNjb3VudF9
+	pZCI6IjEwMiIsImN1c3RvbWVyX2lkIjoiMSJ9
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset="utf-8"
+Authentication-Results-Original: b.mta2vsmtp.cc.prd.sparkpost
+ smtp.user=<hidden>; auth=pass (PLAIN)
+Received: from [64.191.16.134] ([64.191.16.134:56045] helo=n9emlsvc310mgp1.n9.jungle.tech-mailer_process)
+	by b.mta2vsmtp.cc.prd.sparkpost (envelope-from <survey-noreply@outbound.research.net>)
+	(ecelerity 4.3.0.67784 r(Core:4.3.0.9)) with ESMTPSA (cipher=ECDHE-RSA-AES256-GCM-SHA384) 
+	id 94/67-30757-B98B5AC5; Thu, 04 Apr 2019 07:56:11 +0000
+Message-ID: <94.67.30757.B98B5AC5@b.mta2vsmtp.cc.prd.sparkpost>
+From: "noreply@myntra.com via research.net" <member@outbound.research.net>
+To: "CC - Inbound chetansingh2341@hotmail.comCustomer"
+ <chetansingh2341@hotmail.com>
+Subject: =?utf-8?q?Your_Last_Interaction_With_Myntra?=
+Date: Thu, 04 Apr 2019 07:56:11 +0000
+Reply-To: =?utf-8?q?noreply=40myntra=2Ecom?=
+Sender: <survey-noreply@outbound.research.net>
+X-IncomingHeaderCount: 14
+Return-Path: survey-noreply@outbound.research.net
+X-MS-Exchange-Organization-ExpirationStartTime: 04 Apr 2019 07:56:11.9580
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 2:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: c1fe3477-7a57-4090-ce1e-08d6b8d30156
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report: EFV:NLI;
+X-MS-Exchange-Organization-AuthSource:
+ SN1NAM04FT063.eop-NAM04.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-UserLastLogonTime: 4/4/2019 6:42:03 AM
+X-MS-Office365-Filtering-Correlation-Id: c1fe3477-7a57-4090-ce1e-08d6b8d30156
+X-Microsoft-Antispam:
+ BCL:7;PCL:0;RULEID:(2390118)(5000111)(711020)(4605104)(610169)(650170)(651021)(8291501072);SRVR:SN1NAM04HT103;
+X-MS-TrafficTypeDiagnostic: SN1NAM04HT103:
+X-MS-Exchange-PUrlCount: 7
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 52.37.178.91
+X-SID-PRA: MEMBER@OUTBOUND.RESEARCH.NET
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 04 Apr 2019 07:56:11.7143
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: c1fe3477-7a57-4090-ce1e-08d6b8d30156
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN1NAM04HT103
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.8109994
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1750.010
+X-Microsoft-Antispam-Mailbox-Delivery:
+	abwl:0;wl:0;pcwl:0;kl:0;iwl:0;ijl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000261)(5061607266)(5061608174)(4900115)(4920090)(6515079)(4950130)(4990090);
+X-Message-Info:
+	5vMbyqxGkdc52009Gn4GkY25uvr7J7YNqumxb94ouA64Vj/eSr6wB3o1fxJQtmW1tpUPuynJ7/ALAJTC0pQD3A6Udw+1vBZ5CSHwiet5K6IbzQy2r2GsPcd/o733PUYBYxEjS4mMXs4srXOrijZtet77vcDPfxdFujZnt5irYNqxMvveOmSTXhM2Emsgt9qZb7Zxv3bdRrnx16teuLtIsw==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MTtHRD0xO1NDTD0z
+X-Microsoft-Antispam-Message-Info:
+	EniZR908k8YzKoL806GnAj73rZaCHpYwTwSq4Dx0zSlsGscmRgMUsjukJwVJitM1wRLuE8yKwKqMsZ23+dycCqm9U78x63KaXdSltLXlld/FSyhuiHSaeMHYEAoB3rq6xs7yntmyAHkCNYREp6Yg9PDCW1NrwMxshCwZhte1SiTLeW3LQr+r/jIJf+3AYP2zJ70o7vjWBj/A5eXd69P5d8MqvBbv2TiZO0L7oNrN8M657lhAJ9CF6jrYneXKx7XFb+rMVEmnNwj3nhyXyJ4mHwhUtjtBeCPfotyo3jAKw4Ts/3yIFz6r88ywChfJcwhS8Q7mCJ6Fqkq+TOcD8fgzntT3C0tZv6NY4KT4e9Wvn2xXAxXyNaWDa6KY0YViLappD0isRVQLr0ny/3LwVOsR6pbpstlHt+HVahxl/f2suR7iQ07cO3jA3LeXhUzIGT2xlHcncpFhOdSvi5DYGB89u+DUPnDYH943AQWPv5rtqIzUUAlt/UhxRzfgNMaCGSUvUImFCJnE4FO7Ik+R4HCc5whpfj1dNFlndzUUoUunzIKKmXKcqZh0pfze/LCGVebCMJf+fUUSQCQYkpsCiaCFQnGCcCBkc8ImyLI1QygiTYh3h4RfWaHy1+2adiw0s6cSGqR7iR7MDbQWJZJYpGe/Ai2hEcmRPqvoBk+VxJ8eexKdZ0pe5tLrFEHMDAdlHCHsi3bEnhdzAYtVKHTiUghOLg==
+MIME-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body style="margin:0; padding: 0;">
+<div align="center">
+   <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="font-family: Arial,Helvetica,sans-serif; max-width: 700px;">
+       <tr bgcolor="#00BF6F">
+           <td colspan="5" height="40">&nbsp;</td>
+       </tr>
+       <tr bgcolor="#00BF6F">
+           <td width="20">&nbsp;</td>
+           <td width="20">&nbsp;</td>
+           <td align="center" style="font-size: 29px; color:#FFFFFF; font-weight: normal; letter-spacing: 1px; line-height: 1;
+                           text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2); font-family: Arial,Helvetica,sans-serif;">
+              Please rate Myntra's Contact Center experience!
+           </td>
+           <td width="20">&nbsp;</td>
+           <td width="20">&nbsp;</td>
+       </tr>
+       <tr bgcolor="#00BF6F">
+           <td colspan="5" height="40">&nbsp;</td>
+       </tr>
+       <tr>
+           <td height="10" colspan="5">&nbsp;</td>
+       </tr>
+       <tr>
+           <td>&nbsp;</td>
+           <td colspan="3" align="left" valign="top" style="color:#666666; font-size: 13px;">
+              
+                <p>We're running a survey and would love your input. Please let us know what you think below. Thanks for participating!</p>
+              
+           </td>
+           <td>&nbsp;</td>
+       </tr>
+
+       
+           <tr>
+
+
+</tr><tr>
+    <td colspan="5">&nbsp;</td>
+</tr>
+
+<tr>
+    <td rowspan="11">
+    <td colspan="3" style="word-wrap: break-word;white-space: normal;font-size: 20px;font-family: National2;font-weight: 300;line-height: 30px;color: #333E48;font-style: normal;text-decoration: none;">How Easy did you find to get your query/ complaint resolved with Myntra contact center?</td>
+    <td rowspan="11">
+</tr>
+
+<tr>
+    <td colspan="3">&nbsp;</td>
+</tr>
+
+      <tr>
+        <td colspan="3" style="">
+
+                <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td valign="top" width="20" style="width:20px;padding-right:10px;">
+                            <a href="https://www.research.net/tr/v1/te/akU_2BQc2vAhAsa_2B264x1g6_2FSdSvKedPmeZkblcZEtqvXkRYjyfK5Meee0VQKie2BpWjP5PtU1gsVJ3bdjE2PC29vGhsfoUBqrfkUby1Sk6XocArJVzZUNNrCxrz16FpPkYDHmxFDhnx4YW2ZasfbRJ5KtiNDOm_2BtOi9GiMyzVvBe4_2FKS1Ah47M488UE1PkfKyFmurP9kd5dQQLraUnWP0pLebx5cGGBqHlvXNz1dznEN8HO37tCgxuTzqH4JqCsXbfYntJcFdP2G4qIo_2FihczaoaPP4Z5jiVodTodwDVqO6Y_2BmAjVUYUzAvGbydtrmMu2j3MJPQTbGvuENpTFfwKOgR_2FUHHvNN3BlRQuipMv8dJZC_2BptMqP0Z27XnsO6s3LKXHQ0i8nwX_2FR2a6RglBczEKXQ5hh2pmfj9tsnRhQsSbP1GW9pNiMkQ8VN1CPLT13w239f0dRmWDTa6YGC6Xv6MyM62L_2B1HgrFb5RQg7HpzpiP3oICOJCHtXAuIghMuBs9Xw08692BzQxKwDWi_2FiveEIrAHeK2k6601gU0zOwf_2FEMgxSgcnh6aqgCyFsnRhoHSAz7OdtJkGBVLtU_2F7h0jrw0A_3D_3D" style="font-size:20px;text-decoration: none;vertical-align:top;color:#999999;">◯</a>
+                            </td>
+                        <td valign="top" align="left">
+                            <a href="https://www.research.net/tr/v1/te/akU_2BQc2vAhAsa_2B264x1g6_2FSdSvKedPmeZkblcZEtqvXkRYjyfK5Meee0VQKie2BpWjP5PtU1gsVJ3bdjE2PC29vGhsfoUBqrfkUby1Sk6XocArJVzZUNNrCxrz16FpPkYDHmxFDhnx4YW2ZasfbRJ5KtiNDOm_2BtOi9GiMyzVvBe4_2FKS1Ah47M488UE1PkfKyFmurP9kd5dQQLraUnWP0pLebx5cGGBqHlvXNz1dznEN8HO37tCgxuTzqH4JqCsXbfYntJcFdP2G4qIo_2FihczaoaPP4Z5jiVodTodwDVqO6Y_2BmAjVUYUzAvGbydtrmMu2j3MJPQTbGvuENpTFfwKOgR_2FUHHvNN3BlRQuipMv8dJZC_2BptMqP0Z27XnsO6s3LKXHQ0i8nwX_2FR2a6RglBczEKXQ5hh2pmfj9tsnRhQsSbP1GW9pNiMkQ8VN1CPLT13w239f0dRmWDTa6YGC6Xv6MyM62L_2B1HgrFb5RQg7HpzpiP3oICOJCHtXAuIghMuBs9Xw08692BzQxKwDWi_2FiveEIrAHeK2k6601gU0zOwf_2FEMgxSgcnh6aqgCyFsnRhoHSAz7OdtJkGBVLtU_2F7h0jrw0A_3D_3D" style="color:#333E48;font-family:National2;font-size:18px;font-weight:300;font-style:normal;text-decoration:none;">Very Easy</a>
+                        </td>
+                    </tr>
+                </table>
+        </td>
+    </tr>
+
+        <tr>
+            <td colspan="3" style="font-size:9px;">&nbsp;</td>
+        </tr>
+
+      <tr>
+        <td colspan="3" style="">
+
+                <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td valign="top" width="20" style="width:20px;padding-right:10px;">
+                            <a href="https://www.research.net/tr/v1/te/akU_2BQc2vAhAsa_2B264x1g6_2FSdSvKedPmeZkblcZEtqvXkRYjyfK5Meee0VQKie2BpWjP5PtU1gsVJ3bdjE2PC29vGhsfoUBqrfkUby1Sk6XocArJVzZUNNrCxrz16FpPkYDHmxFDhnx4YW2ZasfbRJ5KtiNDOm_2BtOi9GiMyzVvBe4_2FKS1Ah47M488UE1PkfKyFmurP9kd5dQQLraUnWP0pLebx5cGGBqHlvXNz1dznEN8HO37tCgxuTzqH4JqCsXbfYntJcFdP2G4qIo_2FihczaoaPP4Z5jiVodTodwDVqO6Y_2BmAjVUYUzAvGbydtrmMu2j3MJPQTbGvuENpTFfwKOgR_2FUHHvNN3BlRQuipMv8dJbWrPpCvlxZ4IT7urlg6J0v0Dvn_2BonxXmftDzhKFAIM7yGE41_2Fn_2FI1l4zNwJwW9S_2FC38CQditOxLhJYgKsR6iE_2BpCj2S86OsALqT4WOdy1_2BEfqwoIbTqqAIVo9ukUgU0ynald83arg7kJ9q0Zy0Q3xZYOQ3Lz1A_2BwQO1X_2F5LQqzCJissIAI00rgpMKdUE6zs_2FmPK7ubM3ITUNfcRPKWg35c" style="font-size:20px;text-decoration: none;vertical-align:top;color:#999999;">◯</a>
+                            </td>
+                        <td valign="top" align="left">
+                            <a href="https://www.research.net/tr/v1/te/akU_2BQc2vAhAsa_2B264x1g6_2FSdSvKedPmeZkblcZEtqvXkRYjyfK5Meee0VQKie2BpWjP5PtU1gsVJ3bdjE2PC29vGhsfoUBqrfkUby1Sk6XocArJVzZUNNrCxrz16FpPkYDHmxFDhnx4YW2ZasfbRJ5KtiNDOm_2BtOi9GiMyzVvBe4_2FKS1Ah47M488UE1PkfKyFmurP9kd5dQQLraUnWP0pLebx5cGGBqHlvXNz1dznEN8HO37tCgxuTzqH4JqCsXbfYntJcFdP2G4qIo_2FihczaoaPP4Z5jiVodTodwDVqO6Y_2BmAjVUYUzAvGbydtrmMu2j3MJPQTbGvuENpTFfwKOgR_2FUHHvNN3BlRQuipMv8dJbWrPpCvlxZ4IT7urlg6J0v0Dvn_2BonxXmftDzhKFAIM7yGE41_2Fn_2FI1l4zNwJwW9S_2FC38CQditOxLhJYgKsR6iE_2BpCj2S86OsALqT4WOdy1_2BEfqwoIbTqqAIVo9ukUgU0ynald83arg7kJ9q0Zy0Q3xZYOQ3Lz1A_2BwQO1X_2F5LQqzCJissIAI00rgpMKdUE6zs_2FmPK7ubM3ITUNfcRPKWg35c" style="color:#333E48;font-family:National2;font-size:18px;font-weight:300;font-style:normal;text-decoration:none;">Easy</a>
+                        </td>
+                    </tr>
+                </table>
+        </td>
+    </tr>
+
+        <tr>
+            <td colspan="3" style="font-size:9px;">&nbsp;</td>
+        </tr>
+
+      <tr>
+        <td colspan="3" style="">
+
+                <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td valign="top" width="20" style="width:20px;padding-right:10px;">
+                            <a href="https://www.research.net/tr/v1/te/akU_2BQc2vAhAsa_2B264x1g6_2FSdSvKedPmeZkblcZEtqvXkRYjyfK5Meee0VQKie2BpWjP5PtU1gsVJ3bdjE2PC29vGhsfoUBqrfkUby1Sk6XocArJVzZUNNrCxrz16FpPkYDHmxFDhnx4YW2ZasfbRJ5KtiNDOm_2BtOi9GiMyzVvBe4_2FKS1Ah47M488UE1PkfKyFmurP9kd5dQQLraUnWP0pLebx5cGGBqHlvXNz1dznEN8HO37tCgxuTzqH4JqCsXbfYntJcFdP2G4qIo_2FihczaoaPP4Z5jiVodTodwDVqO6Y_2BmAjVUYUzAvGbydtrmMu2j3MJPQTbGvuENpTFfwKOgR_2FUHHvNN3BlRQuipMv8dJYNiujbBjB3AYycU9A51J_2FlFWksVqx9FG0tJa60gzdKNpLHPiCquwEtSDlsF8Kypk6SCbrZlNoukg3uJP0APXKw_2BPe2kf3OOf_2Bzu5vAQFFbjjorzSvFa3ZjVHWO1E9pEG3ljfBAuTzxMd6B9ELz_2FxdWdp_2B3NxITkUFryOtQcChTPb9d17oJbcYlkv8JwLnmieTAJFwv3NgaDPG4eTt8I45V" style="font-size:20px;text-decoration: none;vertical-align:top;color:#999999;">◯</a>
+                            </td>
+                        <td valign="top" align="left">
+                            <a href="https://www.research.net/tr/v1/te/akU_2BQc2vAhAsa_2B264x1g6_2FSdSvKedPmeZkblcZEtqvXkRYjyfK5Meee0VQKie2BpWjP5PtU1gsVJ3bdjE2PC29vGhsfoUBqrfkUby1Sk6XocArJVzZUNNrCxrz16FpPkYDHmxFDhnx4YW2ZasfbRJ5KtiNDOm_2BtOi9GiMyzVvBe4_2FKS1Ah47M488UE1PkfKyFmurP9kd5dQQLraUnWP0pLebx5cGGBqHlvXNz1dznEN8HO37tCgxuTzqH4JqCsXbfYntJcFdP2G4qIo_2FihczaoaPP4Z5jiVodTodwDVqO6Y_2BmAjVUYUzAvGbydtrmMu2j3MJPQTbGvuENpTFfwKOgR_2FUHHvNN3BlRQuipMv8dJYNiujbBjB3AYycU9A51J_2FlFWksVqx9FG0tJa60gzdKNpLHPiCquwEtSDlsF8Kypk6SCbrZlNoukg3uJP0APXKw_2BPe2kf3OOf_2Bzu5vAQFFbjjorzSvFa3ZjVHWO1E9pEG3ljfBAuTzxMd6B9ELz_2FxdWdp_2B3NxITkUFryOtQcChTPb9d17oJbcYlkv8JwLnmieTAJFwv3NgaDPG4eTt8I45V" style="color:#333E48;font-family:National2;font-size:18px;font-weight:300;font-style:normal;text-decoration:none;">Neither easy nor difficult</a>
+                        </td>
+                    </tr>
+                </table>
+        </td>
+    </tr>
+
+        <tr>
+            <td colspan="3" style="font-size:9px;">&nbsp;</td>
+        </tr>
+
+      <tr>
+        <td colspan="3" style="">
+
+                <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td valign="top" width="20" style="width:20px;padding-right:10px;">
+                            <a href="https://www.research.net/tr/v1/te/akU_2BQc2vAhAsa_2B264x1g6_2FSdSvKedPmeZkblcZEtqvXkRYjyfK5Meee0VQKie2BpWjP5PtU1gsVJ3bdjE2PC29vGhsfoUBqrfkUby1Sk6XocArJVzZUNNrCxrz16FpPkYDHmxFDhnx4YW2ZasfbRJ5KtiNDOm_2BtOi9GiMyzVvBe4_2FKS1Ah47M488UE1PkfKyFmurP9kd5dQQLraUnWP0pLebx5cGGBqHlvXNz1dznEN8HO37tCgxuTzqH4JqCsXbfYntJcFdP2G4qIo_2FihczaoaPP4Z5jiVodTodwDVqO6Y_2BmAjVUYUzAvGbydtrmMu2j3MJPQTbGvuENpTFfwKOgR_2FUHHvNN3BlRQuipMv8dJalBh63fEo26ObxzGPylXTbYDDDO_2BDNIwxtlZWIYa0JI_2BDg_2BNAiokwONHsEQTx6WdsMkZLAy48BlA1j5ShKLwaA92OAgGOkarboqyQGgrR5ccvkf8LubBlTx2_2Bdmg0RT_2FsTw2Sq3jYIzj3ggwPyAR2tXZVPZlCyW8EvVvOaKD0cBdgRT0WaqQOa9CIzxgR9mLyXXTasGGB_2FsnauBkli_2FtWe" style="font-size:20px;text-decoration: none;vertical-align:top;color:#999999;">◯</a>
+                            </td>
+                        <td valign="top" align="left">
+                            <a href="https://www.research.net/tr/v1/te/akU_2BQc2vAhAsa_2B264x1g6_2FSdSvKedPmeZkblcZEtqvXkRYjyfK5Meee0VQKie2BpWjP5PtU1gsVJ3bdjE2PC29vGhsfoUBqrfkUby1Sk6XocArJVzZUNNrCxrz16FpPkYDHmxFDhnx4YW2ZasfbRJ5KtiNDOm_2BtOi9GiMyzVvBe4_2FKS1Ah47M488UE1PkfKyFmurP9kd5dQQLraUnWP0pLebx5cGGBqHlvXNz1dznEN8HO37tCgxuTzqH4JqCsXbfYntJcFdP2G4qIo_2FihczaoaPP4Z5jiVodTodwDVqO6Y_2BmAjVUYUzAvGbydtrmMu2j3MJPQTbGvuENpTFfwKOgR_2FUHHvNN3BlRQuipMv8dJalBh63fEo26ObxzGPylXTbYDDDO_2BDNIwxtlZWIYa0JI_2BDg_2BNAiokwONHsEQTx6WdsMkZLAy48BlA1j5ShKLwaA92OAgGOkarboqyQGgrR5ccvkf8LubBlTx2_2Bdmg0RT_2FsTw2Sq3jYIzj3ggwPyAR2tXZVPZlCyW8EvVvOaKD0cBdgRT0WaqQOa9CIzxgR9mLyXXTasGGB_2FsnauBkli_2FtWe" style="color:#333E48;font-family:National2;font-size:18px;font-weight:300;font-style:normal;text-decoration:none;">Difficult</a>
+                        </td>
+                    </tr>
+                </table>
+        </td>
+    </tr>
+
+        <tr>
+            <td colspan="3" style="font-size:9px;">&nbsp;</td>
+        </tr>
+
+      <tr>
+        <td colspan="3" style="">
+
+                <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td valign="top" width="20" style="width:20px;padding-right:10px;">
+                            <a href="https://www.research.net/tr/v1/te/akU_2BQc2vAhAsa_2B264x1g6_2FSdSvKedPmeZkblcZEtqvXkRYjyfK5Meee0VQKie2BpWjP5PtU1gsVJ3bdjE2PC29vGhsfoUBqrfkUby1Sk6XocArJVzZUNNrCxrz16FpPkYDHmxFDhnx4YW2ZasfbRJ5KtiNDOm_2BtOi9GiMyzVvBe4_2FKS1Ah47M488UE1PkfKyFmurP9kd5dQQLraUnWP0pLebx5cGGBqHlvXNz1dznEN8HO37tCgxuTzqH4JqCsXbfYntJcFdP2G4qIo_2FihczaoaPP4Z5jiVodTodwDVqO6Y_2BmAjVUYUzAvGbydtrmMu2j3MJPQTbGvuENpTFfwKOgR_2FUHHvNN3BlRQuipMv8dJa_2B6uZmf8KwDzs73JxOXbH7yVynrNIWDJowzQdIMIXLw7GD0sW_2B9qtOAUYY_2BaPDpDanAb4Ev5MXyR9FNigqjIbChDF_2Fs0cL32AnPtQY_2B1ObRvR1xJpzidwD8yvyyBcqLzttbK6DEVlsdPLiBFekryV_2F5AYAHhpgI8pp9tmjoyxVz8QgyoHB4ciodLAq4_2B2lrD_2FYHpkrtWe8orMdl2x9DYO1" style="font-size:20px;text-decoration: none;vertical-align:top;color:#999999;">◯</a>
+                            </td>
+                        <td valign="top" align="left">
+                            <a href="https://www.research.net/tr/v1/te/akU_2BQc2vAhAsa_2B264x1g6_2FSdSvKedPmeZkblcZEtqvXkRYjyfK5Meee0VQKie2BpWjP5PtU1gsVJ3bdjE2PC29vGhsfoUBqrfkUby1Sk6XocArJVzZUNNrCxrz16FpPkYDHmxFDhnx4YW2ZasfbRJ5KtiNDOm_2BtOi9GiMyzVvBe4_2FKS1Ah47M488UE1PkfKyFmurP9kd5dQQLraUnWP0pLebx5cGGBqHlvXNz1dznEN8HO37tCgxuTzqH4JqCsXbfYntJcFdP2G4qIo_2FihczaoaPP4Z5jiVodTodwDVqO6Y_2BmAjVUYUzAvGbydtrmMu2j3MJPQTbGvuENpTFfwKOgR_2FUHHvNN3BlRQuipMv8dJa_2B6uZmf8KwDzs73JxOXbH7yVynrNIWDJowzQdIMIXLw7GD0sW_2B9qtOAUYY_2BaPDpDanAb4Ev5MXyR9FNigqjIbChDF_2Fs0cL32AnPtQY_2B1ObRvR1xJpzidwD8yvyyBcqLzttbK6DEVlsdPLiBFekryV_2F5AYAHhpgI8pp9tmjoyxVz8QgyoHB4ciodLAq4_2B2lrD_2FYHpkrtWe8orMdl2x9DYO1" style="color:#333E48;font-family:National2;font-size:18px;font-weight:300;font-style:normal;text-decoration:none;">Very difficult</a>
+                        </td>
+                    </tr>
+                </table>
+        </td>
+    </tr>
+
+         <tr>
+            <td colspan="5" style="font-size:9px;">&nbsp;</td>
+        </tr>
+
+ 
+       
+       <tr valign="top" style="color: #666666;font-size: 10px;">
+           <td>&nbsp;</td>
+           <td valign="top" align="center" colspan="3">
+               <p>Please do not forward this email as its survey link is unique to you. <br><a href="https://www.surveymonkey.com/mp/legal/privacy-basics/" target="_blank" style="color: #333333; text-decoration: underline;">Privacy</a> | <a href="https://www.research.net/tr/v1/te/akU_2BQc2vAhAsa_2B264x1g6_2FSdSvKedPmeZkblcZEtqvWWwk_2F481ZEMvTDQms9u33_2FLcCAQxb06cX9B7_2F6GiHWJZEDNms1FOZJRLQPQ0xXI_2B07w2SJ7Qx6nc8O9XtBTffybYycSu1ez9yAn0sSh74EvzLvZJU2HFNHwkosstsDuuU0fK6e_2Bm7TC0AfilgBBkTcvu8jNY_2F6IwKtQ4RB49CuQw_3D_3D" target="_blank" style="color: #333333; text-decoration: underline;">Unsubscribe</a></p>
+           </td>
+           <td>&nbsp;</td>
+       </tr>
+       <tr>
+           <td height="20" colspan="5">&nbsp;</td>
+       </tr>
+
+       <tr style="color: #999999;font-size: 10px;">
+           <td align="center" colspan="5"><table width="100%" cellpadding="2">
+    <tbody>
+        <tr>
+            <td width="45%" align="right" style="font-size: 10px; color: #999999;">Powered by</td>
+            <td width="55%" align="left">
+                <img width="130" align="middle" height="17" alt="SurveyMonkey Logo" src="https://www.research.net/collect/images/smLogo.png">
+            </td>
+        </tr>
+    </tbody>
+</table>
+</td>
+       </tr>
+       <tr>
+           <td height="20" colspan="5">&nbsp;</td>
+       </tr>
+   </table>
+</div>
+<img src="https://www.research.net/tr/v1/te/P_2BQ9KxyQHSdpObxw7nU_2F3bFbiwyw9VdMhxM_2BO5ApVbxR32jOqqF7UA0OaeSmAg7H.png" alt="" width="1px" height="1px">
+<img border="0" width="1" height="1" alt="" src="http://click.outbound.surveymonkey.com/q/X9Nw47BkORkcqQns6Nx3fw~~/AAAAAQA~/RgRehuwbPlcMc3VydmV5bW9ua2V5QgoAAJu4pVwleEl2UhtjaGV0YW5zaW5naDIzNDFAaG90bWFpbC5jb21YBAAAAGY~">
+</body>
+</html>
+From - Mon Feb  6 23:36:45 2023
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from DB5EUR01HT225.eop-EUR01.prod.protection.outlook.com
+ (2603:1096:202:2::27) by HK0PR02MB3540.apcprd02.prod.outlook.com with HTTPS
+ via HK2PR0401CA0017.APCPRD04.PROD.OUTLOOK.COM; Mon, 10 Jun 2019 01:19:32
+ +0000
+Received: from DB5EUR01FT018.eop-EUR01.prod.protection.outlook.com
+ (10.152.4.59) by DB5EUR01HT225.eop-EUR01.prod.protection.outlook.com
+ (10.152.5.32) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1965.12; Mon, 10 Jun
+ 2019 01:19:30 +0000
+Authentication-Results: spf=pass (sender IP is 66.220.155.154)
+ smtp.mailfrom=facebookmail.com; hotmail.com; dkim=pass (signature was
+ verified) header.d=facebookmail.com;hotmail.com; dmarc=pass action=none
+ header.from=facebookmail.com;
+Received-SPF: Pass (protection.outlook.com: domain of facebookmail.com
+ designates 66.220.155.154 as permitted sender)
+ receiver=protection.outlook.com; client-ip=66.220.155.154;
+ helo=mx-out.facebook.com;
+Received: from mx-out.facebook.com (66.220.155.154) by
+ DB5EUR01FT018.mail.protection.outlook.com (10.152.4.251) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.1965.12 via Frontend Transport; Mon, 10 Jun 2019 01:19:30 +0000
+X-IncomingTopHeaderMarker: OriginalChecksum:5C358D97AD86192E1B727EE7FDA8D7981325ED40F5619764A11045C70A2B9A04;UpperCasedChecksum:32BEC29B8E71C4AFEB8C0184AE2F35A4C5F09E3D19D1BD00F70888844C05E84F;SizeAsReceived:1807;Count:20
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=facebookmail.com;
+	s=s1024-2013-q3; t=1560129569;
+	bh=yNeS8QYBJ7XS5CH5Rt92pFJMo/UR62fxsm5PvgGJTtY=;
+	h=Date:To:Subject:From:MIME-Version:Content-Type;
+	b=ettwtNyIk7RyzeeTynDRMDpBOgNmdZJJ8EtytgXwwYSSOnuNRJkW1OvbhxKvEdnbg
+	 sTMB8AYGN0CdqBbN1ykwBsAjZLKUGKryXEtHyy9QhoXB4P0q4VQqGKmYVWD/ypuVAu
+	 JvjV8znGxMm/3CVuUh/w1b4aIUi0Y7A+xPstIt3U=
+Received: from facebook.com (Pz5W+xGdkPKLe4BGguEhnvemls3HPhRt3DXi2SNJl0kFCbGTcmPcewGjdfUWUj6F 2401:db00:2120:8195:face:0000:0031:0000)
+ by facebook.com with Thrift id cba65ea08b1d11e9893fec0d9abf7726-1c93a6f0;
+ Sun, 09 Jun 2019 18:19:29 -0700
+X-Facebook: from 2401:db00:2120:303d:face:0:30:0 ([MTI3LjAuMC4x]) 
+	by www.facebook.com with HTTPS (ZuckMail);
+Date: Sun, 9 Jun 2019 18:19:29 -0700
+To: Chetan Singh Shekhawat <chetansingh2341@hotmail.com>
+Subject: =?UTF-8?B?8J+OgiBDaGV0YW4gQmFpcndh?=
+ =?UTF-8?B?LCBIaXRlc2ggUmFvIGFu?=
+ =?UTF-8?B?ZCBZYXNoIEdhcmcgaGF2?=
+ =?UTF-8?B?ZSB0aGVpciBiaXJ0aGRh?=
+ =?UTF-8?B?eXMgdG9kYXk=?=
+X-Mailer: ZuckMail [version 1.00]
+Return-Path: notification@facebookmail.com
+From: "Facebook" <notification@facebookmail.com>
+Reply-To: noreply <noreply@facebookmail.com>
+Errors-To: notification@facebookmail.com
+X-Facebook-Notify: birthday_reminder; mailid=58aedaf361258G5af3f0281afbG58aedf8cc152aG1a
+List-Unsubscribe: <https://www.facebook.com/o.php?k=AS1HmoPF4hkaiNpp&u=100003752712955&mid=58aedaf361258G5af3f0281afbG58aedf8cc152aG1a>
+Feedback-ID: 0:birthday_reminder:Facebook
+X-FACEBOOK-PRIORITY: 0
+X-Auto-Response-Suppress: All
+Message-ID: <a7372be7911835367cc3bf2d4ebcfb4a@3e723b591bdb95ce8f5c9b7032dc572ca97351d0da5efc73459c1fbaf438e43b>
+Content-Type: multipart/alternative;
+	boundary="b1_a7372be7911835367cc3bf2d4ebcfb4a"
+X-IncomingHeaderCount: 20
+X-MS-Exchange-Organization-ExpirationStartTime: 10 Jun 2019 01:19:30.2951
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: cc3a0486-754c-4c30-8595-08d6ed41b01e
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-Forefront-Antispam-Report: EFV:NLI;
+X-MS-Exchange-Organization-AuthSource:
+ DB5EUR01FT018.eop-EUR01.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-PublicTrafficType: Email
+X-MS-UserLastLogonTime: 6/9/2019 3:06:05 AM
+X-MS-Office365-Filtering-Correlation-Id: cc3a0486-754c-4c30-8595-08d6ed41b01e
+X-Microsoft-Antispam:
+ BCL:1;PCL:0;RULEID:(2390118)(5000113)(711020)(4605104)(610169)(650170)(651021)(8291501072);SRVR:DB5EUR01HT225;
+X-MS-TrafficTypeDiagnostic: DB5EUR01HT225:
+X-MS-Exchange-PUrlCount: 7
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 66.220.155.154
+X-SID-PRA: NOTIFICATION@FACEBOOKMAIL.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 10 Jun 2019 01:19:30.0119
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: cc3a0486-754c-4c30-8595-08d6ed41b01e
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DB5EUR01HT225
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.7600575
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.1965.000
+X-Microsoft-Antispam-Mailbox-Delivery:
+	abwl:0;wl:0;pcwl:0;kl:0;iwl:0;ijl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000261)(5061607266)(5061608174)(4900115)(4920090)(6250004)(4950130)(4990090);
+X-Message-Info:
+	5vMbyqxGkdfvxzlDHjKHkYHpjPtKNHhaO/ZB4GeQJrGGQi/8yIh86A7XfhXSGbTp0xYno7fZ2ZdCDlE+Mjcvw6S9IFIf5YhcZt7N9Nz6tg9SCGu14DTZn/mugWF5kW82eUdG4B6GT4U+mqAffW7YwPCe9mKBTPSrkHPXbgl2tzdrVFDr4kl3tlCNjJuGKGBHUYsNU1owADvhs7pZ0siiug==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MDtHRD0wO1NDTD0tMQ==
+X-Microsoft-Antispam-Message-Info:
+	r0jiqysmZ6gaSzH7FTIZ4TJyT+ufGnfRwppaJek25teMRmxVOXJS/0yAbfjTkxC61oTvNnBVkhfAm/WuuW7mg4GmUjIXY0NtaoGeyKxMEctfBaeOx1/e5iYBpwVgROOsXvPhAabGOXfmzC8+1dU/LGONN2oZUwocZLoOtSCzZMwxQYasLA8Ngg2RM1T8qOb5Brh7rpCxxrjnnjpJU84LKiMLg1p5/Q0rDQU8PoH6AiH6tx3Vwl892NFyXvkqaDV+yBUfKjQVEk1yfLJ+ewIpS3WE2NfRh6sf+igALFsTnQKIBl/KHqKkKEKd8Ue0oO3xmXp6xd0mbdNaEGeq7nSMlnvQB9TJCrh4r7GW76+5aR1LbN/eqUyatL4XknpKoXpAvPsyc0Hj3+flB134RW15SR0I7oQwMV8vz8zAg7rMANBaGu+IW6xgL1xD9cBiuvhag/iWhvki4hlnF8jBegK5azbDXmCdxZ/6aKqKRYwhDm98ZGwlqayuHUQYzZgZo3jVYMQfyxYhG2b1husJFSYTiVPIIu1WO9Sj2ckc9Dd0mL28+AWXfV0dGCJvIj9iu8wdyWQb4CVK2zl1sFv7/RpWlWTxhV2XgmfQhM2MZgE9DSr38sBUhW/2FTpfQnExgdIa5/baZvhT6xyb46eCSPGLQ2w9LAaGaiS88uBo5DQ48mCFYQbUf0DyCVa3gp0by7VA31ct51v+D8SPDoMfgHkpriPJI+WAY7kYWe20W9vtovwKjJ84jQR5Dc9Gr8ARfGUbjWvXCjtmZEYxWf5V6ikpUcvfqS6e2xDo3REcDrXh1Thj+ekTMPeNdl7znpd5z65K
+MIME-Version: 1.0
+
+--b1_a7372be7911835367cc3bf2d4ebcfb4a
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Plan an Event
+https://www.facebook.com/n/?events%2F&aref=3D1560129569559850&medium=3Dema=
+il&mid=3D58aedaf361258G5af3f0281afbG58aedf8cc152aG1a&bcode=3D2.1560129569.=
+AbxFCuUxFeX6M1DIKsg&n_m=3Dchetansingh2341%40hotmail.com&lloc=3Dplan_event
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+Hi Chetan,
+
+Help Chetan Bairwa, Hitesh Rao and Yash Garg celebrate their birthdays
+
+=C2=A0=C2=A0=C2=A0Chetan Bairwa=C2=A0Write on his timeline
+
+=C2=A0=C2=A0=C2=A0Hitesh Rao=C2=A0Write on his timeline
+
+=C2=A0=C2=A0=C2=A0Yash Garg=C2=A0Write on his timeline
+
+Thanks,
+The Facebook Team
+
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+This message was sent to chetansingh2341@hotmail.com. If you don't want to =
+receive these emails from Facebook in the future, please follow the link =
+below to unsubscribe.
+https://www.facebook.com/o.php?k=3DAS1HmoPF4hkaiNpp&u=3D100003752712955&mi=
+d=3D58aedaf361258G5af3f0281afbG58aedf8cc152aG1a
+Facebook, Inc., Attention: Community Support, 1 Facebook Way, Menlo Park, =
+CA 94025
+To help keep your account secure, please don't forward this email. Follow =
+the link below to learn more.
+https://www.facebook.com/email_forward_notice/?mid=3D58aedaf361258G5af3f02=
+81afbG58aedf8cc152aG1a
+
+
+--b1_a7372be7911835367cc3bf2d4ebcfb4a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional //EN"><html><head=
+>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle>Facebook</title><style>@media all and (max-width: 480px){*[class].ib_t=
+{min-width:100% !important}*[class].ib_row{display:block !important}*[class=
+].ib_ext{display:block !important;padding:10px 0 5px 0;vertical-align:top !=
+important;width:100% !important}*[class].ib_img,*[class].ib_mid{vertical-al=
+ign:top !important}*[class].mb_blk{display:block !important;padding-bottom:=
+10px;width:100% !important}*[class].mb_hide{display:none !important}*[class=
+].mb_inl{display:inline !important}*[class].d_mb_flex{display:block !import=
+ant}}.d_mb_show{display:none}.d_mb_show_center{display:table;margin:auto}.d=
+_mb_flex{display:flex}@media only screen and (max-device-width: 480px){.d_m=
+b_hide{display:none !important}.d_mb_show{display:block !important}.d_mb_fl=
+ex{display:block !important}}.mb_text h1,.mb_text h2,.mb_text h3,.mb_text h=
+4,.mb_text h5,.mb_text h6{line-height:normal}.mb_work_text h1{font-size:18p=
+x;line-height:normal;margin-top:4px}.mb_work_text h2,.mb_work_text h3{font-=
+size:16px;line-height:normal;margin-top:4px}.mb_work_text h4,.mb_work_text =
+h5,.mb_work_text h6{font-size:14px;line-height:normal}.mb_work_text a{color=
+:#1270e9}.mb_work_text p{margin-top:4px}</style></head><table border=3D"0" =
+width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse=
+:collapse;"><tr><td width=3D"100%" align=3D"center" style=3D""><table borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"borde=
+r-collapse:collapse;"><tr><td width=3D"840" align=3D"center" style=3D""><bo=
+dy style=3D"max-width:420px;margin:0 auto;" dir=3D"ltr" bgcolor=3D"#ffffff"=
+><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" i=
+d=3D"email_table" style=3D"border-collapse:collapse;max-width:420px;margin:=
+0 auto;"><tr><td id=3D"email_content" style=3D"font-family:Helvetica Neue,H=
+elvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;background:#ffffff;"=
+><table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" sty=
+le=3D"border-collapse:collapse;"><tr style=3D""><td height=3D"20" style=3D"=
+line-height:20px;" colspan=3D"3">&nbsp;</td></tr><tr><td height=3D"1" colsp=
+an=3D"3" style=3D"line-height:1px;"><span style=3D"color:#FFFFFF;font-size:=
+1px;">&nbsp; Help Chetan Bairwa, Hitesh Rao and Yash Garg celebrate their b=
+irthdays &nbsp; Monday, 10 June 2019 &nbsp; &nbsp;&nbsp;&nbsp; Chetan Bairw=
+a &nbsp; Write on his timeline &nbsp;&nbsp;&nbsp; Hitesh Rao &nbsp; Write o=
+n his timeline &nbsp;&nbsp;&nbsp; Yash Garg &nbsp; Write on his timeline &n=
+bsp; &nbsp;</span></td></tr><tr><td width=3D"15" style=3D"display:block;wid=
+th:15px;">&nbsp;&nbsp;&nbsp;</td><td style=3D""><table border=3D"0" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:coll=
+apse;"><tr style=3D""><td height=3D"15" style=3D"line-height:15px;" colspan=
+=3D"3">&nbsp;</td></tr><tr><td width=3D"32" align=3D"left" valign=3D"middle=
+" style=3D"height:32;line-height:0px;"><a href=3D"https://www.facebook.com/=
+n/?profile.php&amp;id=3D100003752712955&amp;ref=3Dbrem&amp;aref=3D156012956=
+9559850&amp;medium=3Demail&amp;mid=3D58aedaf361258G5af3f0281afbG58aedf8cc15=
+2aG1a&amp;bcode=3D2.1560129569.AbxFCuUxFeX6M1DIKsg&amp;n_m=3Dchetansingh234=
+1%40hotmail.com&amp;lloc=3Dheader" style=3D"color:#3b5998;text-decoration:n=
+one;"><img src=3D"https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/nblMrq1jYuK.=
+png" width=3D"32" height=3D"32" style=3D"border:0;"></a></td><td width=3D"1=
+5" style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td width=3D"=
+100%" style=3D""><a href=3D"https://www.facebook.com/n/?profile.php&amp;id=
+=3D100003752712955&amp;ref=3Dbrem&amp;aref=3D1560129569559850&amp;medium=3D=
+email&amp;mid=3D58aedaf361258G5af3f0281afbG58aedf8cc152aG1a&amp;bcode=3D2.1=
+560129569.AbxFCuUxFeX6M1DIKsg&amp;n_m=3Dchetansingh2341%40hotmail.com&amp;l=
+loc=3Dheader" style=3D"color:#3b5998;text-decoration:none;font-family:Helve=
+tica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size=
+:19px;line-height:32px;">Facebook</a></td></tr><tr style=3D"border-bottom:s=
+olid 1px #e5e5e5;"><td height=3D"15" style=3D"line-height:15px;" colspan=3D=
+"3">&nbsp;</td></tr></table></td><td width=3D"15" style=3D"display:block;wi=
+dth:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr><td width=3D"15" style=3D"displa=
+y:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td style=3D""><table border=3D=
+"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-coll=
+apse:collapse;"><tr style=3D""><td height=3D"15" style=3D"line-height:15px;=
+">&nbsp;</td></tr><tr><td style=3D""><span class=3D"mb_text" style=3D"font-=
+family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-ser=
+if;font-size:18px;color:#1C1E21;">Help Chetan Bairwa, Hitesh Rao and Yash G=
+arg celebrate their birthdays</span></td></tr><tr style=3D""><td height=3D"=
+10" style=3D"line-height:10px;">&nbsp;</td></tr><tr><td style=3D""><table b=
+order=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"bor=
+der-collapse:collapse;"><tr><td style=3D"font-size:11px;font-family:LucidaG=
+rande,tahoma,verdana,arial,sans-serif;background:#FFFFFF;display:block;"><t=
+able border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"border-collapse:collapse;"><tr><td style=3D"font-family:Helvetica Neue,=
+Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-weight:500;pad=
+ding:0;color:#606770;border-radius:4px;text-align:left;display:inline-block=
+;width:100%;font-size:12px;">Monday, 10 June 2019</td></tr><tr style=3D""><=
+td height=3D"10" style=3D"line-height:10px;">&nbsp;</td></tr><tr><td><table=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:=
+collapse;border-top:solid 1px #E5E5E5;border-bottom:solid 1px #E5E5E5;width=
+:100%;"><tr><td style=3D"font-size:11px;font-family:LucidaGrande,tahoma,ver=
+dana,arial,sans-serif;border-top:solid 1px #E5E5E5;border-bottom:solid 1px =
+#E5E5E5padding-bottom;"><tr><td style=3D""><table border=3D"0" width=3D"100=
+%" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collapse;">=
+<tr><td style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,ari=
+al,sans-serif;background:#FFFFFF;padding:15px 15px 15px 15px;display:block;=
+"><table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" st=
+yle=3D"border-collapse:collapse;"><tr><td valign=3D"top" style=3D""><a href=
+=3D"https://www.facebook.com/n/?chetan.bairwa.79025&amp;composeropen=3D1&am=
+p;aref=3D1560129569559850&amp;medium=3Demail&amp;mid=3D58aedaf361258G5af3f0=
+281afbG58aedf8cc152aG1a&amp;bcode=3D2.1560129569.AbxFCuUxFeX6M1DIKsg&amp;n_=
+m=3Dchetansingh2341%40hotmail.com&amp;lloc=3Drow" style=3D"color:#3b5998;te=
+xt-decoration:none;"><img src=3D"https://scontent.xx.fbcdn.net/v/t1.0-1/p10=
+0x100/61803769_239945096964700_7556832143691743232_n.jpg?_nc_cat=3D111&amp;=
+_nc_ad=3Dz-m&amp;_nc_cid=3D0&amp;_nc_zor=3D9&amp;_nc_ht=3Dscontent.xx&amp;o=
+h=3D5b02afeba07e7ee5be088f15da6372b3&amp;oe=3D5D9BE507" width=3D"64" height=
+=3D"64" style=3D"border:solid 1px rgba(0,0,0,0.15);border-radius:50%;"></a>=
+</td><td width=3D"12" style=3D"display:block;width:12px;">&nbsp;&nbsp;&nbsp=
+;</td><td width=3D"100%" style=3D""><table border=3D"0" width=3D"100%" cell=
+spacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td=
+ align=3D"left" colspan=3D"2" style=3D""><span class=3D"mb_text" style=3D"f=
+ont-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans=
+-serif;font-weight:bold;font-size:16px;color:#1C1E21;">Chetan Bairwa</span>=
+</td></tr><tr style=3D""><td height=3D"10" style=3D"line-height:10px;">&nbs=
+p;</td></tr><tr><td height=3D"36" align=3D"center" style=3D""><a href=3D"ht=
+tps://www.facebook.com/n/?chetan.bairwa.79025&amp;composeropen=3D1&amp;aref=
+=3D1560129569559850&amp;medium=3Demail&amp;mid=3D58aedaf361258G5af3f0281afb=
+G58aedf8cc152aG1a&amp;bcode=3D2.1560129569.AbxFCuUxFeX6M1DIKsg&amp;n_m=3Dch=
+etansingh2341%40hotmail.com&amp;lloc=3Drow" style=3D"color:#3b5998;text-dec=
+oration:none;display:block;width:100%;"><span style=3D"border-radius:6px;pa=
+dding:11px 0px 11px 0px;text-align:center;font-family:Helvetica Neue,Helvet=
+ica,Lucida Grande,tahoma,verdana,arial,sans-serif;display:inline-block;colo=
+r:#FFFFFF;background-color:#3578E5;font-weight:500;width:100%;font-size:13p=
+x;">Write on his timeline</span></a></td></tr></table></td></tr></table></t=
+d></tr></table></td></tr></td></tr><tr><td style=3D"font-size:11px;font-fam=
+ily:LucidaGrande,tahoma,verdana,arial,sans-serif;border-top:solid 1px #E5E5=
+E5;border-bottom:solid 1px #E5E5E5padding-top;padding-bottom:0px;"><tr><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"border-collapse:collapse;"><tr><td style=3D"font-size:11px;=
+font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;background:#FFFFFF=
+;padding:15px 15px 15px 15px;display:block;"><table border=3D"0" width=3D"1=
+00%" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collapse;=
+"><tr><td valign=3D"top" style=3D""><a href=3D"https://www.facebook.com/n/?=
+hitesh.rao.10485546&amp;composeropen=3D1&amp;aref=3D1560129569559850&amp;me=
+dium=3Demail&amp;mid=3D58aedaf361258G5af3f0281afbG58aedf8cc152aG1a&amp;bcod=
+e=3D2.1560129569.AbxFCuUxFeX6M1DIKsg&amp;n_m=3Dchetansingh2341%40hotmail.co=
+m&amp;lloc=3Drow" style=3D"color:#3b5998;text-decoration:none;"><img src=3D=
+"https://scontent.xx.fbcdn.net/v/t1.0-1/c33.0.100.100a/p100x100/35701517_20=
+3669243798372_5585362916976099328_n.jpg?_nc_cat=3D107&amp;_nc_ad=3Dz-m&amp;=
+_nc_cid=3D0&amp;_nc_zor=3D9&amp;_nc_ht=3Dscontent.xx&amp;oh=3D19427dd5fdbcf=
+c3f3ae13a07786e2e0c&amp;oe=3D5D7C3F58" width=3D"64" height=3D"64" style=3D"=
+border:solid 1px rgba(0,0,0,0.15);border-radius:50%;"></a></td><td width=3D=
+"12" style=3D"display:block;width:12px;">&nbsp;&nbsp;&nbsp;</td><td width=
+=3D"100%" style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" c=
+ellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td align=3D"left"=
+ colspan=3D"2" style=3D""><span class=3D"mb_text" style=3D"font-family:Helv=
+etica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-wei=
+ght:bold;font-size:16px;color:#1C1E21;">Hitesh Rao</span></td></tr><tr styl=
+e=3D""><td height=3D"10" style=3D"line-height:10px;">&nbsp;</td></tr><tr><t=
+d height=3D"36" align=3D"center" style=3D""><a href=3D"https://www.facebook=
+.com/n/?hitesh.rao.10485546&amp;composeropen=3D1&amp;aref=3D156012956955985=
+0&amp;medium=3Demail&amp;mid=3D58aedaf361258G5af3f0281afbG58aedf8cc152aG1a&=
+amp;bcode=3D2.1560129569.AbxFCuUxFeX6M1DIKsg&amp;n_m=3Dchetansingh2341%40ho=
+tmail.com&amp;lloc=3Drow" style=3D"color:#3b5998;text-decoration:none;displ=
+ay:block;width:100%;"><span style=3D"border-radius:6px;padding:11px 0px 11p=
+x 0px;text-align:center;font-family:Helvetica Neue,Helvetica,Lucida Grande,=
+tahoma,verdana,arial,sans-serif;display:inline-block;color:#FFFFFF;backgrou=
+nd-color:#3578E5;font-weight:500;width:100%;font-size:13px;">Write on his t=
+imeline</span></a></td></tr></table></td></tr></table></td></tr></table></t=
+d></tr></td></tr><tr><td style=3D"font-size:11px;font-family:LucidaGrande,t=
+ahoma,verdana,arial,sans-serif;border-top:solid 1px #E5E5E5;border-bottom:s=
+olid 1px #E5E5E5padding-top;"><tr><td style=3D""><table border=3D"0" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:coll=
+apse;"><tr><td style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verd=
+ana,arial,sans-serif;background:#FFFFFF;padding:15px 15px 15px 15px;display=
+:block;"><table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"border-collapse:collapse;"><tr><td valign=3D"top" style=3D"=
+"><a href=3D"https://www.facebook.com/n/?profile.php&amp;id=3D1000070936216=
+92&amp;composeropen=3D1&amp;aref=3D1560129569559850&amp;medium=3Demail&amp;=
+mid=3D58aedaf361258G5af3f0281afbG58aedf8cc152aG1a&amp;bcode=3D2.1560129569.=
+AbxFCuUxFeX6M1DIKsg&amp;n_m=3Dchetansingh2341%40hotmail.com&amp;lloc=3Drow"=
+ style=3D"color:#3b5998;text-decoration:none;"><img src=3D"https://scontent=
+.xx.fbcdn.net/v/t1.0-1/c1.0.100.100a/p100x100/54728679_2350574328522332_639=
+1457308395700224_n.jpg?_nc_cat=3D100&amp;_nc_ad=3Dz-m&amp;_nc_cid=3D0&amp;_=
+nc_zor=3D9&amp;_nc_ht=3Dscontent.xx&amp;oh=3D8f239b4278ecbc39c001d2eebc421b=
+86&amp;oe=3D5D96D06D" width=3D"64" height=3D"64" style=3D"border:solid 1px =
+rgba(0,0,0,0.15);border-radius:50%;"></a></td><td width=3D"12" style=3D"dis=
+play:block;width:12px;">&nbsp;&nbsp;&nbsp;</td><td width=3D"100%" style=3D"=
+"><table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" st=
+yle=3D"border-collapse:collapse;"><tr><td align=3D"left" colspan=3D"2" styl=
+e=3D""><span class=3D"mb_text" style=3D"font-family:Helvetica Neue,Helvetic=
+a,Lucida Grande,tahoma,verdana,arial,sans-serif;font-weight:bold;font-size:=
+16px;color:#1C1E21;">Yash Garg</span></td></tr><tr style=3D""><td height=3D=
+"10" style=3D"line-height:10px;">&nbsp;</td></tr><tr><td height=3D"36" alig=
+n=3D"center" style=3D""><a href=3D"https://www.facebook.com/n/?profile.php&=
+amp;id=3D100007093621692&amp;composeropen=3D1&amp;aref=3D1560129569559850&a=
+mp;medium=3Demail&amp;mid=3D58aedaf361258G5af3f0281afbG58aedf8cc152aG1a&amp=
+;bcode=3D2.1560129569.AbxFCuUxFeX6M1DIKsg&amp;n_m=3Dchetansingh2341%40hotma=
+il.com&amp;lloc=3Drow" style=3D"color:#3b5998;text-decoration:none;display:=
+block;width:100%;"><span style=3D"border-radius:6px;padding:11px 0px 11px 0=
+px;text-align:center;font-family:Helvetica Neue,Helvetica,Lucida Grande,tah=
+oma,verdana,arial,sans-serif;display:inline-block;color:#FFFFFF;background-=
+color:#3578E5;font-weight:500;width:100%;font-size:13px;">Write on his time=
+line</span></a></td></tr></table></td></tr></table></td></tr></table></td><=
+/tr></td></tr></table></td></tr><tr style=3D""><td height=3D"10" style=3D"l=
+ine-height:10px;">&nbsp;</td></tr></table></td></tr></table></td></tr><tr s=
+tyle=3D""><td height=3D"10" style=3D"line-height:10px;">&nbsp;</td></tr></t=
+able></td><td width=3D"15" style=3D"display:block;width:15px;">&nbsp;&nbsp;=
+&nbsp;</td></tr><tr><td width=3D"15" style=3D"display:block;width:15px;">&n=
+bsp;&nbsp;&nbsp;</td><td style=3D""><table border=3D"0" width=3D"100%" cell=
+spacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr sty=
+le=3D""><td height=3D"0" style=3D"line-height:0px;" colspan=3D"3">&nbsp;</t=
+d></tr><tr><tr><td height=3D"40" align=3D"middle" style=3D""><a href=3D"htt=
+ps://www.facebook.com/n/?events%2F&amp;aref=3D1560129569559850&amp;medium=
+=3Demail&amp;mid=3D58aedaf361258G5af3f0281afbG58aedf8cc152aG1a&amp;bcode=3D=
+2.1560129569.AbxFCuUxFeX6M1DIKsg&amp;n_m=3Dchetansingh2341%40hotmail.com&am=
+p;lloc=3Dplan_event" style=3D"color:#3b5998;text-decoration:none;"><table b=
+order=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"bor=
+der-collapse:collapse;"><tr><td style=3D"border-collapse:collapse;border-ra=
+dius:4px;text-align:center;display:block;font-family:Helvetica Neue,Helveti=
+ca,Lucida Grande,tahoma,verdana,arial,sans-serif;background:#EBEDF0;padding=
+:10px 20px 12px 20px;"><a href=3D"https://www.facebook.com/n/?events%2F&amp=
+;aref=3D1560129569559850&amp;medium=3Demail&amp;mid=3D58aedaf361258G5af3f02=
+81afbG58aedf8cc152aG1a&amp;bcode=3D2.1560129569.AbxFCuUxFeX6M1DIKsg&amp;n_m=
+=3Dchetansingh2341%40hotmail.com&amp;lloc=3Dplan_event" style=3D"color:#3b5=
+998;text-decoration:none;display:block;"><center><font size=3D"3"><span sty=
+le=3D"font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,ari=
+al,sans-serif;white-space:nowrap;font-weight:bold;vertical-align:middle;col=
+or:#333639;font-size:13px;line-height:13px;font-weight:500;">Plan&nbsp;an&n=
+bsp;Event</span></font></center></a></td></tr></table></a></td></tr><tr sty=
+le=3D""><td height=3D"10" style=3D"line-height:10px;" colspan=3D"3">&nbsp;<=
+/td></tr></tr><tr style=3D""><td height=3D"32" style=3D"line-height:32px;" =
+colspan=3D"3">&nbsp;</td></tr></table></td><td width=3D"15" style=3D"displa=
+y:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr><td width=3D"15" style=
+=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td style=3D""><table=
+ border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" align=3D"l=
+eft" style=3D"border-collapse:collapse;"><tr style=3D"border-top:solid 1px =
+#e5e5e5;"><td height=3D"19" style=3D"line-height:19px;">&nbsp;</td></tr><tr=
+><td style=3D"font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,ver=
+dana,arial,sans-serif;font-size:11px;color:#aaaaaa;line-height:16px;">This =
+message was sent to <a href=3D"mailto:chetansingh2341@hotmail.com" style=3D=
+"color:#3b5998;text-decoration:none;">chetansingh2341@hotmail.com</a>. If y=
+ou don't want to receive these emails from Facebook in the future, please <=
+a href=3D"https://www.facebook.com/o.php?k=3DAS1HmoPF4hkaiNpp&amp;u=3D10000=
+3752712955&amp;mid=3D58aedaf361258G5af3f0281afbG58aedf8cc152aG1a" style=3D"=
+color:#3b5998;text-decoration:none;">unsubscribe</a>.<br>Facebook, Inc., At=
+tention: Community Support, 1 Facebook Way, Menlo Park, CA 94025</td></tr><=
+/table></td><td width=3D"15" style=3D"display:block;width:15px;">&nbsp;&nbs=
+p;&nbsp;</td></tr><tr><td width=3D"15" style=3D"display:block;width:15px;">=
+&nbsp;&nbsp;&nbsp;</td><td style=3D""><table border=3D"0" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><=
+td style=3D"font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verda=
+na,arial,sans-serif;font-size:11px;color:#aaaaaa;line-height:16px;"><span s=
+tyle=3D"font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,a=
+rial,sans-serif;font-size:11px;color:#aaaaaa;line-height:16px;">To help kee=
+p your account secure, please don't forward this email. <a href=3D"https://=
+www.facebook.com/email_forward_notice/?mid=3D58aedaf361258G5af3f0281afbG58a=
+edf8cc152aG1a" style=3D"color:#3b5998;text-decoration:none;">Learn more.</a=
+></span></td></tr></table></td><td width=3D"15" style=3D"display:block;widt=
+h:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr style=3D""><td height=3D"20" style=
+=3D"line-height:20px;" colspan=3D"3">&nbsp;</td></tr></table><span style=3D=
+""><img src=3D"https://www.facebook.com/email_open_log_pic.php?mid=3D58aeda=
+f361258G5af3f0281afbG58aedf8cc152aG1a" style=3D"border:0;width:1px;height:1=
+px;"></span></td></tr></table></body></td></tr></table></td></tr></table></=
+html>
+
+
+
+--b1_a7372be7911835367cc3bf2d4ebcfb4a--
+From - Mon Feb  6 23:36:45 2023
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from PUZPR06MB4632.apcprd06.prod.outlook.com (2603:1096:301:b3::5)
+ by SG2PR06MB3338.apcprd06.prod.outlook.com with HTTPS; Tue, 12 Jul 2022
+ 15:13:33 +0000
+Received: from AM6P195CA0066.EURP195.PROD.OUTLOOK.COM (2603:10a6:209:87::43)
+ by PUZPR06MB4632.apcprd06.prod.outlook.com (2603:1096:301:b3::5) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5417.20; Tue, 12 Jul
+ 2022 15:13:31 +0000
+Received: from AM7EUR06FT043.eop-eur06.prod.protection.outlook.com
+ (2603:10a6:209:87:cafe::8d) by AM6P195CA0066.outlook.office365.com
+ (2603:10a6:209:87::43) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.5417.20 via Frontend
+ Transport; Tue, 12 Jul 2022 15:13:29 +0000
+Authentication-Results: spf=pass (sender IP is 149.72.20.204)
+ smtp.mailfrom=em5702.e.udemymail.com; dkim=pass (signature was verified)
+ header.d=e.udemymail.com;dmarc=bestguesspass action=none
+ header.from=e.udemymail.com;compauth=pass reason=109
+Received-SPF: Pass (protection.outlook.com: domain of em5702.e.udemymail.com
+ designates 149.72.20.204 as permitted sender)
+ receiver=protection.outlook.com; client-ip=149.72.20.204;
+ helo=o5.e.udemymail.com; pr=C
+Received: from o5.e.udemymail.com (149.72.20.204) by
+ AM7EUR06FT043.mail.protection.outlook.com (10.233.254.89) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.5417.15 via Frontend Transport; Tue, 12 Jul 2022 15:13:29 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:5C43FC73C273ED478007F24540C2E94050C3A089071A0DE95DACD592C3E54346;UpperCasedChecksum:CD0BD2984450D45713E8E53B4696F5FEB8E580937B6483AD87599E1CE6FB2442;SizeAsReceived:2180;Count:15
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=e.udemymail.com;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:to;
+	s=s1; bh=3IJ1pRruC4vadUlf6ZWD8FBBX+R2ELWlv7D/nxsqsjE=;
+	b=mAdeUBIxk1H9MxLZCz4Kd/GpuSnfEdGBCcKYhQOFcoWmOcReBeMbkDd70P2x8C6y3oK3
+	jUkg39PrttA+o8sxRx48ZjEPa1ehyd31dCM4MBFl/r9Hfng06DP/DJipN5r51tV2Wo12Wz
+	KabkdyDca8KF5ii/RwJUgFEx5mHzfKDfuJvkGMccyyk0a2l3Su27cURo/S3cV+3WoVjrQx
+	4tsc7mqVySBddKFkIKxlt5x49nEiRgpvK1bXbWRjoI5Kn5AZ+3Ue6mjmftiymvO5b/c42k
+	8+hwBZ64QoW+7tN9AmLZHx+2jUSl8CKywqTiX+VrLwC5C7POytX3PnwDiSihUYmw==
+Received: by filterdrecv-7864f684f-5jm4d with SMTP id filterdrecv-7864f684f-5jm4d-1-62CD8F97-D7
+        2022-07-12 15:13:27.449549786 +0000 UTC m=+2929724.969938304
+Received: from NzM1NA (unknown)
+	by geopod-ismtpd-6-2 (SG) with HTTP
+	id -m5is76AQHWav-ISa5dkQQ
+	Tue, 12 Jul 2022 15:13:27.414 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Tue, 12 Jul 2022 15:13:27 +0000 (UTC)
+From: "Udemy Instructor: Andrei Neagoie" <no-reply@e.udemymail.com>
+Message-ID: <-m5is76AQHWav-ISa5dkQQ@geopod-ismtpd-6-2>
+Subject: NEW COURSE!
+mail_type: new-course-promotion
+X-SG-EID:
+ =?us-ascii?Q?WpDZB=2F9tNcUNffiUzh3F7doOa2MU=2FiwbwjKsQQ7y3rsnQeWI6d9RtZfLBAPBIA?=
+ =?us-ascii?Q?wO0O0NRvRlho8YVkilXqahs+KGAeWySmITWTwZB?=
+ =?us-ascii?Q?cDf9GfoY7tHT+Zg1g+WmyOZBXb2e3dxAqOgXUof?=
+ =?us-ascii?Q?kCBgOt70kt1mKJqvN=2FM4YibgfvE0lTawarAbJq0?=
+ =?us-ascii?Q?MB9VIRmf=2F7J=2FpML0tJ3zLemme15HTOIRva84iSt?=
+ =?us-ascii?Q?imglpSvGIkTNEqIUkgMQjpjz7t+kuFElgKHj5mT?=
+ =?us-ascii?Q?AMyusDwGpQrSZYxZuktTh89qfiP9zX5gKrTIA0T?= =?us-ascii?Q?YVQ=3D?=
+X-SG-ID:
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsbyyzsFY3VfavMyXI4tum16QID1=2FgFRTB+6KZteS30j?=
+ =?us-ascii?Q?4=2FCGxxr9Dj9azbJV74c0KR1kZaJnv2NtGRX25+f?=
+ =?us-ascii?Q?A8G3g1I9=2F+AWDLDgXgpPK931l=2FHtgMBvf2mkO8M?=
+ =?us-ascii?Q?Hz1JCaowkeVD=2F3l9TK+ez+AHSYjIda6LxFrdFW7?=
+ =?us-ascii?Q?bzb693pFzqh8Eo+NpYsY6BKyRJHhVrMKNYdAPki?=
+ =?us-ascii?Q?CL4zPLyfds99J6hAUredwx8y0hyGLsDXYdu=2FgmR?=
+ =?us-ascii?Q?TwEDpS+KAUvhxeI3npplQ=3D=3D?=
+To: chetansingh2341@hotmail.com
+X-Entity-ID: 0uUmzHwfHa8Hfnoi4jOYfQ==
+X-IncomingHeaderCount: 15
+Return-Path:
+ bounces+7354-53ae-chetansingh2341=hotmail.com@em5702.e.udemymail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 12 Jul 2022 15:13:29.6270
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ def75906-2d81-4445-a170-08da641913d8
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-AuthSource:
+ AM7EUR06FT043.eop-eur06.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 7/12/2022 2:46:37 PM
+X-MS-Office365-Filtering-Correlation-Id: def75906-2d81-4445-a170-08da641913d8
+X-MS-TrafficTypeDiagnostic: PUZPR06MB4632:EE_
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 149.72.20.204
+X-SID-PRA: NO-REPLY@E.UDEMYMAIL.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-MS-Exchange-Organization-SCL: 2
+X-Microsoft-Antispam: BCL:1;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 12 Jul 2022 15:13:29.0489
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: def75906-2d81-4445-a170-08da641913d8
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ AM7EUR06FT043.eop-eur06.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PUZPR06MB4632
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.6389447
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.5417.026
+X-Microsoft-Antispam-Mailbox-Delivery:
+	abwl:0;wl:0;pcwl:0;kl:0;iwl:0;ijl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000285)(90000117)(90012020)(91020020)(91040095)(5061607266)(5061608174)(9050020)(9100338)(4810004)(4910013)(9910022)(9545005)(10170022)(9320005);
+X-Message-Info:
+	5vMbyqxGkdeq8LmROz4S0lrfsYwrsYsbY8mtjk989b4/q5+oP0dTYertbu4BZ/bLnTjTdSkIgQbaziq9hxQpPKE5FMr5Kvuvo121if55p1s971OxpOpz3NvC0xkSG9JAhaThoFJE8LLGVZtjmp8/6n/wYv7CdS7wZfBJW6Om4J3ze73J9tpFUtL39E8X9bKCU/gaCXkyDyT7dj8hXR6syw==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MTtHRD0xO1NDTD0tMQ==
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?E4+D8ZCgHYqH7rr+eYVZqfT70DASl3nL9hI6P9xhiurkENF1F7ciUs035AOu?=
+ =?us-ascii?Q?YO1ZoNcyHn3y//ggTHVn+WXkXksctYLsq2bZ5YkvtvJh+1HzZw/T9CqKxHPE?=
+ =?us-ascii?Q?S4HLV1HgVGn6Y8fYR9IOONHiggniXKEIkc2vSPEIZfFITQRaToPx8V7JH5UT?=
+ =?us-ascii?Q?PkFKhi5bxE8GCYXogK5NpVqzH8h++oySzCBHT5BnpmRaQ8weujsc05bmR9Ux?=
+ =?us-ascii?Q?eSxcGoqDoKNg0nRHpqFhNGD8AuvEQ0yyglbcgLyJZExkZdWjXeLVpkWa1zQd?=
+ =?us-ascii?Q?AwQM2KyImKGw+Jk4crC4DJMg7n+m1V+XmJv97D6wPbO6bALMckjQhTieDeQC?=
+ =?us-ascii?Q?270bARNS3VBJ4wu8qn1tl645tLtkbt5HLRVD2xi/LyMBhA8dU/QfbwUyzlJr?=
+ =?us-ascii?Q?f/USPug3jN2jt7fbXu78SvzogjmMasq+SLQJX90kmuevaj189DWecu854/kM?=
+ =?us-ascii?Q?Vuw/y8nbiAAypOzIHwpCDRFV27yqeocj01rd5drvRB3waX95/DZOUdpF/tNH?=
+ =?us-ascii?Q?2JlVLPtzY1rHIvIIES9l2RyVhj4iS4oTa7ta/CKo942bAUK8TYe/XDiUNz1t?=
+ =?us-ascii?Q?A6jod2Ta51dRpknnWrs/1T9AYdotVX0T4CZ+7+ZDUtSTCrZNKQwT1pxa+ys+?=
+ =?us-ascii?Q?cWuLY8gCjPbfdOeFN6uidrGxEDxyEYvl4BDRxUlVec5Si6apdQZWwZf6FjI9?=
+ =?us-ascii?Q?vSbgDJRdTzPF3d248Wj/v1WgZj+VufL4FRGCdg5aTRrKE6oyHivEH6rjM1s9?=
+ =?us-ascii?Q?XYJF13Ap64rBT0AihuSveY9gQ47wvj9yIxYeNtfWD7xv/KOOW1IFCatbkhVI?=
+ =?us-ascii?Q?2VPlKkM4Zq4YMC14UfiskekJYubx2bZQxHEqzRaD8liaz0A34r1/u4X95TpI?=
+ =?us-ascii?Q?ct8LTqCJeyNyErB7tGLTZ+1imMOtjJaGH80jwmBsrTE8+DG0/viqGb7gEFgE?=
+ =?us-ascii?Q?VXx4+fsu+JArWoE0Fg6vb9osIIMxpoS8WpAPni8r87i15EmghZhoXFpnnS69?=
+ =?us-ascii?Q?q95eyyyzC8Kj46dzSr1YxBauGY2jEM5p42EpXOB5aWqoYLIDxcDWX6apo3SO?=
+ =?us-ascii?Q?yD4anp3KOCYyhL+lMRozQVbL6QuqyNZ5tlSuzjs+bxulKclRQLRnUNcnOXms?=
+ =?us-ascii?Q?BZSaapbDP88Ubi3DPzvcRCsuhpmwsafHPvJnR/qqmLpYiTUv5TTGSLh5YZTV?=
+ =?us-ascii?Q?5BzKdVJeMbzXAOWnjkM8aKN34DvHVEBk/zkl7qc/5By08zsw0kKFvhzOFFtR?=
+ =?us-ascii?Q?YU8K6u28FTokB6hoZBQ0GlJoaUmYYDYUJwR1zfj4YOqBmMi1vNOS5bK2jdKI?=
+ =?us-ascii?Q?MkLYm7Y5aJsKd7MEMl5OCPwdzPL2j8LnfTkjYVjs0+tFsegcD5uGNTf3O7OE?=
+ =?us-ascii?Q?3DWDAGQqhppnTTiWpHobaATWPMuYRHPxoNZKNJH249R6nOGC2AF7X0EhRHbj?=
+ =?us-ascii?Q?pQQHsMDxHCALuddVoBVPHIH0aUlcqiq0nZOWycS5txkhTIIwNfp9Qw11mg4y?=
+ =?us-ascii?Q?mqJ8WKAQ4rYKYSMg5NQupkh7ls0EXcBMEAVIKrP5H3sRkEgzgTkstIOEcRrG?=
+ =?us-ascii?Q?FTA7fBtRCQ37zJSVC73rVSoxxOfQYlquMMZqTAH6EVn+1WC1sqv+A1t5J/mN?=
+ =?us-ascii?Q?2XZ6LOfaeZNFJgGq/dFiTY23Kk8ZeXwDCVXaUFErCCuCxZaDb+KY3FzF6r5O?=
+ =?us-ascii?Q?fCosWRf8uJtPOKOuatu4LWutV6r5wIlCF2RKywVv4PcJF+9ZLqXo9H0Ju5E/?=
+ =?us-ascii?Q?HMXCLiirWm3ItAhaGJFelkRUMjZP7K9Qb7lHjNy1xiboxSIrnRiL6ChbQfcP?=
+ =?us-ascii?Q?Kh46x1UHIqwp/uSlGV6Ri7uY6twhmxoexAmVpw7qRj9EPJAutxib6hES7yqF?=
+ =?us-ascii?Q?A37S5wBpZORQwxeqzaQSoDwaaPv7yM0VqU8nBiS0XwAJIlEv8XHbGdwvU+ie?=
+ =?us-ascii?Q?hf7a8IS+PUPK5fifbS4KD7y+Gx1TUzWW6X8vOCNglVA=3D?=
+MIME-Version: 1.0
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm=
+l4/strict.dtd"><html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+        <meta name=3D"x-apple-disable-message-reformatting">
+
+        <title>Udemy</title>
+       =20
+       =20
+        <style>
+            #udemy-email img {
+                max-width:100%;
+                height:auto;
+            }
+
+            #udemy-email p {
+                color:#1C1D1F;
+                margin:0 0 8px 0;
+            }
+
+           =20
+            #udemy-email a {
+                color:#5624D0;
+                text-decoration:underline;
+            }
+
+            #udemy-email ul,
+            #udemy-email ol {
+                margin:0 0 8px 24px;
+                padding:0;
+            }
+
+            #udemy-email li {
+                margin:0 0 4px 0;
+                padding:0 0 0 8px;
+            }
+
+            #udemy-email hr {
+                border:0;
+                border-top:1px solid #CCCCCC;
+                margin:16px 0 16px 0;
+            }
+
+           =20
+        </style>
+    </head>
+    <body style=3D"color:#1C1D1F; margin:0; font-family:'SF Pro Text', -app=
+le-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-s=
+erif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size:1=
+6px; font-weight:400; line-height:1.4">
+        <table id=3D"udemy-email" width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" style=3D"background-color:#F7F9FA; padding:24px">
+            <tr>
+                <td>&nbsp;</td>
+                <td width=3D"600">
+                    <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"background-color:#FFF">
+                       =20
+                            <tr>
+                                <td style=3D"border-bottom:1px solid #CCCCC=
+C; padding:24px">
+                                   =20
+    <p style=3D"margin:0">
+        <b>
+           =20
+                New Promotional Announcement
+           =20
+        </b>
+    </p>
+
+                                </td>
+                            </tr>
+                       =20
+                       =20
+                            <tr>
+                                <td style=3D"padding:24px 24px 0 24px">
+                                   =20
+                                    <!-- No greeting -->
+                                   =20
+    <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+        <tr>
+            <td width=3D"48" style=3D"vertical-align:middle">
+                <img src=3D"https://img-b.udemycdn.com/user/50x50/38516954_=
+b11c_3.jpg" width=3D"48" alt=3D"" style=3D"border-radius:50%; display:block=
+; object-fit:cover">
+            </td>
+            <td style=3D"padding:0 0 0 16px; vertical-align:middle">
+               =20
+                                       =20
+                                            <p style=3D"margin-bottom:0">
+                                                <a href=3D"" style=3D"text-=
+decoration:none; color:#1C1D1F">Hi Chetan, an announcement has been made fr=
+om Andrei, instructor of </a><a href=3D"https://e2.udemymail.com/ls/click?u=
+pn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXikqIMugZIr-2BbqPGMliHGyKi7q=
+G3XQ8SHPZJxdpdk2S0Ajdx9zALMvWdUV4UNC6pBQhSfeUGnh4wb6gSkwXT14KMKDAo8j6D7Lau-=
+2BFYID-2BSMMRwq4fxNEVzs7IyFo-2FjhJ9MafRu8grR6zfrTrXtl5ZhzoTg6Ysr8q1ql7zhTSr=
+mRcHromoVvrQudyHN4elHgHVz8E0C6Bn28sCT9S7x6Ax-2F9vF3-_RYuHu4cYKjPyA1SSpekwle=
+FVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9L=
+v0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239=
+OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSb=
+Cd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p3qdn=
+q-2FuyLfMPHZwYLSphiY3qWHCt61s6ynfazlwpcACb9QpPnN39UTQFueGR-2BaAHL8j4zLf5uM6=
+agcS9WR9bh7TG1pTwcTRM-2FcvPyZQ5HTmxkyQt5NhSoLhfpY201aWFieSGUd7zS201Ny5H3wkF=
+9weUBm6MO6JdodseICn4EtPVsqbbUuda9wuxQrTH5JXmA-3D">Complete Ethical Hacking =
+Bootcamp 2022: Zero to Mastery</a><a href=3D"" style=3D"text-decoration:non=
+e; color:#1C1D1F">.</a>
+                                            </p>
+                                       =20
+                                   =20
+            </td>
+        </tr>
+    </table>
+
+                                </td>
+                            </tr>
+                       =20
+
+                       =20
+    <tr><td style=3D"padding:24px 0 0 0"></td></tr>
+    <tr>
+        <td style=3D"border-top:1px solid #CCCCCC; padding:24px 24px 0 24px=
+">
+             <p>Hellllooooo ZTM! Your long await is over... the ultimate gu=
+ide <em>(and we believe, the best course on the market)</em> to master Terr=
+aform is now available: <a href=3D"https://e2.udemymail.com/ls/click?upn=3D=
+ZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXin66UmNtxNx8Uhmw13pO0XwlllK5liqA=
+QXUkGXKvtJWcchGUsNdCzgR-2BnvZfqHZhodhU-2B62ev3ZO3lMiy-2BzE0o8JFjkfDw-2FJ5ks=
+UKXdJpMuR0-2Fx5pXDz0P4vvkWXLq41iR2aISfHAhNwLdumjWgNmqS0a8Ek8BGANY48RfytGDHJ=
+AZgUnHc3eDn2boE2f9GxIBA6-2Fbrne9tJgsiKd1-2Ff2APRJZiJYWWXKHaiajxEuDCnA-3D-3D=
+CijZ_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJ=
+WVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k=
+-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7=
+TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2=
+F8-2B6F0y6cR-2BJANtsF3p3TU9PQG19EpnZUOvyu2uBQNXwnWgPReqEum1C8dV7MjZ4OThUaRI=
+KEQkL3zxTTP9P5PQ90gGGrHXG3gdT34an-2FXtQiI2MIhWpZkjxlnPYpn1lEo9PBZ9j1DXKUzNZ=
+DT28oO61qdg09Qgn2IR6DcyWv8kDRp0uYNgCPaUkEfx6ZM3CzESjzhv2SJAFCd3am9vA-3D" re=
+l=3D"noopener noreferrer" target=3D"_blank"><strong>DevOps Bootcamp: Terraf=
+orm</strong></a><strong><br><br></strong>Want to learn DevOps and master AW=
+S, Azure, GCP?&nbsp;Then using Terraform is the way to go! Check out the FR=
+EE previews inside the course to see what this course is about.<br><strong>=
+<br>Available at special discount to the first 1,000 students that sign up =
+with coupon code: </strong><em>TERRANOVA (discount applied by clicking the =
+link below):</em><strong><br><br></strong><a href=3D"https://e2.udemymail.c=
+om/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXin66UmNtxNx8Uh=
+mw13pO0XwlllK5liqAQXUkGXKvtJWcchGUsNdCzgR-2BnvZfqHZhodhU-2B62ev3ZO3lMiy-2Bz=
+E0o8JFjkfDw-2FJ5ksUKXdJpMuR0-2Fx5pXDz0P4vvkWXLq41iR2aISfHAhNwLdumjWgNmqS0a8=
+Ek8BGANY48RfytGDHJAZgUnHc3eDn2boE2f9GxIBA6-2Fbrne9tJgsiKd1-2Ff2APRJZiJYWWXK=
+HaiajxEuDCnA-3D-3DzRkY_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUW=
+cWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2=
+BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqp=
+bkmaBd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsS=
+HhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p3BVhqHb3y3WAxX1sltF4Yz2VZLCv2oeOjj=
+x5eVkz4WP3FduMSDu2WWzp2b6EPe6gI2EFNeTuZJHOG-2Bge0TCz5rfxcgWyUGEeA3hCvLan-2B=
+Eksa1FJsmV4Sdc-2BIKmiRWSUQXCz471ymH08GtsA6a-2BoHcqUD8R6-2B8tjQt3E1k0GRZdpwp=
+rzdxlqvVS9K4VkFiOsM-3D" rel=3D"noopener noreferrer" target=3D"_blank"><stro=
+ng>https://www.udemy.com/course/devops-bootcamp-terraform-certification/?co=
+uponCode=3DTERRANOVA</strong></a><strong><br></strong></p><figure><a href=
+=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9x=
+RA49IDbkpAnXin66UmNtxNx8Uhmw13pO0XwlllK5liqAQXUkGXKvtJWcchGUsNdCzgR-2BnvZfq=
+HZhodhU-2B62ev3ZO3lMiy-2BzE0o8j-2Fhr55zvFe7uOFxQTEDXZ3gehnkJXQJTggqTOWL-2F0=
+xI-2Fg0HQA0Ub8patgXLbeQeTS43VQrYySN0eMDZggb0l0rO0mzIFQX32yz-2BP6RKYcTvm0mwA=
+1kx7xVCYhyGlsLQ1f-2FHwHxwwKnyOnIdKLS3PxQ-3D-3DM6Ci_RYuHu4cYKjPyA1SSpekwleFV=
+D-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0=
+bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC=
+4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd=
+-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p3dcguE=
+0YlcJKTMEEbBjKoiDFPNxinDqGZK1izaThkO2PyYn47wucLC6CJoEUSfrlBzsAZNKRhOS3MSe-2=
+Br3wjpMLy3ncRBp4qDGYZvABrTOeKVN2JiZJjzBCj1mVTJbCFxXaHnib4WPTn62-2FAO-2B726N=
+vvcFhAq71az-2FuxjUXBaTQKfnlQyWuxoEzjhHVhoK7dk-3D" rel=3D"noopener noreferre=
+r" target=3D"_blank"><img alt=3D"Terraform" src=3D"https://udemy-images.s3.=
+amazonaws.com:443/redactor/raw/announcement/2022-07-12_14-44-04-7b6c3d8c674=
+93f6044add8050c0c1356.png"></a></figure><p><br>Questions about the course? =
+Andrei and I will be hanging out today in the ZTM Discord community <em>(se=
+e lecture 2 of your ZTM courses)</em> <strong>#devops </strong>channel to a=
+nswer any questions that you may have!<br><br>Thank you for being part of Z=
+TM and supporting our work. None of this would be possible without you all =
+being here... so thank you for giving us the best job in the world!<br><br>=
+-------------------------------------------------</p><p>Check out some of t=
+he other ZTM courses below. We are known for <strong>top quality, high prod=
+uction, and always up to date content!<em><br></em></strong></p><p><strong>=
+1.</strong><a href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPI=
+oSZT6Aoc-2BEAPso9xRA49IDbkpAnXinfBNS-2BRlEpV4rNuqoyRJke0LAr7HBrcsHiJAuF-2Fb=
+Bb-2Fq3a1NPQS7-2Fncgk8w2aQEfsu7QPX5g54qhn3Q-2FxFyxN2XUQf8Fw6ESMbXo-2BeJsXrE=
+IUKeaJclPqhAmh23hqIqpr53-2BjWwt9NpvqLe3bncWx1p1FYtgzqXrig-2Fhg0pq-2FnARk2Hj=
+gxPEsXze5eMLzb6xV12A-2BnM60GKU4AQJTnt6-2B-2FVKg3uGlio-2FgammxQqqSF0-2FPRY4r=
+LTDx-2BjiT6WtfL8EY-3DDeP9_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99=
+xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjj=
+L-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvH=
+jqpbkmaBd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJ=
+QsSHhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p1LcubbfYU3u-2Fv6VJ6076GWuzAitiQ=
+rH-2FFfqB-2B20K6F-2FnLas4u850dw7PrnnHDkkw5qYEdFzD7OvwECSYi2gO-2B0ypVySYCuQb=
+axDuE2o1V5ofFxu6skQcwYjuUdw0qvzwxjh3SPyyTwavi7gkA1sYa-2FErxNyQmmsd1NyNSwEM0=
+wvS-2B-2FAt0GAvqyA-2BgXKv857zo-3D" rel=3D"noopener noreferrer" target=3D"_b=
+lank"><strong> The Complete Web Developer in 2022: Zero to Mastery</strong>=
+</a></p><p><strong>2.</strong><a href=3D"https://e2.udemymail.com/ls/click?=
+upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXikMLwYdxyIYXmY-2Fimlq7QDFu=
+1TlR8nzZ-2FyU4FNP-2BVMDBzzCOwp1UXjUJNtvSX4oGwr-2BVhwIfLSrCUjN4guTumv0ec4Wmk=
+tCi2dFT243VBxD9h2sNrlwO0UcuEnM2kAnoJ-2BfFQ0DvGg-2FTShXuw7oHb4KFnJdV7L5L4p01=
+6y0z73GK3BwxgeA1I4ZyjL2DtSOvvBu5yzEqym9wnhwEHmkm6rlGEPk-2FL8E5MYcQfMfNz56vv=
+2gQ71tGK-2FAjdVOhxMLXME-3DtnNL_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUz=
+aSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FE=
+lHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D=
+30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4=
+mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p0xEMRGa2W9Wq4CdHFJYssCcjjU=
+yr51chhwi0epKBl1ExJdlTQgII-2BScpWDaTIXA6jdu9QpXYSkbRiXiX1qhihP0gGHRpezGRjH2=
+P6tTBO3196qi8fCpeBAruFT7km1WwS4uNFgHeWfxs3iSuu1VCt7eZjx9EfZIQWxtOIrZpFS5wY0=
+gp5kdfRYHYxLLzcDzyI-3D" rel=3D"noopener noreferrer" target=3D"_blank"><stro=
+ng> Complete Python Developer in 2022: Zero to Mastery</strong></a></p><p><=
+strong>3.</strong><a href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOy=
+S2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXinXWq1AwyKbmB91Omk0HDUGNS7EUOJL2-2BS4E=
+P8-2B6ltnZg9cVg1qwqU1UenruSHnT2Tdayo03FAYmNIXbuUAalcVaYmmE9sRrHJosdZ4GUno3C=
+Uu9UQUyqJDtOcBRyg34bQdzvkB2I4FLkoMmiDNdoMWBZ1QENbkADIsz9obvjAtyqr-2FNpTSAxj=
+lmeePf4cXUAvqY4nNr52p2SDxEf3DtbDXfSvexLg1gDwwkW6XP5xWvEg4nIm8dCGFhRKvsdc2p1=
+oOlsau8pf7pJ84jXODIWLjQo3H_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU9=
+9xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSj=
+jL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30Lv=
+HjqpbkmaBd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFV=
+JQsSHhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p2VZA83W8nuc9c1m8N8lg5se2mbsRNS=
+ZPwtnFxndsi9OUqm2P2NoEU3wriqRsGO0RPv4tPP4GcwxLooFAGEkNbgxe87rxjDqdMUBwxZsx4=
+wajfwi8CUHWc4DsB4w2AJIgPNPdqMzJg4Y96LmDHcpHkhk1lmFTi7V-2FCOi4wh6dKwxPxlkzLn=
+D-2BfkSnCBrSw68L8-3D" rel=3D"noopener noreferrer" target=3D"_blank"><strong=
+> The Complete Junior to Senior Web Developer Roadmap</strong></a></p><p><s=
+trong>4.</strong><a href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS=
+2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXimMUqSR6fG0RkQPbaWN-2FJlzRSD8-2FlJWrCxm=
+RRDavuz4qxBnDu24vWqoeMOrmZOjEqL7b7IQoCMAyjdSsegdO3sLB2tog2g8Dd8k0QW4lB4bmkr=
+LOfeyDVkYa7xyU6aaHG3lHzv-2BfX8tUt6VS9J6lHogVhJI2dMzIk1YRhGtxfI-2BxdDMqC7a8z=
+A4VwcztyW8TBHlZv-2BP4z-2BwdFTjj2faE5lvb-2Fvewx0oo1FovoEyETLG8vDqGg32BkeJgap=
+Ym-2Ft-2BOtzeJWhOiSAM4L26M8CvSCHc7AZw_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGj=
+sdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR=
+6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoam=
+AvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7=
+CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p1GuthTqTyy1DXhpZVKF=
+CPrlHLco7S0NjqlExT0mJ0kkg6TOEAYX3CjZnkgqM0s3Uu5giPMVIpQLrBaNocoZP-2FkreCtrR=
+464oTVTyrZfTAFX6dpstc715Axqt-2FD0CuwLPiUFh77VUj3OOuJkKMOQHmII0KB4h6jBg1exuT=
+z7Pdqml0qrQIAP2i51e3WssyvprY-3D" rel=3D"noopener noreferrer" target=3D"_bla=
+nk"><strong> Master the Coding Interview: Data Structures + Algorithms</str=
+ong></a></p><p><strong>5.</strong><a href=3D"https://e2.udemymail.com/ls/cl=
+ick?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXin75kSPMGxBzU5dk5i-2Br=
+CHgEirGjm-2BOWSl3cMqEiiQ3JG35-2FZ7b3uMe-2FGhjBjw-2B51XlzgL0ZwXz6VXEZ22kjAwE=
+zb1LwKvf37A-2BbufulsGfzxfR2FcSOVP-2FPhLJVNxLMf6LLmV-2FcR5cai7W1sgqIEjEgqTwp=
+AMVfXPYzW2yFxuTfePF87V1LmKpHgAtWvJdVHCvq4wRYK6Wr1qFl1DeN8nk1BGN9FTok2O-2Bib=
+gDtZgMhQ-3D-3D_DeN_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhD=
+KR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2Bdjh=
+CO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkma=
+Bd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV=
+9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p2UZ84qpQkTecuGHivikhg2Lo5SXoYEHgBNxLXR=
+ASchVAEEiiWFqah8uHDG12AegSCQSu3-2Baau6uxyP90hfsC6GmSNS8DsitHeqsSHUPHDoSQDUt=
+92p3eS1pojuoFKdXpvxy8lYSPv1vZ2lrM9-2B8pfCNw2sd4PbOLd2DnnLJvd5tSM75nFY9f5dnx=
+ErS-2Ftq-2B-2Fw-3D" rel=3D"noopener noreferrer" target=3D"_blank"><strong> =
+JavaScript: The Advanced Concepts</strong></a></p><p><strong>6.</strong><a =
+href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAP=
+so9xRA49IDbkpAnXinx8MsPGCpanzfAnGufLxDJxyXJXV5TsNb8X3MvjVVjob2N3i8VH4mydQSs=
+m8R8ZCbqOhOWMDLX0rsTS63-2F4cugsBlciq4VKs3vaI5jxvawekC0NyW1twYUzUDh-2FMKuplg=
+dtkHsPTgJZ7FLE-2BEHtVZ0UwQBhGbwiKCJqqv7GiOlpJaQ27uaAWmkiv-2FLYipPQL7UZ-2FuR=
+-2BJVP7jar53NbrUW2bDzWlBOqnPejw-2FCRgmpUOFcsp8uZXSdQIgtiumNKjvY-3Dg-E8_RYuH=
+u4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp=
+6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng=
+2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA4=
+5U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y=
+6cR-2BJANtsF3p0Rs-2B7acNcpDraYUdJg985DRQG-2FLvphoAGG3DJM9j6sWUJRYIn4ey6ZNvw=
+Yo-2FlUBd0i74OlpwMiJSfyOJ7tXWAENnhGKRXyaAuvMDisDEGYtS9D0M6Fcx1RQ6t5SOEQTl0T=
+vlGuJPV5HLrlLlijYH6u4h1k-2FZe1MFIXS89HG6OFSneyAcuy9uTowhZLfW9StZo-3D" rel=
+=3D"noopener noreferrer" target=3D"_blank"><strong> Complete React Develope=
+r in 2022: Zero to Mastery</strong></a></p><p><strong>7.</strong><a href=3D=
+"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA4=
+9IDbkpAnXilZi59kmP3DLheiqjvJmVTvNSxZDrXnJdaE9d7B-2FuRvlV0sMcaNM-2FLvruAmu42=
+rYo0J68IGmZan8SBiCNxGC4MWNTisv3fswha154Io-2BCzsoEDrEt-2BLeyK5DaPfHY8nn1BIW3=
+CaT8eGRMp6hfH0-2F-2FNqeDdKZGltV1ccaR3fOzIVreIpOLbAu8yWkIhlX95K86cRPc9JilJyR=
+jRgO-2F9y0sBS5ssmgUdFvW4jeLFT15tdsiMXGwHkm-2BrPJvRwXjBACACiGkyfTFMdpevh7YU-=
+2Fkfvo77Zg_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2Byom=
+uP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1x=
+h32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLD=
+z6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyO=
+wayU-2F8-2B6F0y6cR-2BJANtsF3p2iIJRy7VfgzBiUTESTT0yquGvl6A4tL2a2rkEW-2Fwdg0X=
+TAYFSp3-2Bp06MOZb2jPHjW9mZyDI13ZJ09cWrURRqRjn3MWZSxiygoeQxUXtgHApGlpHu3XjBD=
+YnfuCriiJj75KBJQA2KknELfKFHs6L-2FP1hOf-2BvN4h9Kpb9mR56yO53vVWnjRXl7kfOwZedN=
+G5iVk-3D" rel=3D"noopener noreferrer" target=3D"_blank"><strong> Complete M=
+achine Learning and Data Science: Zero to Mastery</strong></a></p><p><stron=
+g>8.</strong><a href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxE=
+PIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXin9ahK-2BDTCHXF1PziE-2BqMt6G-2BQckW7mRipvt-=
+2B4bchLbjuUXqeWR8uqK9Nhjk-2Bgxo9lTTzs6tHVnOm1-2BEDOv8ydJUwzuXbkldf8agxB0jqK=
+ed-2Bg1M1FDfJ8ENBmDma6tA5WgvzBnbwXrnXhtrZMVW5hZbFjyddt5NYcRMzYRzUjtl-2BoqxX=
+tt1FzadsWxp19xSk7FvWAOSBnF9AtsWC0XjjyXUUbkCOj-2FCmkNZHr-2FNfwZnOqIFdiLxH0mI=
+xWavobn86w-3D3UYq_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDK=
+R-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhC=
+O0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaB=
+d6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9=
+hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p0udVtjYD5OJuFBU1Nv19RwQQzrxgx4RoYs2G15U=
+vLFY5IaLKf5yLxqqfh-2F1oNleNsw8eMUoTi0nOKNT806gS6n4Ka-2FCBh0TWLvl2X-2BsaVLm8=
+Ek7ky0Y69LbxrG6f-2Bawf2v-2FzG69tSoUfhMtKm6wrikjAa-2BdtsysjkygsyvJ5WaiQNwqQZ=
+NXJ2zk7da8yYG7sM-3D" rel=3D"noopener noreferrer" target=3D"_blank"><strong>=
+ Deno: The Complete Guide Zero to Mastery</strong></a></p><p><strong>9.</st=
+rong><a href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6A=
+oc-2BEAPso9xRA49IDbkpAnXil9JELVmKfGjyOxR6ldgY33MRyvn3Rn2BZeVb2YIwG4vlOLhB1Q=
+sKO7qwc-2FpWHO3IrG0iIYclNp-2BdOjinDTJ34bEhRlVEC2KZ7gkDRMUnnqN8fUF5CspYjrb17=
+sDJZnaAlIGR1oQUQr-2FoWC5wo2WT5eRAKGUbxK8WFV1lMuuX2k-2BB4NpkDIk5ZAl7YhGOFQ2k=
+CxhkU3lZpqfLRPb0vdXXeLRNj2pduIzTHUEKppXJvGIG9ylIKfwm0CHVgnzASakqyy89MpEwhJh=
+yiHXDR2vE4gbjv7_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-=
+2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0=
+FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6=
+njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn=
+-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p3jrzrvrnFUlRcA875ngtbgruQ1GjsetaqxS51P3Ns=
+TtL9mVnmQG9MCjIcX45W9x2KkXrpR4b3PfWL2BV6agADiakBU758lYJvyvPRzbQZyBThCLlvwrk=
+EgMiNd448HFAzcUGQfMQJpeg15lb2YRPFSKZs2JSpDH1f5ZQVD6yxtsDwwUq68Bn2LSSK2fyipI=
+rQ-3D" rel=3D"noopener noreferrer" target=3D"_blank"><strong> Learning to L=
+earn -Efficient Learning</strong></a></p><p><strong>10.</strong><a href=3D"=
+https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49=
+IDbkpAnXikTtrqXzFduEAlA-2F5Ow698riPDIzWyheuUKaif0v3P8psns6vGDImL83QDnQLRiq0=
+fnRaLte3OKD-2BCt9ite6UG7RCTH4U8Q71mVQKwRDce-2F3nE0iAAz5Kad-2FFHlFsIW3sO9fpF=
+P5FE0IEA4EaC3p98sqelSAs9TYi9RZ3-2FNvxmpuUYZjMvAh4xMLpJm8BzsT3O0S8lHOQ6hoplW=
+Txl3s-2FlDMwlrZFLZJc6hubiCusMSH3nFEEaTbUmXC2Ky-2FawVOSTW6eSgRLjHwyYEH6px6nu=
+ppmiI_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lN=
+JWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8=
+k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf=
+7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-=
+2F8-2B6F0y6cR-2BJANtsF3p1QuIcKLV6c0ByQs78Miz3vpAFVssYoyGjJqh-2BUW7uFQM8Hegd=
+iukrkIrUmLfrPT5S5qTq87BULl5Pzy3YTro-2BlTH2w0nM4-2FPYfXJ-2FVQ4l2LcTjijC29S6r=
+36sYQliCWki7VLT8L5XsaoJTn7jSvi-2FRUPwUb0ZY5cSXiQrWaEHw16OGNEDLIPPhHI58QKDGM=
+gY-3D" rel=3D"noopener noreferrer" target=3D"_blank"><strong> JavaScript We=
+b Projects: 20 Projects to Build Your Portfolio</strong></a></p><p><strong>=
+11.</strong><a href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEP=
+IoSZT6Aoc-2BEAPso9xRA49IDbkpAnXilxx13lpHwGxM3W27TkTSigceKfU7MjkahSMuEZGlpK6=
+ZVL7w5vF9BAbBJ6C-2BJ5o9RZXkTr0LA8XlT1dbI12W3D1qkk04U8Rs8b5-2FK7h2VFdtTg2rmk=
+8hmtiJ5paZPvwD33P2ytCyUhq2cpE70WetZ-2BT6qNcvVIHaxB11ZvsSamRZAqPhZhoOlDJxOOQ=
+SmV5FdKFl6RF7mMSI0H2sKtANN5Bag13Ov4PAz1Lvdxr9igRiidT12qMR35GBvBldzEi64-3Dw5=
+eD_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWV=
+M9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2=
+Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TF=
+NDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8=
+-2B6F0y6cR-2BJANtsF3p3WrU4nK7B-2FqsqMrGhEXoxsFIcAB34-2F9sZZWzhoTWPP9bR3V7ma=
+HQ4dMQPp9XaLAImpxTNfiPnMk8anu6eH0nUDeYl-2BEhBeNslIIxDLh2Qo4rjGngvNXCtO4bzxA=
+0TqN7AIEdkJt1eP1Za3QrFuo7KIAUOP9Q2IoGk7xQ-2FS3ql44ZNe0rb1-2FpNW541VQVMAsnM-=
+3D" rel=3D"noopener noreferrer" target=3D"_blank"><strong> Complete SQL + D=
+atabases Bootcamp: Zero to Mastery</strong></a></p><p><strong>12.</strong><=
+a href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BE=
+APso9xRA49IDbkpAnXikT9HFU1oKczKP5-2BsQlGGr2qC4BMvmAXD4wSPF-2B02fbqxondnKpmZ=
+K3mNvJVLoqe9IAg-2BBcH6lO7RhWBgLunIwF4cddfsrGCdG2d2uVczZ2iPBeye6VbbM3Q0xwx2p=
+p0hfvEasysX-2BlIk3fCiw4G9YTrcy1mi-2BqHae9DbYdXkGBjgWbsar-2BQlyvFXW1-2BFfMcw=
+3Whx4NhfsYy-2BnJyfpxhiU5NV8btvIhhyBA3BM-2B74ELKIBMNybCuHZW05aFaG4APwacfPcft=
+B8KUec9H-2B-2BCNBeBn0rH_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xU=
+WcWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-=
+2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjq=
+pbkmaBd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQs=
+SHhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p3pA1U8b3e6HU-2BEM-2B-2FLJCuZ-2BS1=
+9LLduEot3g-2BVz-2B-2Fj6hbkMdwJmo6G-2BSONy-2BJBcCsxAs4H7TC3rUZ4zBV-2BhuoEuXg=
+VHlvsbI8Ril2CTh6ZI6KXlmijqv3s-2BZ-2BMxjN-2BKR-2F4HJVY8gRxrYbv-2B8ne3-2FEU81=
+TjnAUMehBuB6EjQSXJb8jOM63SmiJtpYUtr-2FEvzgEg-3D" rel=3D"noopener noreferrer=
+" target=3D"_blank"><strong> Complete Web &amp; Mobile Designer in 2022: Ze=
+ro to Mastery</strong></a></p><p><strong>13.</strong><a href=3D"https://e2.=
+udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXikq=
+IMugZIr-2BbqPGMliHGyKi7qG3XQ8SHPZJxdpdk2S0Ajdx9zALMvWdUV4UNC6pBQg1rx2p69mmN=
+PzR-2B62b303MgjThHwaAxxo1HXVBm-2Brf5G0BKAI3vInR-2FMLUOI-2FSyP-2B4eY33eIMWag=
+eK5M5Y-2Bwqpl-2B27J0s4kmbkND1n-2Bh-2BeAHZaySU2SjcLONlV5ytuMEoHpFXdu-2F-2F9m=
+6KFVir9Xxnuz7r6IKAFXBLDkywV0P3OEiQ4YwNLB08GfDpV-2FFORbPk-3DzMsw_RYuHu4cYKjP=
+yA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSB=
+RDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDm=
+BIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA45U71AcX=
+oFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJ=
+ANtsF3p3lazyjwKfhMRjpj28M16xyIcDQJegn8h0-2FOI48HQ55QvUDFQ7SUoXwEupyZDkh8U93=
+zGTIp7WDKxbR5DnG4-2F4LgbPd4J0woGmSkHmJmkWKVTlQ2tyJmUqgKP9ReW55o2jYdrayvWJBB=
+dFmb-2F3lCaPqzDIcnMkQwJkKNgXHuuqsy8Gvs5DZE85Z0og-2FKxJZXck-3D" rel=3D"noope=
+ner noreferrer" target=3D"_blank"><strong> Complete Ethical Hacking Bootcam=
+p</strong></a></p><p><strong>14.</strong><a href=3D"https://e2.udemymail.co=
+m/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXimMUqSR6fG0RkQP=
+baWN-2FJlzP6-2FHuuWVVYckryWMma6qxW0swSMYK5fRlHbAiqz1cIU4WKtTySdwZg4mZieDLJE=
+GUL8woWAsUUmXd6bXL5BYcgD2cAQQ1BqMDRf3f0oveoN7NNb55KRFAQtlS6UlSeRu9AEh6DOUTG=
+ZZ3tzE4ozN8klxXSjCh71SUGybBN6cgLV2fAK4RBy-2BaFp9WEkK3HZkToA7lWpkLuZniaBCznx=
+WtdhOrJBhNbWTQCM4ICtp23bt2goy8uGPPf03JoGYSbzyYgeU_RYuHu4cYKjPyA1SSpekwleFVD=
+-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0b=
+F8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4=
+M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-=
+2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p1hva-2F=
+puQwPaqWkeOl4PeP89RPfh1jwk-2BKHjmtu89HOLlIYH34yPy4QAAWcuffvvuJmVtO7Z6HpkfgB=
+OzSxL9Fum1HfQV4E1jgkejk9w7O38v-2BbA0whO92KqTfI5arv8iYuoPVYZ6ZtRMu8d6aZYgyDY=
+9BIhLRQf6mSXs43EQcdpT4Cget5W76UPcz4Y-2BlYES4-3D" rel=3D"noopener noreferrer=
+" target=3D"_blank"><strong> Master the Coding Interview: FAANG Interview</=
+strong></a></p><p><strong>15.</strong><a href=3D"https://e2.udemymail.com/l=
+s/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXinx8MsPGCpanzfAnGu=
+fLxDJnrPqAvYLW-2B9CfJtw9jfBG-2FkZvmwFeYoDl3FLbGx9e5AI4t1qGZheg8BfbOtLpbgS2E=
+DLwFJ-2B8Kni2E9sm5k3bvHXOHcoB7exF9pgugcNYOPasqW5wZpEdBAQNSKTwb-2FMI3ivlHDlP=
+J4qsK8DMCp9ic37qfUPNkOjFsXeH-2BmAQUBFTme1m9T3zwo9saedNm02nzVY8kbbQwBSgdhw1c=
+gqg7TS2WOhjbV9T7F0g5ftgS1aDh2ML7Xop4UB0vcvd6x5MvKJn7t56SxarJW9EOF7Fw-3D-3D0=
+cST_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJW=
+VM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-=
+2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7T=
+FNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F=
+8-2B6F0y6cR-2BJANtsF3p3Fssg5z6yKHwmEbLnjd-2Fsces7JBT4pWuiVwupYGam5plX9nisAe=
+48Ceh6hdiQtURuNP2dYTRSx6J4GtXOG7bunrO3c7CHxvpz-2BuKLdUjqjisgy64lzujfMH8aDWv=
+lX-2BSeUlul2boDmQ7D6rII6uFrPPqNf-2Fz8Hoq84LgoZ9xgHRuM6lFfoOWz-2F0powcuea3N8=
+-3D" rel=3D"noopener noreferrer" target=3D"_blank"><strong> Complete React =
+Native Developer: Zero to Mastery</strong></a></p><p><strong>16.</strong><a=
+ href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEA=
+Pso9xRA49IDbkpAnXil0U1tDH3eyOroeMimpKgUTg-2BkDl72ll9a2VruuwMzxExqTIiiA3ySA0=
+hLFG8CxXBeDdphhCZT9QPJyQquMH6cARdHgX-2BQZovWHaHSq5aloeqNEuDadwK-2FITuL-2F5P=
+Jt8EGQbn-2FrOnqtzLY7Q81Qz2jaUgvIG2NuV6thAsr7-2BFET31xsOykgCb9bGAc4hzNxsp4Rn=
+fzInWMo7wfCXODywcdY2hv-2FFtsBSDSAa1xWBRzooh9NlAK1jIps1-2BuYd9HamK6iK-2FKtbs=
+LPjTzUyy90gB0bpZSP_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhD=
+KR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2Bdjh=
+CO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkma=
+Bd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV=
+9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p1UunpmJTZiWxyHKu4Hrpv50jPgj5zPo0oewFOJ=
+RJQq7wmD4WRP5AismSVohhr0eYi9SDCF-2Bl8-2BthIXegs6SjcMG0UdBbUobtKlzqv4YgGFCLh=
+8xQ8ueBi4-2Bq6X4vKY4xMPSOj-2BoL29vd749r0tYSDHNiqqDUZYZ70JuP3cEo5Sh0cAf-2FkY=
+faWNqCNTokiodl8-3D" rel=3D"noopener noreferrer" target=3D"_blank"><strong> =
+TensorFlow Developer Certificate: Zero to Mastery</strong></a></p><p><stron=
+g>17. </strong><a href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2S=
+xEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXil4K-2FAa50Ep9MN6gvdNXUQjSgobIpVrowI3eO9t=
+L-2FrAxsCxnAdr1-2BkLSBjBQJR-2FYEQZ0NC0zpsn93VvGyQz4TidRbGhqcpi-2FqfypqJFsye=
+n735v3dDy-2BeneCrbwgeSakBHaKP-2FFAwLQZtdeBVe62ftVuvjl8dEYBXWexvD-2BWqmpcOgF=
+JN9vRHUfv5vMYyZUQ1XRHTBa2p0JbNHW0B45CnhGUzDh2aZIL3WlMilQxH4e41J48o6KVhJMqCl=
+0CkSjEz4-3DHWaf_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-=
+2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0=
+FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6=
+njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn=
+-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p1pN47uzxVah7f47BXvwvboc1pcNWTNFuT3P07Ub6T=
+oPGXjOYcWB0yOhxhylTpwDWMf5lUuHQID-2BUqvQ68I49jLo9s7ADJIhfhZ7HhmKLIr-2FIqYsp=
+7BqbOt6ukik7jYe6fKx7gAFkYuYHjOZmP3bNRefm034jTbsMn4-2F611WjydInb-2F5CHJuY17R=
+10-2FiXxSLhI-3D" rel=3D"noopener noreferrer" target=3D"_blank"><strong>Comp=
+lete Vue Mastery 2022 (w/ Vuex, Composition API, Router)</strong></a></p><p=
+><strong>18. </strong><a href=3D"https://e2.udemymail.com/ls/click?upn=3DZF=
+3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXilgtqctN7l7Mtv276Ff2QfmrUZzxHKcT4i=
+-2BDruRm1MBXBgicf2sBmK70zWgZqhy1LSGtgYxaYx54kSXhfKLZhDqm8ipA29FeAAEMz1bHWdz=
+WYb3iCzAIt13VOduRXLCPUAB8m3EFIRjnc03wYUvEMHKcQ8G2owOACd7I6-2F-2Bj4d86HlBQPI=
+E-2FdPY9Ku40-2FdChHBdT73zHPkiQ7EmNBmG2YLp4ww-2FIuP3ry-2FqBjHvfa3FdSYvU3mfG5=
+N4zvv-2Fo5j-2FK0EIYQzvAcYj8frBbN2jmT6e4NlQ_RYuHu4cYKjPyA1SSpekwleFVD-2FdAap=
+HfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZ=
+KiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLb=
+NQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66=
+fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p0YDSvnh4vCTomj=
+miYrVl-2BYRQoH6fLrmM3LlwEautWw8oOvUPxCbX7R3YjtLPZlBn3q-2FOTHT0VHsFOLDmbiGBK=
+7ZSRG5A4JREx8qpns1UVFc48yOE8MhyhltGFj8scIn-2FUr8S7QodaKV-2BAyIPwNnTbPP9B7Uu=
+TH-2BR-2FDqnYGLUqtQmziJKU6X6-2BbN3ZKh6Q-2BRg4-3D" rel=3D"noopener noreferre=
+r" target=3D"_blank"><strong>Web Security &amp; Bug Bounty: Learn Penetrati=
+on Testing</strong></a></p><p><strong>19. </strong><a href=3D"https://e2.ud=
+emymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXikVKY=
+mL4ujnXY17Tk2gD0vVTRhmL9emT9cuj5fGYs-2BHgCiM6J98JE3JveYWJR34-2Bd23J1ZrX3NvX=
+2oMaqqHQ845Rlcn9dApgY8GNvMpCmZKyY1LzzYZlTaTdG5lSc9E1ScPpGY0JWR-2BU2qwGtDJrW=
+O1ceGn3U9M4dB9wcEIRu-2FtljEqhTxywge0R7L04vaqmqLfZhoSypWcCGPrR8IAcqMbd-2BOxm=
+X6s1kw4q84e02DANFbXFFI-2Fs6O0jCzZstOYOUY-3DQ7O2_RYuHu4cYKjPyA1SSpekwleFVD-2=
+FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8=
+ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M7=
+0BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2F=
+O5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p0BnBtBJTf=
+IEhFKj9TF7rg8K2cJ5iooooF6K00PJHU9A1KdblvVf5yvnzLl-2B1yF4YnuAf9pKbpVaLp38o6v=
+7EAlmCYMbqJHSjP9nk8cPsOg0lli0YhfOYf-2F-2FQTU5t9R5Qzue-2FbZ7GlQiemVdyC-2Fzj2=
+uQi9l8BQxsZeQ3ugeYvhMRRIz1v5eF84M-2B9kRGI0KcqU-3D" rel=3D"noopener noreferr=
+er" target=3D"_blank"><strong>Complete Guide to Freelancing in 2022: Zero t=
+o Mastery</strong></a></p><p><strong>20. </strong><a href=3D"https://e2.ude=
+mymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXindvnm=
+sX4dDgiY2iwG1SKH9HzC7Q7Iuz3B7TInAkU-2BUEv8AQ-2Fmv4hxHmDupMa84Zu5ETTNJaOfqbQ=
+Wt7PSmPES3ysZhmh-2F5h92LqFh4A9ckmc560rAzoXIw5slvreuPRgOcqWeY-2BDRBGdNmkQWJ6=
+deQV8xGgQn1y4UkMX8Nd5wAoJqufDUD8CZ8UdsI-2Fnfo4-2B3z2DXIxlb35oqgr9AoNF6zmDau=
+t4WIu67ShHW-2BYqojvpqAp5AS-2BZWKmsIqA7i5TaoL5EkEZir7V4wj9JOUQJ-2BMYRC6_RYuH=
+u4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp=
+6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng=
+2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA4=
+5U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y=
+6cR-2BJANtsF3p08vVwTqp-2FHtQAOJRP-2BD8I-2FIZS522kAy563OQ1bPxdmpAFpJfN5I0kyw=
+JWeMWPl5NuetAeA2xtnBRnf2Nb3gk4B0CR1t692m9RhSPyITCOoCdQvupZt3Dagfp1nhh-2FHh8=
+UzmJaRqGr8Qr68OyuPBPbXxCoPexiH2Kl3mXS8WWOIwtTe2l1q5XzJR0UPMfAhsxA-3D" rel=
+=3D"noopener noreferrer" target=3D"_blank"><strong>Motion Design with Figma=
+: Animations, Motion Graphics, UX/UI</strong></a></p><p><strong>21. </stron=
+g><a href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-=
+2BEAPso9xRA49IDbkpAnXikEloUPouVT28hrxAqLChIUL7gaAA4Z9NGfXMeqQlFF8gVGooOzU6d=
+ztEaCJIQw3m3oNjTgRu3IuBoJwpE0hCoTHZQ6w89WwTpGzvstOK1lJF7DN5uvRlpcZQAIWu-2F6=
+7MZpwubCO-2BHtqYiKNatQjMT8BgYuCh876akNzzSZvV0At5mapkEsutlynEoSNDVej3mIhTe63=
+sdaEZMcsmN3jtBbFvpWR71ZSyB2zvG-2FFPNrPJUXsZiCBrnpQ7nnEWDYSjk-3D-ESM_RYuHu4c=
+YKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u0=
+UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LY=
+AQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA45U7=
+1AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y6cR=
+-2BJANtsF3p2kVxFiuuq4dsuELI0te0DB9ZE9k8DXt3cJIqVdmfRouaRLU1h-2BGx3lTMVQdaYA=
+Uu76vEBJOy0rL2PmXUtM46GHYZQ9cmIX2Art0rzPi7uv-2B5yPDiv0JIfBU3WPitOXV1OSmSxQc=
+otLNPTmk4XsISIz-2FyTmiQmPleYIxOrfG8yOnVreY-2BAG4676LH6Tqzs3rKI-3D" rel=3D"n=
+oopener noreferrer" target=3D"_blank"><strong>Complete Node.js Developer in=
+ 2022: Zero to Mastery</strong></a></p><p><strong>22.</strong><a href=3D"ht=
+tps://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49ID=
+bkpAnXin-2BdJ-2FkDx22wS-2BmuxMFI-2BwDSdS3G1-2BLaOT5NU-2BLfRKjg9Jic-2B7-2FyZ=
+a7ACRqLMI-2BRCE0dapITxKasW-2FO4rBcNrrA2QWAogUn6l4dlrznuZhCB1BHJSm1ZtrUSjWRV=
+293J2a1yBNvndIt0rUnVohkzFgoULvPj6mH0Qp0odVjceGyQJag1-2BC5r8NSjiaYHMatZug7Ne=
+eSDhJZRexwxVbYi52Cy-2BScmq-2BXtg3cIP043CaZOKJCMa7kXc-2BOXKhbEhUWWYw-3Dk5hw_=
+RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9Q=
+IIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpf=
+u3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQ=
+CbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B=
+6F0y6cR-2BJANtsF3p0QSmkIpo00kKByh3-2B6HetP5qwUWEJ-2FlclkDju2Qqfj7rrb9LQPOtc=
+fxGlSIio9hDGAdVBRC15ZVCKO-2B3prHebgg2PJLlO-2BbAurEfuhb8d097dENuF5sD7AcZelu1=
+SuzaruQ62I9cp-2FHdMD4fbsLFb7q0WuiyHMFumB3Z3xBNUfs6TuAGL9teDzQhXIY3eUkBk-3D"=
+ rel=3D"noopener noreferrer" target=3D"_blank"><strong> Complete NextJS Dev=
+eloper in 2022: Zero to Mastery</strong></a></p><p><strong>23. </strong><a =
+href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAP=
+so9xRA49IDbkpAnXikYtoFJJvyrihAz5R-2BFvg17VwXtweNIC1SO-2BEoLE1ltcKaxo69QVEsD=
+dWIDtlVYSXaQ5kgqaI2QJgyXtQa022-2FPawQEmV0tv6bzsMK0gW04tYY2TnIV1J7n278AK5AwM=
+YeiRgtF6-2BIvlE2i2szvlnkT24Q9CCJjDl2nPJBHerwt65s9bmJMOVjlrI5aU9lLco-2FfnynE=
+NvB4UaE38qojdYaUPNvns90RY7uHKAxI8uc-2B7IUQNPbetC9vtjVjgAEV5ek-3DHfXc_RYuHu4=
+cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u=
+0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2L=
+YAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA45U=
+71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y6c=
+R-2BJANtsF3p1MeEqSRFagegs4UfEMxRKFL-2FLCe-2B-2FUGDqPiFD9j22vMNvYeizS5nTLsm6=
+r6S3LIPHrCi9dsAhzxdYCOhwIgMpQ9t96pDSGUBvRAwsJX0DC7glhZe5lGPADye9apgsN2K7eDZ=
+Ujm4x6eHVpbElx8fHvnAlQIbEBus9ofXARl2kFZXtFCpdQjZMOhasOrR0fL1Q-3D" rel=3D"no=
+opener noreferrer" target=3D"_blank"><strong>Complete Angular Developer in =
+2022: Zero to Mastery</strong></a></p><p><strong>24. </strong><a href=3D"ht=
+tps://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49ID=
+bkpAnXin1mdMfKA6m3kEce8ri5L7TkFpigKi00XEaIPv-2F-2FSTCnnbMYVzpmlCIIJaTyVmaG0=
+tke-2B-2F9FRqpNBvEa3ToArfBg8qc65zQ4-2FOI7VYR6oDf9hMuNlryOd3z8ZT-2BjTpWmIL9I=
+9qtCAz8Rps4c2StuFzBJCr9lamXsZXSpm86EnXPdisusWwnpc5xLRH6-2BtYUoDsajNrU3H154V=
+JRWxNXI0ebXpBTcdfWkn9i9GwtJmazXA-3D-3Di89l_RYuHu4cYKjPyA1SSpekwleFVD-2FdAap=
+HfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZ=
+KiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLb=
+NQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66=
+fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p1Oj1DyNy-2FnqE=
+PvPQT2SPmJ9n9vDHfgjdcnAlFhH5tUZs2usLtlVhxpXREUgYvIkD83TaB8k-2BVSx3BgTZKCrgj=
+T9bxgUjenf4xLq6MMg0rZ1HOxHVcR7M-2BfAukWEMk2tjxwXK-2Bl27TUQqnW4NVVMEIZUzFNad=
+DaaRkOjM6Hb3erPPW1JfTLw-2FLICG-2BRVh65KAY-3D" rel=3D"noopener noreferrer" t=
+arget=3D"_blank"><strong>The Excel Bootcamp: Zero to Mastery</strong></a></=
+p><p><strong>25. </strong><a href=3D"https://e2.udemymail.com/ls/click?upn=
+=3DZF3sOyS2SxEPIoSZT6Aoc-2BEAPso9xRA49IDbkpAnXimUVfFZV2quXMpVLkGaJHLMcGg8TG=
+zYKj1wsGKeGtCvF1PRRHBm2r459PIk1zDNl-2BxqpDRk7nyYew7BJA2PNTNktM6-2BOZ9V8s2MY=
+UoXRm6HnccyptHGna-2B9a5SYgKMvR3Dm6ywT-2B4DYBRPpwqCLX7FyCgLbMIc5OFJLJckVZov5=
+gqYV4pDGi4HUI7tOizj4WZFIkAo92aGyjIjJ05abP7ub4qxlRVwMUO7oJtyRD5-2Be2Ou78pkEt=
+U6BsmIEHG6yyL9abvJHJIDnYY9ybSshHh9PWIwG_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfV=
+GjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiG=
+WR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQo=
+amAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpd=
+j7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p2YJ3sdrWAnKIQdO9v=
+21M5ZbUCLnskQdhPd-2FmDRTfk2W1vAgE4NL5e7eZ-2F0fbX2-2FOD736Q2sR9LKi2d4CDrj-2F=
+arGz6H0MLn4XtKomsSdC9oM5-2BSFGsIcx97tQCvTB7FeoU0-2BmhF5DULqhDm75K-2BHEqvV55=
+Z8Iv0dubLfcvtrxVClQMeqxuXjFoZvM9oBDENlWU-3D" rel=3D"noopener noreferrer" ta=
+rget=3D"_blank"><strong>Go Programming (Golang): The Complete Developer's G=
+uide</strong></a><strong><br></strong><br><em>Since I get this question a l=
+ot, we have built an interactive roadmap that is personalized to your skill=
+s and your career path on ZTM based on your career goals. Go take the quiz =
+now by checking the link inside Discord</em><strong><em> #ztm-perks</em></s=
+trong><em> channel:</em></p><figure><img src=3D"https://udemy-images.s3.ama=
+zonaws.com:443/redactor/raw/announcement/2021-05-26_12-58-06-d32314a66a3385=
+d942390e09a81ada28.jpeg"></figure>
+        </td>
+    </tr>
+
+
+                       =20
+                           =20
+                       =20
+
+                       =20
+
+                        <tr>
+                            <td style=3D"padding:48px 24px 0 24px">
+                               =20
+                               =20
+                                <p style=3D"font-family:'SF Pro Text', -app=
+le-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-s=
+erif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size:1=
+2px; font-weight:400; line-height:1.4; color:#6A6F73; margin:0">
+                                   =20
+                                        Delivered by Udemy 600 Harrison Str=
+eet, 3rd Floor, San Francisco, CA 94107.
+                                   =20
+                                   =20
+                                       =20
+                                           =20
+                                                You may <a href=3D"https://=
+e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6AocxZU-2BXw2691MgmMaElQcj=
+yu1WEIHIp7-2F2TbKmnkn5th7fwQtHXLaZ-2FhtIwYwfiqhBLMzVsY9tx8ttV3yKY-2F7n9wpLV=
+dQihiYNm-2F3BeoLtuZ6-2FLaImdln6cO-2FGRinXpUkOdpWimPyalDfgCRnwZ2juQWvRj-2FJK=
+TUija7AH5-2B-2F1nqAuPZKRu8qNSK0aKqfoGGGKpti1C2J2uDTmKUstUNp9vZ8Hi8-2B2I9WZY=
+TMbVg-2Fpe8Gy76X-2Bn8lp7234-2F2NbfQsUHqdqr1PrlIAmROvVDLLMN7qAO26iraxAUFSWD2=
+N5rS3RTQ-2FZ5gXB-2FTW0XFmZ-2FcqCxbvkJgdSrZuBR3XWIt99M8Vy126Ual3zfVlJF4M4h86=
+yuSDdIv6XgrTdTh3e5D-2FYteAcHgltcV2Ou1RB-2BrIusg-2B8fW6ezPDKkub5CP3cDZje8l-2=
+BBLgdHWX51I7HCXP0pf1vIFBxAiPiW1x4sjnk1bA8JiP-2F9nKyAkn-2FvZjkvbt-2F-OkE_RYu=
+Hu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2ByomuP5lNJWVM9QIIz=
+p6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0FMe1xh32s8k-2Fpfu3n=
+g2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6njWLDz6tuf7TFNDQCbA=
+45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-2FyOwayU-2F8-2B6F0=
+y6cR-2BJANtsF3p2YwLmWO1jWKYiOZHH5H60LBT20F5ug1os6Zap2cW6dpCa872N9wU8N8ENxok=
+ZiTvoaO-2FJvikelETdBSGqP-2FNPbWX54RXKkIL2wdWXw9KDACD-2FJuXA51wQG8wdnvsVGNdg=
+HP6ojWn0URosksr-2FZUURBGOJVmO1pFEOuT7BCnnrD754fLNEMwvfDwJJYukGuNes-3D" styl=
+e=3D"color:#6A6F73">unsubscribe</a> if you prefer not to receive messages l=
+ike these.
+                                           =20
+                                       =20
+                                   =20
+                                   =20
+                                       =20
+                                           =20
+                                                If something isn't right, p=
+lease <a href=3D"https://e2.udemymail.com/ls/click?upn=3DZF3sOyS2SxEPIoSZT6=
+Aoc47BwcPaTgb-2BQQuyBM-2FWMDRLaPNWZPuYNZNbGBIxDD3ZcEWO-2B4pF2g2oSOb-2BV-2Fo=
+h7zOUew1UkZd8Ixv15g2-2BxiXQ7cY9jBfiCvwxIF6RrhgWGXm-2B76p2XqebaZn-2B3BXyUsvj=
+GCmr0xSJcIm4v0VV4W9X-2FrF7clOghu87f9MimHcMmMtu3fOW35NNdXsj2U3Thks-2F0-2F3h-=
+2FnfbUww0l8qbxdet0UCwDNbqNxshVQNegAtty-2FWrQ7lRK9ss2xlBNYJoooIi7rQMmy0aEU5P=
+g3DTrqk-3D285E_RYuHu4cYKjPyA1SSpekwleFVD-2FdAapHfVGjsdxpqUzaSU99xUWcWhDKR-2=
+ByomuP5lNJWVM9QIIzp6u0UnSBRDpEYW50c9Lv0bF8ajjtZKiGWR6jx-2FElHSjjL-2BdjhCO0F=
+Me1xh32s8k-2Fpfu3ng2LYAQDmBIbTQHDg239OC4M70BMLbNQoamAvMFf8D30LvHjqpbkmaBd6n=
+jWLDz6tuf7TFNDQCbA45U71AcXoFQRu9ZlCSbCd-2FO5s66fpdj7CiL3es4mgFVJQsSHhDV9hn-=
+2FyOwayU-2F8-2B6F0y6cR-2BJANtsF3p1Nd23ocCu2lePqnNeInZGtR6Y3GMAm-2BOYKPAf4n7=
+qPBWPloQ9N43r6T54G4LrNNIIXeNan35A75UCX6R87yQa4OZoHv2S5hixeQlpC5i-2Fc9tIgB4k=
+vrls2zsYBGQWaQxmiM7URiqAENG5aAE96f6wKO4PubvYpKx64jlJFw8GbMf4OPlP4AZxERJdniQ=
+VeCl4-3D" style=3D"color:#6A6F73">report abuse</a>.
+                                           =20
+                                       =20
+                                   =20
+                                </p>
+                            </td>
+                        </tr>
+                       =20
+                        <tr>
+                            <td style=3D"padding:24px 0 0 0"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    <img src=3D"https://e2.udemymail.com/wf/open?upn=3DIJuwSpdlLSo2V9BJ0pjm=
+SW1lx814pVi3UL-2FBVnxSwO13hwjIgyBVcJthMGkh6pQ-2F5osnBL-2Bfc-2Bc6AR1PYyUo9i1=
+1UVIZikeIPM4w1oApRh2zQa3sGIumxFPJ8LqYGJkkM-2F17-2BksrgRVm1TQaE06jj7oRk0rGCS=
+rUXNvb4f46gkNl8b0FudGORSeJYsXi-2BkQ7aMy4MO72ev05npCP8ptDgF34anSuDvDjflEYH3I=
+yCIiB4cGU4hkeAP8c0JG-2F7KHED67Q0iO4LuiWYdt644owPq-2BaqaAiI-2FemYGovnun2qOpl=
+RVpKISozpa7PtWZ0JCBGkIz1NM1RIdeqd5ZL36G28DTntQjFMclbJkXZFhmZGkshciI2103PT6j=
+yoSAwSpyNqVlN-2B-2B0f6cj-2FRXTJqzdbAtLRuJzQPnPP71R9mXqtF7G4McMHrhmVeLvnUbaO=
+IuvS-2FYIepnRH0gDEhD3B6YVwUNIkFMmeBdN3vkQVvkFAo-2F4-3D" alt=3D"" width=3D"1=
+" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !impor=
+tant;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !imp=
+ortant;margin-right:0 !important;margin-left:0 !important;padding-top:0 !im=
+portant;padding-bottom:0 !important;padding-right:0 !important;padding-left=
+:0 !important;"></body>
+</html>

@@ -1,0 +1,29 @@
+[Data Source]
+DisplayName=chetansingh2341@hotmail.com
+Enabled=true
+Parent=2b4b9030225dd4b7ae0d720eda02c7fddd80191c
+
+[Mail Submission]
+SentFolder=folder://local/Sent
+TransportUid=17c688ae45c7867495b05ee1a20e7a00db47bd14
+RepliesToOriginFolder=false
+UseSentFolder=true
+
+[Mail Composition]
+Bcc=
+Cc=
+DraftsFolder=folder://local/Drafts
+ReplyStyle=default
+SignImip=true
+TemplatesFolder=
+StartBottom=inconsistent
+TopSignature=inconsistent
+Language=
+
+[Mail Identity]
+Address=chetansingh2341@hotmail.com
+Aliases=
+Name=
+Organization=
+ReplyTo=
+SignatureUid=none

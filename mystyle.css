@@ -1,0 +1,19 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+table th,td{
+		padding:8px;
+}
+header{
+			background-color:gray;
+			padding:20px;
+			margin:2px;
+}
+nav ul{
+				margin:20px;
+				padding:0px;
+				list-style:none;
+				display:flex;
+}
+

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="snap-store_ubuntu-software.desktop" score="1.25" last-seen="1677420563"/>
+    <application id="thunderbird.desktop" score="0.25" last-seen="1677038205"/>
+    <application id="org.gnome.Nautilus.desktop" score="19.75" last-seen="1677585014"/>
+    <application id="org.gnome.Shell.PortalHelper.desktop" score="27.25" last-seen="1677036542"/>
+    <application id="org.gnome.Terminal.desktop" score="153391805.25" last-seen="1677584989"/>
+    <application id="software-properties-gtk.desktop" score="1.25" last-seen="1677191153"/>
+    <application id="gnome-control-center.desktop" score="70.25" last-seen="1677040352"/>
+    <application id="leafpad_leafpad.desktop" score="5.25" last-seen="1677038997"/>
+    <application id="update-manager.desktop" score="0.5" last-seen="1677191183"/>
+    <application id="firefox_firefox.desktop" score="464.5" last-seen="1677584928"/>
+  </context>
+</application-state>

@@ -1,0 +1,23 @@
+[Data Source]
+DisplayName=chetansingh2341@hotmail.com
+Enabled=true
+Parent=2b4b9030225dd4b7ae0d720eda02c7fddd80191c
+
+[Authentication]
+Host=smtp-mail.outlook.com
+Method=XOAUTH2
+Port=587
+ProxyUid=system-proxy
+RememberPassword=true
+User=chetansingh2341@hotmail.com
+CredentialName=
+IsExternal=false
+
+[Security]
+Method=starttls-on-standard-port
+
+[Mail Transport]
+BackendName=smtp
+
+[Smtp Backend]
+ReencodeData=false

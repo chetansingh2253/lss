@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/chetan/Downloads/code_1.75.0-1675266613_amd64.deb" added="2023-02-06T18:08:56.250500Z" modified="2023-02-06T18:08:56.521623Z" visited="2023-02-06T18:08:56.250505Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.debian.binary-package"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;file-roller %U&apos;" modified="2023-02-06T18:08:56.250511Z" count="1"/>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2023-02-06T18:08:56.521621Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads" added="2023-02-06T18:09:06.465814Z" modified="2023-02-06T18:09:06.465819Z" visited="2023-02-06T18:09:06.465815Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Archive Manager" exec="&apos;file-roller %u&apos;" modified="2023-02-06T18:09:06.465817Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/debian-binary" added="2023-02-06T18:09:12.474933Z" modified="2023-02-06T18:09:12.474936Z" visited="2023-02-06T18:09:12.474933Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2023-02-06T18:09:12.474935Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/data.tar.xz" added="2023-02-06T18:09:15.965020Z" modified="2023-02-06T18:09:22.213252Z" visited="2023-02-06T18:09:15.965023Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-xz-compressed-tar"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;file-roller %U&apos;" modified="2023-02-06T18:09:15.965030Z" count="1"/>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2023-02-06T18:09:22.213251Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/control.tar.xz" added="2023-02-06T18:09:30.311628Z" modified="2023-02-06T18:09:30.311631Z" visited="2023-02-06T18:09:30.311628Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-xz-compressed-tar"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2023-02-06T18:09:30.311630Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/IMG_1664.jpg" added="2023-02-06T18:15:46.888384Z" modified="2023-02-06T18:16:02.885406Z" visited="2023-02-06T18:15:46.888386Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;eog %U&apos;" modified="2023-02-06T18:15:46.888392Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2023-02-06T18:15:47.189230Z" count="1"/>
+          <bookmark:application name="gnome-control-center" exec="&apos;gnome-control-center %u&apos;" modified="2023-02-06T18:16:02.885405Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/kali-linux-the-flaming-dragon-aopaijkc6i77lb07.jpg" added="2023-02-08T15:01:34.591556Z" modified="2023-02-08T15:01:34.591559Z" visited="2023-02-08T15:01:34.591557Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2023-02-08T15:01:34.591558Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/security-kali-linux-j8aqaqhemgofk4en.jpg" added="2023-02-08T15:02:40.525333Z" modified="2023-02-08T15:02:40.525343Z" visited="2023-02-08T15:02:40.525334Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2023-02-08T15:02:40.525339Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/pexels-vlad-bagacian-1368382.jpg" added="2023-02-08T15:06:52.998396Z" modified="2023-02-08T15:06:52.998400Z" visited="2023-02-08T15:06:52.998397Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2023-02-08T15:06:52.998399Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/pexels-pixabay-159393.jpg" added="2023-02-08T15:08:20.379279Z" modified="2023-02-08T15:08:20.379283Z" visited="2023-02-08T15:08:20.379280Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2023-02-08T15:08:20.379282Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/joker-joker-2019-movie-smoke-hd-wallpaper-preview.jpg" added="2023-02-08T15:10:17.825559Z" modified="2023-02-08T15:10:29.476885Z" visited="2023-02-08T15:10:17.825560Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="xdg-desktop-portal-gnome" exec="&apos;xdg-desktop-portal-gnome %u&apos;" modified="2023-02-08T15:10:17.825561Z" count="1"/>
+          <bookmark:application name="snap.firefox" exec="&apos;gio open %u&apos;" modified="2023-02-08T15:10:18.075319Z" count="1"/>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;eog %U&apos;" modified="2023-02-08T15:10:29.220795Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2023-02-08T15:10:29.476883Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/pexels-max-ravier-3641974.jpg" added="2023-02-08T15:19:52.585800Z" modified="2023-02-08T15:19:52.585806Z" visited="2023-02-08T15:19:52.585802Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2023-02-08T15:19:52.585805Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/pexels-aron-visuals-1646870.jpg" added="2023-02-08T15:20:36.026881Z" modified="2023-02-08T15:20:36.026887Z" visited="2023-02-08T15:20:36.026882Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2023-02-08T15:20:36.026885Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/idin-ebrahimi-re8vcdP3aOk-unsplash.jpg" added="2023-02-08T15:23:13.608314Z" modified="2023-02-08T15:23:13.608322Z" visited="2023-02-08T15:23:13.608315Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2023-02-08T15:23:13.608319Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/asus-touchpad-numpad-driver-main.zip" added="2023-02-10T17:15:39.495511Z" modified="2023-02-10T17:15:39.495514Z" visited="2023-02-10T17:15:39.495512Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2023-02-10T17:15:39.495513Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/.cache/.fr-wooFh8/asus-touchpad-numpad-driver-main/install.sh" added="2023-02-10T17:15:45.137831Z" modified="2023-02-10T17:15:45.137833Z" visited="2023-02-10T17:15:45.137831Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-shellscript"/>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2023-02-10T17:15:45.137832Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Pictures/Screenshots/Screenshot%20from%202023-02-15%2009-39-48.png" added="2023-02-15T04:09:48.614390Z" modified="2023-02-15T04:09:48.614419Z" visited="2023-02-15T04:09:48.614390Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="gnome-shell" exec="&apos;gnome-shell %u&apos;" modified="2023-02-15T04:09:48.614413Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Desktop/prg1.py" added="2023-02-19T16:58:04.101982Z" modified="2023-02-19T16:58:25.132246Z" visited="2023-02-19T16:58:04.101982Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2023-02-19T16:58:25.132245Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/file2.txt" added="2023-02-21T12:51:46.732921Z" modified="2023-02-21T12:51:46.732923Z" visited="2023-02-21T12:51:46.732922Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2023-02-21T12:51:46.732922Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/prg1.html" added="2023-02-21T15:09:28.679551Z" modified="2023-02-21T15:09:28.679560Z" visited="2023-02-21T15:09:28.679552Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/firefox_firefox.desktop /snap/bin/firefox %u&apos;" modified="2023-02-21T15:09:28.679556Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/mystyle.css" added="2023-02-21T15:15:16.984044Z" modified="2023-02-21T15:15:16.984048Z" visited="2023-02-21T15:15:16.984044Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/css"/>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2023-02-21T15:15:16.984046Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/prg1.html" added="2023-02-21T15:16:40.555151Z" modified="2023-02-21T15:18:07.236648Z" visited="2023-02-21T15:16:40.555152Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/firefox_firefox.desktop /snap/bin/firefox %u&apos;" modified="2023-02-21T15:18:07.236644Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/xyz" added="2023-02-21T15:21:41.808762Z" modified="2023-02-21T15:21:41.808764Z" visited="2023-02-21T15:21:41.808762Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-02-21T15:21:41.808763Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/Downloads/xyz/prg1.html" added="2023-02-21T15:22:42.770515Z" modified="2023-02-22T04:08:38.580736Z" visited="2023-02-21T15:22:42.770516Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/leafpad_leafpad.desktop /snap/bin/leafpad %f&apos;" modified="2023-02-22T04:08:38.580733Z" count="10"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="gphoto2://Apple_Inc._iPhone_00008120000A29812EEB401E/DCIM/201908__/SZGQ2106.JPG" added="2023-02-23T13:39:27.448032Z" modified="2023-02-23T13:39:27.817081Z" visited="2023-02-23T13:39:27.448034Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:groups>
+          <bookmark:group>Graphics</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;eog %U&apos;" modified="2023-02-23T13:39:27.448036Z" count="1"/>
+          <bookmark:application name="Image Viewer" exec="&apos;eog %u&apos;" modified="2023-02-23T13:39:27.817079Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/chetan/prg1.py" added="2023-02-25T17:23:29.746067Z" modified="2023-02-25T17:23:29.746076Z" visited="2023-02-25T17:23:29.746068Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/leafpad_leafpad.desktop /snap/bin/leafpad %f&apos;" modified="2023-02-25T17:23:29.746071Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///media/chetan/UBUNTU%2022_0" added="2023-02-25T17:25:55.243035Z" modified="2023-02-25T17:25:55.243038Z" visited="2023-02-25T17:25:55.243036Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-02-25T17:25:55.243037Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

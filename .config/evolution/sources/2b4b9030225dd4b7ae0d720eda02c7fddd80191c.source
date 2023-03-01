@@ -1,0 +1,31 @@
+[Data Source]
+DisplayName=chetansingh2341@hotmail.com
+Enabled=true
+Parent=
+
+[Authentication]
+Host=
+Method=none
+Port=0
+ProxyUid=system-proxy
+RememberPassword=true
+User=
+CredentialName=
+IsExternal=true
+
+[Collection]
+BackendName=outlook
+CalendarEnabled=true
+ContactsEnabled=true
+Identity=bcf24ecd001bfae5
+MailEnabled=true
+AllowSourcesRename=false
+CalendarUrl=
+ContactsUrl=
+
+[GNOME Online Accounts]
+AccountId=account_1675706468_0
+CalendarUrl=
+ContactsUrl=
+Name=
+Address=chetansingh2341@hotmail.com

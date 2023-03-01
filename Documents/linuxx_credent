@@ -1,0 +1,7 @@
+Username:	1RV22MC024
+Password:	gsT1nr
+
+
+command to connect -
+
+ssh -p 60024 1RV22MC024@172.16.2.133

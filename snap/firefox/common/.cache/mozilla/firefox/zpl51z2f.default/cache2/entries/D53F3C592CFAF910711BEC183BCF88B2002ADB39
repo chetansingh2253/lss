@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Unix Basic Tutorial</title>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- STYLES =======================================-->
+
+  <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="jquery/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/meted-base.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/module-custom.css">
+  <link rel="stylesheet" type="text/css" media="print" href="css/module-print.css">
+
+<!-- JS LIBRARIES =================================-->
+  <script type="text/javascript" src="jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="jquery/jquery-plugins.min.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="modernizr/modernizr.min.js"></script>
+
+<!-- MEDIA PLAYER =================================-->
+  <link rel="stylesheet" type="text/css" media="screen" href="jquery/meted-player/css/meted-player.min.css">
+  <script src="jquery/meted-player/js/meted-player.min.js"></script>
+
+<!-- THIRD-PARTY HANDLERS =========================-->
+  <link rel="stylesheet" type="text/css" media="screen" href="jquery/apps/fancybox/fancybox.min.css">
+  <script type="text/javascript" src="jquery/apps/fancybox/fancybox.min.js"></script>
+
+  <script type="text/javascript" src="jquery/apps/elevatezoom/elevatezoom.min.js"></script>
+
+<!-- EXTENSION SCRIPTS ============================-->
+  <script type="text/javascript" src="jquery/apps/drag/drag.js"></script>
+
+  <script type="text/javascript" src="jquery/apps/draw/draw.js"></script>
+
+  <link rel="stylesheet" type="text/css" media="screen" href="jquery/apps/image-sweep/image-sweep.css">
+  <script type="text/javascript" src="jquery/apps/image-sweep/image-sweep.js"></script>
+
+<!-- PRESET DEFAULTS ==============================-->
+  <script type="text/javascript" src="jquery/defaults.js"></script>
+
+<!-- PRESET OVERRIDES =============================-->
+  <script type="text/javascript">
+	var printVersion = false; // Specify Print View.  [true] for PRINT, or [false] for DYNAMIC content.
+  </script>
+
+<!-- IE SUPPORT ===================================-->
+  <!--[if lte IE 9]>
+    <script type="text/javascript" src="jquery/apps/draw/excanvas.js"></script>
+    <script type="text/javascript" src="ie-support/respond.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="ie-support/ie-support.css" />
+  <![endif]-->
+</head>
+<body>
+
+
+<!-- MAIN WRAPPER =================================-->
+<div id="module-wrapper" class="container">
+
+
+<!-- PAGE HEADER ==================================-->
+<div class="row">
+  <section id="module-topbanner">
+  	<a id="module-title" href="index.htm">Unix Basic Tutorial</a>
+    <h3 id="module-credit" class="hidden-sm hidden-xs">Produced by The COMET&reg; Program</h3>
+  </section>
+</div>
+
+
+<div class="row">
+
+<!-- SIDEBAR ======================================-->
+<div id="module-sidebar" class="col-md-3">
+
+    <!-- Collapsible Sidebar Menu -->
+    <div id="toc-panel" class="row col-xs-12">
+    <!-- Table of Contents -->
+    <div id="collapsible-toc">
+      <div class="panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#collapsible-toc" href="#collapse-toc">
+              Navigation Menu <span id="nav-menu-icon" class="glyphicon glyphicon-th-list"></span></a>
+          </h4>
+        </div>
+        <div id="collapse-toc" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="lc-docs-sidebar">
+            	<div class="module-nav">
+				<ul class="nav">
+                	<li><a href="#">Table of Contents</a></li>
+                </ul>
+                </div>
+                <!--  Table of Contents -->
+                <div id="menu" class="sidebar-toc">  <ul class="nav lc-docs-sidenav" style="display:block;"> <li><a href="navmenu.php?tab=1&amp;page=1-0-0&amp;type=flash">Introduction</a></li> <li><a href="navmenu.php?tab=1&amp;page=2-0-0&amp;type=flash">What is Unix?</a><ul class="nav" id="ul_2-0-0" style="display:block;"><li><a href="navmenu.php?tab=1&amp;page=2-1-0&amp;type=flash">Unix Architecture</a></li> <li><a href="navmenu.php?tab=1&amp;page=2-2-0&amp;type=flash" class="menu_here">Unix-PC Comparisons</a></li> </ul></li> <li><a href="navmenu.php?tab=1&amp;page=3-0-0&amp;type=flash">Command Line Environment</a><ul class="nav" id="ul_3-0-0" style="display:none;"><li><a href="navmenu.php?tab=1&amp;page=3-1-0&amp;type=flash">Directory Structure and Navigation</a></li> <li><a href="navmenu.php?tab=1&amp;page=3-2-0&amp;type=flash">File Management</a></li> <li><a href="navmenu.php?tab=1&amp;page=3-3-0&amp;type=flash">Searching</a></li> </ul></li> <li><a href="navmenu.php?tab=1&amp;page=4-0-0&amp;type=flash">Summary</a></li> </ul>  </div>
+				<hr>
+              <div class="module-nav">
+              <ul class="nav">
+                <li><a href="index.htm">Home</a></li>
+                <li class="active"><a href="#">Lesson</a></li>
+                <li><a href="print.php">Printable Lesson</a></li>
+				<li><a href="https://bellard.org/jslinux/vm.html?url=https://bellard.org/jslinux/buildroot-x86.cfg" target="_blank">Linux Simulator</a></li>
+                <!--<li><a href="download.php">Download</a></li>-->
+                <li><a href="unix_commands_takeaway.pdf" target="_blank">Printable Takeaway</a></li>
+                <!--<li><a href="#userQuiz" data-toggle="modal">Quiz</a></li>-->
+                <!--<li><a href="#userSurvey" data-toggle="modal">User Survey</a></li>-->
+                <!--<li><a href="media_gallery.php">Media Gallery</a></li>-->
+              </ul>
+              </div>
+  			</div>
+          </div>
+        </div>
+      </div>
+	 </div>
+     </div><!-- Collapsible Sidebar Menu (end) -->
+
+</div>
+
+<!-- PAGE CONTENT =================================-->
+<div id="module-content" class="col-md-9">
+
+
+<!-- UNIT SELECTOR =================================-->
+<div class="row unit-header"></div>
+<!-- UNIT SELECTOR END =============================-->
+
+
+<h3 class="sub_head"><small>What is Unix?</small>Unix-PC Comparisons</h3>  <p>Let's take a look at another example.  Suppose you have a folder called "docs" on your personal computer, phone or stored in a cloud somewhere.  Let's say you have "personal" and "schoolwork" subfolders in there, and that inside your personal folder you have a subfolder with your photos from 2015, and that they're arranged into monthly subfolders.  How do you get into March 2015's photo area?  Easy - you keep clicking on or touching the appropriate folder, until it opens the next, and then the next folders until you can see March 2015 - then you click on it.</p>  <img src="media/images/desktop_click_thru_directory.jpg" alt="Image Description" class="img-responsive center-block"> <p class="image-caption">Typical PC desktop environment showing folder structure</p>  <p>In Unix, you'd simply type the following at the command line to perform the same task: "cd /docs/personal/photos/2015/march".  </p>  <pre><code class="prettycode"># cd /docs/personal/photos/2015/march</code></pre> <p>Although you can't see your photos as icons here, the computer is performing exactly the same actions as you did by clicking on all those folders.  Additionally, you can then list the photos in the directory, rename them one at a time or all at once, move them to other directories or even other computers, or much more - all by just typing a few characters.</p>  <p>The rest of the tutorial will introduce you to the file structures in Unix, how to navigate them, and how to use many common commands and programs to efficiently perform the work you need to accomplish.</p> <div class="stage_nav"><ul class="pager"><li class="previous"><a href="navmenu.php?tab=1&amp;page=2-1-0&amp;type=flash">&larr; Previous</a></li> <li class="next"><a href="navmenu.php?tab=1&amp;page=3-0-0&amp;type=flash">Next &rarr;</a></li></ul></div>
+
+</div>
+<!-- PAGE CONTENT END ===========================-->
+
+
+
+</div>
+
+
+
+
+<!-- FOOTER ======================================-->
+<div id="module-footer" class="row">
+	<div class="col-md-10 col-sm-12">
+        <p class="footer-text">&copy; Copyright 2015, <a href="http://www.ucar.edu/">The University Corporation for Atmospheric Research</a>.<br>
+All Rights Reserved. <a href="http://www.meted.ucar.edu/legal.htm">Legal Notices</a>.</p>
+    </div>
+    <div class="col-md-2 hidden-sm hidden-xs">
+        <ul class="footer-links list-unstyled">
+            <li><a href="https://www.meted.ucar.edu/"><span class="glyphicon glyphicon-link"></span> MetEd Home</a></li>
+            <li><a href="http://comet.ucar.edu"><span class="glyphicon glyphicon-link"></span> COMET Home</a></li>
+        </ul>
+   	</div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- BACK TO TOP BUTTON ==========================-->
+<p class="back-top"><a href="#top"><span class="glyphicon glyphicon-upload"></span></a></p>
+
+<!-- SIDEBAR MODAL PROMPTS ========================-->
+<!-- Quiz and Survey Prompts -->
+<div id="quiz-prompt" data-item-id="1140"></div>
+
+</body>
+</html>
+¯x{êÏ      cÙ≤ºcÙ≥ EHªÁcÙ≤æ   s    O^partitionKey=%28https%2Cucar.edu%29,:https://www.meted.ucar.edu/ucar/unix/navmenu.php?tab=1&page=2-2-0&type=flash necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Tue, 21 Feb 2023 06:32:04 GMT
+Server: Apache/2.4.54 (Unix)
+Strict-Transport-Security: max-age=63072000
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy-Report-Only: default-src    'self'    'unsafe-inline';   script-src    'self'    'unsafe-inline'    'unsafe-eval'    https://apis.google.com    https://accounts.google.com    https://connect.facebook.net    https://www.facebook.com    https://storage.googleapis.com    ttps://stats.g.doubleclick.net    *.google-analytics.com;   img-src    'self'    *.google-analytics.com    *.googleapis.com    blob:    data:;   connect-src    'self'    https://httpbin.org    https://stats.g.doubleclick.net    https://ssl.google-analytics.com    *.google-analytics.com;   object-src    'none';   frame-src    'self'    https://accounts.google.com    https://sketchfab.com    https://www.facebook.com    https://apis.google.com;   style-src    'self'    'unsafe-inline';   report-uri /csp.php;
+Content-Type: text/html
+ original-response-headers Date: Tue, 21 Feb 2023 06:32:04 GMT
+Server: Apache/2.4.54 (Unix)
+Strict-Transport-Security: max-age=63072000
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy-Report-Only: default-src    'self'    'unsafe-inline';   script-src    'self'    'unsafe-inline'    'unsafe-eval'    https://apis.google.com    https://accounts.google.com    https://connect.facebook.net    https://www.facebook.com    https://storage.googleapis.com    ttps://stats.g.doubleclick.net    *.google-analytics.com;   img-src    'self'    *.google-analytics.com    *.googleapis.com    blob:    data:;   connect-src    'self'    https://httpbin.org    https://stats.g.doubleclick.net    https://ssl.google-analytics.com    *.google-analytics.com;   object-src    'none';   frame-src    'self'    https://accounts.google.com    https://sketchfab.com    https://www.facebook.com    https://apis.google.com;   style-src    'self'    'unsafe-inline';   report-uri /csp.php;
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html
+ ctid 1 uncompressed-len 0 net-response-time-onstart 1591 net-response-time-onstop 1877   $€

@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="https://protonvpn.com/support/wp-content/themes/protonvpn/img/favicon.ico">
+    <script type="text/javascript">
+        document.querySelector("html").classList.remove("no-js");;
+    </script>
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v19.11 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>How to use Proton VPN on Linux</title>
+	<meta name="description" content="How to use a VPN on Linux, with a full guide to installing and using the official Proton VPN Linux app with graphical user interface." />
+	<link rel="canonical" href="https://protonvpn.com/support/linux-vpn-setup/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="How to use Proton VPN on Linux" />
+	<meta property="og:description" content="How to use a VPN on Linux, with a full guide to installing and using the official Proton VPN Linux app with graphical user interface." />
+	<meta property="og:url" content="https://protonvpn.com/support/linux-vpn-setup/" />
+	<meta property="og:site_name" content="Proton VPN Support" />
+	<meta property="article:publisher" content="https://www.facebook.com/Proton" />
+	<meta property="article:modified_time" content="2022-07-05T08:33:13+00:00" />
+	<meta property="og:image" content="https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@ProtonVPN" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="7 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://protonvpn.com/support/linux-vpn-setup/","url":"https://protonvpn.com/support/linux-vpn-setup/","name":"How to use Proton VPN on Linux","isPartOf":{"@id":"https://protonvpn.com/support/#website"},"primaryImageOfPage":{"@id":"https://protonvpn.com/support/linux-vpn-setup/#primaryimage"},"image":{"@id":"https://protonvpn.com/support/linux-vpn-setup/#primaryimage"},"thumbnailUrl":"https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect.png","datePublished":"2017-02-21T08:01:11+00:00","dateModified":"2022-07-05T08:33:13+00:00","description":"How to use a VPN on Linux, with a full guide to installing and using the official Proton VPN Linux app with graphical user interface.","breadcrumb":{"@id":"https://protonvpn.com/support/linux-vpn-setup/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://protonvpn.com/support/linux-vpn-setup/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://protonvpn.com/support/linux-vpn-setup/#primaryimage","url":"https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect.png","contentUrl":"https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect.png","width":1200,"height":675,"caption":"Screenshot of the Quick Connect button in the Linux app"},{"@type":"BreadcrumbList","@id":"https://protonvpn.com/support/linux-vpn-setup/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://protonvpn.com/support/"},{"@type":"ListItem","position":2,"name":"Article","item":"https://protonvpn.com/support/knowledge-base/"},{"@type":"ListItem","position":3,"name":"How to use Proton VPN on Linux"}]},{"@type":"WebSite","@id":"https://protonvpn.com/support/#website","url":"https://protonvpn.com/support/","name":"Proton VPN Support","description":"Get help for your free VPN","publisher":{"@id":"https://protonvpn.com/support/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://protonvpn.com/support/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://protonvpn.com/support/#organization","name":"Proton AG","url":"https://protonvpn.com/support/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://protonvpn.com/support/#/schema/logo/image/","url":"https://protonvpn.com/support/wp-content/uploads/2023/02/proton-vpn-organization.jpg","contentUrl":"https://protonvpn.com/support/wp-content/uploads/2023/02/proton-vpn-organization.jpg","width":1200,"height":1200,"caption":"Proton AG"},"image":{"@id":"https://protonvpn.com/support/#/schema/logo/image/"},"sameAs":["https://www.instagram.com/protonprivacy/","https://www.linkedin.com/company/protonprivacy/","https://www.youtube.com/c/protonag","https://en.wikipedia.org/wiki/ProtonVPN","https://www.facebook.com/Proton","https://twitter.com/ProtonVPN"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Proton VPN Support &raquo; Feed" href="https://protonvpn.com/support/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Proton VPN Support &raquo; Comments Feed" href="https://protonvpn.com/support/comments/feed/" />
+<link rel='stylesheet' id='wp-block-library-css' href='https://protonvpn.com/support/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://protonvpn.com/support/wp-includes/css/classic-themes.min.css?ver=1' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='font-awesome-css' href='https://protonvpn.com/support/wp-content/themes/protonvpn/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bootstrap-css' href='https://protonvpn.com/support/wp-content/themes/protonvpn/css/static/bootstrap.4.3.1.css?ver=4.3.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='main-css' href='https://protonvpn.com/support/wp-content/themes/protonvpn/css/static/main.css?ver=1672737337' type='text/css' media='screen' />
+<link rel='stylesheet' id='styles-css' href='https://protonvpn.com/support/wp-content/themes/protonvpn/css/styles.css?ver=1672737337' type='text/css' media='screen' />
+<script type='text/javascript' src='https://protonvpn.com/support/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://protonvpn.com/support/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://protonvpn.com/support/wp-content/plugins/stop-user-enumeration/frontend/js/frontend.js?ver=1.4.4' id='stop-user-enumeration-js'></script>
+<link rel='shortlink' href='https://protonvpn.com/support/?p=104' />
+<link rel="alternate" type="application/json+oembed" href="https://protonvpn.com/support/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fprotonvpn.com%2Fsupport%2Flinux-vpn-setup%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://protonvpn.com/support/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fprotonvpn.com%2Fsupport%2Flinux-vpn-setup%2F&#038;format=xml" />
+		<script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script>
+				<style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload, .lazyloading { opacity: 0; }
+				.lazyloaded {
+					opacity: 1;
+					transition: opacity 400ms;
+					transition-delay: 0ms;
+				}
+					</style>
+		<!--[if lt IE 9]><script src="https://protonvpn.com/support/wp-content/themes/protonvpn/inc/ht-core/js/html5.js"></script><![endif]--><!--[if (gte IE 6)&(lte IE 8)]><script src="https://protonvpn.com/support/wp-content/themes/protonvpn/inc/ht-core/js/selectivizr-min.js"></script><![endif]--></head>
+
+<body class="ht_kb-template-default single single-ht_kb postid-104 single-format-standard vpn-kb gecko">
+<div id="navbar-mobile-overlay"></div>
+<div id="navbar-mobile" class="collapse navbar-collapse bg-white d-xl-none">
+    <button class="close navbar-light" type="button" data-toggle="collapse" data-target="#navbar-mobile"
+        aria-controls="navbar-mobile" aria-expanded="false" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#1B1340" aria-hidden="true"
+            width="32">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+    <div class="navbar-mobile-logo"></div>
+	<ul class="navbar-nav mt-5">
+        <li class="nav-item">
+            <a class="nav-link nav-link-menu" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-menu" href="/secure-vpn">Features</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-menu" href="/pricing">Pricing</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-menu" href="/blog/">Blog</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-menu" href="/support">Support</a>
+        </li>
+		<li class="nav-item">
+			<a class="nav-link nav-link-menu" href="https://proton.me/business/contact?ref=pvpncom" target="_blank">For Business</a>
+		</li>
+        <li class="nav-item mt-4">
+            <a class="btn btn-outline-gradient py-2" href="https://account.protonvpn.com"><span>Sign in</span></a>
+        </li>
+        <li class="nav-item mt-2">
+			<a class="btn btn-gradient-primary py-2" href="https://protonvpn.com/pricing">Create free account</a>
+        </li>
+    </ul>
+</div>
+
+<div id="topbar">
+	    <div class="container d-flex justify-content-between">
+        <div class="text-left mobile-social-icons">
+            <a href="https://twitter.com/ProtonVPN" target="_blank" rel="noreferrer nofollow noopener">
+                <i class="fa fa-twitter"></i><span class="sr-only">Twitter</span>
+            </a>
+            &nbsp;&nbsp;
+            <a href="https://www.reddit.com/r/ProtonVPN/" target="_blank" rel="noreferrer nofollow noopener">
+                <i class="fa fa-reddit-alien"></i><span class="sr-only">Reddit</span>
+            </a>
+            &nbsp;&nbsp;
+            <a href="https://www.linkedin.com/company/protonprivacy/" target="_blank" rel="noreferrer nofollow noopener">
+                <i class="fa fa-linkedin"></i><span class="sr-only">LinkedIn</span>
+            </a>
+            &nbsp;&nbsp;
+            <a href="https://www.instagram.com/protonprivacy/" target="_blank" rel="noreferrer nofollow noopener">
+                <i class="fa fa-instagram"></i><span class="sr-only">Instagram</span>
+            </a>
+            &nbsp;&nbsp;
+            <a href="https://www.facebook.com/Proton" target="_blank" rel="noreferrer nofollow noopener">
+                <i class="fa fa-facebook"></i><span class="sr-only">Facebook</span>
+            </a>
+            &nbsp;&nbsp;
+        </div>
+
+        <div class="d-flex d-md-flex align-items-center topbarlinks">
+			<a href="https://proton.me/mail?ref=pvpncom" target="_blank" rel="noreferrer noopener" class="protonmail-link">
+                <img  alt="ProtonMail Logo" data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/protonmemail.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/protonmemail.svg" alt="ProtonMail Logo" /></noscript>
+            </a>
+			<div class="divider-top" aria-hidden="true"></div>
+			<a href="https://proton.me/calendar?ref=pvpncom" target="_blank" rel="noreferrer noopener" class="protonmail-link">
+                <img  alt="ProtonCalendar Logo" data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/protoncalendar.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/protoncalendar.svg" alt="ProtonCalendar Logo" /></noscript>
+            </a>
+			<div class="divider-top" aria-hidden="true"></div>
+			<a href="https://proton.me/drive?ref=pvpncom" target="_blank" rel="noreferrer noopener" class="protonmail-link">
+                <img  alt="ProtonDrive Logo" data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/protondrive.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/protondrive.svg" alt="ProtonDrive Logo" /></noscript>
+            </a>
+			<span class="localization d-none d-xl-block">
+                <div id="selected-lang">
+                    <i class="fa fa-globe localization-icon"></i>
+                    <span></span>
+                    <i class="fa fa-angle-down"></i>
+                    <i class="fa fa-angle-up"></i>
+                </div>
+            </span>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-toggleable-md navbar-inverse" id="navbar-main">
+    <span class="ghost-bar"></span>
+    <div class="container">
+        <a class="navbar-brand" href="https://protonvpn.com">
+            <em></em>
+            <i></i>
+			<img  alt="ProtonVPN Logo" data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/protonvpn-transparent.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/protonvpn-transparent.svg" alt="ProtonVPN Logo" /></noscript>
+        </a>
+
+        <div class="navbar-dark d-xl-none ml-auto">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile"
+                aria-controls="navbar-mobile" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgb(17, 24, 39)"
+                    data-testid="dynamic-hero-icon" width="24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="d-none d-xl-flex ml-auto" id="navbarSupportedContent">
+			<ul class="navbar-nav flex-row ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-menu" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-menu" href="/secure-vpn">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-menu" href="/pricing">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-menu" href="/blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active-link nav-link-menu" href="/support">Support</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link nav-link-menu" href="https://proton.me/business/contact?ref=pvpncom" target="_blank">For Business</a>
+				</li>
+                <!-- <li class="divider" aria-hidden="true"></li> -->
+                <li class="nav-item" id="nav-login">
+					<a class="nav-link btn-outline-gradient" href="https://account.protonvpn.com"><span>Sign in</span></a>
+                </li>
+                <li class="nav-item" id="nav-signup">
+					<a class="nav-link btn btn-success" href="https://protonvpn.com/pricing">Create free account</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h2 class="mb-0"><a href="https://protonvpn.com/support">Support Center</a></h2>
+            </div>
+            <div class="col-lg-8">
+                <div id="kbPortal">
+                    <div id="ht-kb-search" class="clearfix">
+                        <form id="kbSearchForm" action="https://protonvpn.com/support/" method="GET">
+                            <div class="form-group">
+                                                            		<div class="ht-kb-article-search">
+			<form role="search" method="get" id="searchform" class="searchform" action="https://protonvpn.com/support/">
+				<label class="screen-reader-text" for="s">Search for:</label>
+				<input type="text" value="" placeholder="Have a question?" name="s" id="s" autocomplete="off" />
+				<input type="hidden" name="ht-kb-search" value="1" />
+				<button type="submit" id="searchsubmit"> <i class="fa fa-search"></i> <span>Search</span> </button>
+		</form>
+		</div>
+		                                                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+<div class="row">
+    <div class="col sidebar">
+        <div class="hidden-sm-down">
+
+
+
+<h4>Categories</h4>
+<ul>
+        <li>
+        <a href="https://protonvpn.com/support/categories/setup-and-use/">
+	        Setup and use        </a>
+                <ul>
+        	        	    		<li>
+    			<a href="https://protonvpn.com/support/categories/download-and-setup/">
+			        Download and setup		        </a>
+	        </li>
+        	    		<li>
+    			<a href="https://protonvpn.com/support/categories/access-content/">
+			        Access content		        </a>
+	        </li>
+        	    		<li>
+    			<a href="https://protonvpn.com/support/categories/speed-and-bandwidth/">
+			        Speed and bandwidth		        </a>
+	        </li>
+        	        </ul>
+            </li>
+        <li>
+        <a href="https://protonvpn.com/support/categories/account-and-billing/">
+	        Account and Billing        </a>
+                <ul>
+        	        	    		<li>
+    			<a href="https://protonvpn.com/support/categories/account/">
+			        Account		        </a>
+	        </li>
+        	    		<li>
+    			<a href="https://protonvpn.com/support/categories/billing/">
+			        Billing		        </a>
+	        </li>
+        	        </ul>
+            </li>
+        <li>
+        <a href="https://protonvpn.com/support/categories/troubleshooting-and-general-information/">
+	        Troubleshooting and general information        </a>
+                <ul>
+        	        	    		<li>
+    			<a href="https://protonvpn.com/support/categories/general-information/">
+			        General information		        </a>
+	        </li>
+        	    		<li>
+    			<a href="https://protonvpn.com/support/categories/troubleshooting/">
+			        Troubleshooting		        </a>
+	        </li>
+        	        </ul>
+            </li>
+    </ul>
+<p>&nbsp;</p>
+
+</div>    </div>
+    <div class="col-lg-9 main">
+        
+        
+        <span class="breadcrumbs">
+            <a href="https://protonvpn.com/support">Support Center</a> / 
+                        <a href="https://protonvpn.com/support/categories/setup-and-use">Setup and use</a> / 
+                        <a href="https://protonvpn.com/support/linux-vpn-setup/">How to use Proton VPN on Linux</a>
+        </span>
+
+        <div class="clear"></div>
+
+        <div class="body">
+
+            <h1>How to use Proton VPN on Linux</h1>
+
+            <div class="entry">
+<p><span style="font-weight: 400">In this guide, we briefly discuss the various ways you can use Proton VPN on Linux and provide a guide to setting up and using the Proton VPN Linux app, which is our recommended method.</span></p>
+
+
+
+<p><span style="font-weight: 400">It&#8217;s simple to <a href="https://protonvpn.com/free-vpn/linux" target="_blank" rel="noopener">get Proton VPN for free on Linux</a> for the distro of your choice. There are a number of ways to use Proton VPN on Linux:</span></p>
+
+
+
+<h3><span style="font-weight: 400">1. The official Proton VPN Linux app</span></h3>
+
+
+
+<p><span style="font-weight: 400">The Proton VPN Linux app is a fully featured desktop VPN application with a graphical user interface. It is the recommended way for most people to use Proton VPN on their Linux systems. We discuss how to install and use this app in this article.</span></p>
+
+
+
+<p><a href="#linux_app" rel="noopener noreferrer"><span style="font-weight: 400">Learn how to set up and use the Proton VPN Linux app</span></a></p>
+
+
+
+<h3><span style="font-weight: 400">2. The official Proton VPN CLI&nbsp;</span></h3>
+
+
+
+<p><span style="font-weight: 400">The Proton VPN CLI is a fully featured command line tool recommended for people who prefer to work in Terminal, want an app that uses minimal system resources, or work with Linux servers. Please note that the Proton VPN CLI doesnâ€™t yet support Split Tunneling and doesnâ€™t run on headless servers.</span></p>
+
+
+
+<p><a href="https://protonvpn.com/support/linux-vpn-tool" target="_blank" rel="noopener noreferrer"><span style="font-weight: 400">Learn how to set up and use Proton VPN CLI</span></a></p>
+
+
+
+<h3><span style="font-weight: 400">3. Manual OpenVPN setup</span></h3>
+
+
+
+<p><span style="font-weight: 400">The Proton VPN Linux app and the Proton VPN CLI use the highly secure OpenVPN protocol to secure the VPN connection to our servers. You can also configure OpenVPN manually in Linux using either NetworkManager or the command line. This may be useful on devices not supported by our Proton VPN Linux app or the Proton VPN CLI, but if we retire a server, you may need to download new OpenVPN configuration files.&nbsp;</span></p>
+
+
+
+<p><a href="https://protonvpn.com/support/linux-openvpn/" target="_blank" rel="noopener noreferrer"><span style="font-weight: 400">Learn how to manually configure OpenVPN for Proton VPN in Linux</span></a></p>
+
+
+
+<h2><span style="font-weight: 400">How to install the Proton VPN Linux app</span></h2>
+
+
+
+<p><span style="font-weight: 400">The official Proton VPN Linux app lets you protect your Linux devices with Proton VPN while controlling the VPN via an intuitive and easy-to-use graphical interface.&nbsp;</span></p>
+
+
+
+<p><span style="font-weight: 400">This app natively supports advanced Proton VPN features, including:</span></p>
+
+
+
+<ul><li style="font-weight: 400"><span style="font-weight: 400">NetShield Adblocker</span></li><li style="font-weight: 400"><span style="font-weight: 400">Permanent Kill Switch</span></li><li style="font-weight: 400"><span style="font-weight: 400">Kill Switch</span></li><li style="font-weight: 400"><span style="font-weight: 400">Secure Core</span></li></ul>
+
+
+
+<p><span style="font-weight: 400">Not only is the Linux app easy to use, but installing it is quick and simple, regardless of which distro you use. This article will explain how to use our official Linux app. We have separate installation guides for all supported distros:</span></p>
+
+
+
+<ul><li style="font-weight: 400"><a href="https://protonvpn.com/support/official-linux-vpn-debian/" target="_blank" rel="noopener noreferrer"><span style="font-weight: 400">Debian 10+</span></a></li><li style="font-weight: 400"><a href="https://protonvpn.com/support/linux-ubuntu-vpn-setup/" target="_blank" rel="noopener noreferrer"><span style="font-weight: 400">Ubuntu 20+</span></a></li><li style="font-weight: 400"><a href="https://protonvpn.com/support/official-linux-vpn-mint/" target="_blank" rel="noopener noreferrer"><span style="font-weight: 400">Mint 20+</span></a></li><li style="font-weight: 400"><a href="https://protonvpn.com/support/official-linux-vpn-mx-linux/" target="_blank" rel="noopener"><span style="font-weight: 400">MX Linux</span><span style="font-weight: 400"> 19+</span></a></li><li><a href="https://protonvpn.com/support/official-linux-vpn-kali/" target="_blank" rel="noopener">Kali Linux</a></li><li><a href="https://protonvpn.com/support/official-linux-vpn-elementary-os/" target="_blank" rel="noopener">Elementary OS 6.0+</a></li><li style="font-weight: 400"><a href="https://protonvpn.com/support/official-linux-vpn-fedora/" target="_blank" rel="noopener noreferrer"><span style="font-weight: 400">Fedora 34+</span></a></li><li><a href="https://protonvpn.com/support/official-linux-client-arch/" target="_blank" rel="noopener">Archlinux / Manjaro</a></li></ul>
+
+
+
+<p><span style="font-weight: 400">If you are using the community-developed version of our Linux app, we recommend you uninstall it before installing the new app. Instructions for this are provided in each distro setup guide.&nbsp;</span></p>
+
+
+
+<h2 id="linux_app"><span style="font-weight: 400">How to use the Proton VPN Linux app</span></h2>
+
+
+
+<p><span style="font-weight: 400">Once you have installed the Proton VPN app, open it by using the application launcher and searching for <strong>ProtonVPN</strong>.</span></p>
+
+
+
+<p><span style="font-weight: 400">Then, log in by entering your Proton account credentials. (If you were previously using the Proton VPN Linux CLI and upgraded, you will not need to log in again.)</span></p>
+
+
+
+<h3><span style="font-weight: 400">Quick Connect</span></h3>
+
+
+
+<p><span style="font-weight: 400">Once you have logged in to the app, you can connect to the fastest VPN server available (as determined by your geographic location and server traffic) with one click using the <strong>Quick Connect</strong> button.</span></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img decoding="async" width="1200" height="675"  alt="Screenshot of the Quick Connect button in the Linux app"  data-srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect-50x28.png 50w"  data-src="https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect.png" data-sizes="(max-width: 1200px) 100vw, 1200px" class="wp-image-1846 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img decoding="async" width="1200" height="675" src="https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect.png" alt="Screenshot of the Quick Connect button in the Linux app" class="wp-image-1846" srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/Quick-Connect-50x28.png 50w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></figure></div>
+
+
+
+<p class="has-text-align-center"></p>
+
+
+
+<h3><span style="font-weight: 400">Search by country</span></h3>
+
+
+
+<p><span style="font-weight: 400">You can search for VPN servers by country by scrolling through the country list or typing in the search bar. You can connect to the server of your choice by clicking the green <strong>CONNECT</strong> button.</span></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img decoding="async" width="1200" height="675"  alt="Screenshot of country search in the Proton VPN Linux app"  data-srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/country-search.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/country-search-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/country-search-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/country-search-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/country-search-50x28.png 50w"  data-src="https://protonvpn.com/support/wp-content/uploads/2021/05/country-search.png" data-sizes="(max-width: 1200px) 100vw, 1200px" class="wp-image-1854 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img decoding="async" width="1200" height="675" src="https://protonvpn.com/support/wp-content/uploads/2021/05/country-search.png" alt="Screenshot of country search in the Proton VPN Linux app" class="wp-image-1854" srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/country-search.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/country-search-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/country-search-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/country-search-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/country-search-50x28.png 50w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></figure></div>
+
+
+
+<p class="has-text-align-center"></p>
+
+
+
+<h3><span style="font-weight: 400">P2P file sharing</span></h3>
+
+
+
+<p><span style="font-weight: 400">You can share and torrent files while connected to Proton VPN servers that have the two-way arrow icon (in the picture below). P2P file sharing is only available on <a href="https://protonvpn.com/pricing">VPN Plus, Proton Unlimited</a>, or Visionary (legacy users only) </span><span style="font-weight: 400">&nbsp;plans.</span></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img decoding="async" width="1200" height="675"  alt="Screenshot of P2P file-sharing servers in the Linux app"  data-srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/P2P.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/P2P-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/P2P-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/P2P-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/P2P-50x28.png 50w"  data-src="https://protonvpn.com/support/wp-content/uploads/2021/05/P2P.png" data-sizes="(max-width: 1200px) 100vw, 1200px" class="wp-image-1848 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img decoding="async" width="1200" height="675" src="https://protonvpn.com/support/wp-content/uploads/2021/05/P2P.png" alt="Screenshot of P2P file-sharing servers in the Linux app" class="wp-image-1848" srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/P2P.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/P2P-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/P2P-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/P2P-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/P2P-50x28.png 50w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></figure></div>
+
+
+
+<p class="has-text-align-center"></p>
+
+
+
+<h3><span style="font-weight: 400">Streaming</span></h3>
+
+
+
+<p><span style="font-weight: 400">You can use Proton VPN to access your favorite streaming platforms. Servers that have a play arrow icon next to their name support streaming. (Available only on Plus and Visionary plans.)</span></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img decoding="async" width="1200" height="675"  alt="Screenshot of streaming servers in the Linux app"  data-srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/Streaming.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/Streaming-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/Streaming-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/Streaming-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/Streaming-50x28.png 50w"  data-src="https://protonvpn.com/support/wp-content/uploads/2021/05/Streaming.png" data-sizes="(max-width: 1200px) 100vw, 1200px" class="wp-image-1847 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img decoding="async" width="1200" height="675" src="https://protonvpn.com/support/wp-content/uploads/2021/05/Streaming.png" alt="Screenshot of streaming servers in the Linux app" class="wp-image-1847" srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/Streaming.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/Streaming-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/Streaming-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/Streaming-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/Streaming-50x28.png 50w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></figure></div>
+
+
+
+<p class="has-text-align-center"></p>
+
+
+
+<p><a href="https://protonvpn.com/support/streaming-guide/" target="_blank" rel="noopener noreferrer"><i><span style="font-weight: 400">See what services you can access with our streaming guide</span></i></a></p>
+
+
+
+<p><span style="font-weight: 400">You can also check the traffic load on any given server by hovering your cursor over the <strong>i</strong> icon.</span></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img decoding="async" width="1200" height="675"  alt="Screenshot of the server load in the Linux app"  data-srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/server-load.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/server-load-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/server-load-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/server-load-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/server-load-50x28.png 50w"  data-src="https://protonvpn.com/support/wp-content/uploads/2021/05/server-load.png" data-sizes="(max-width: 1200px) 100vw, 1200px" class="wp-image-1849 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img decoding="async" width="1200" height="675" src="https://protonvpn.com/support/wp-content/uploads/2021/05/server-load.png" alt="Screenshot of the server load in the Linux app" class="wp-image-1849" srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/server-load.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/server-load-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/server-load-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/server-load-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/server-load-50x28.png 50w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></figure></div>
+
+
+
+<p class="has-text-align-center"></p>
+
+
+
+<p><span style="font-weight: 400">The <strong>Quick Settings</strong> menu has three buttons that let you control our Secure Core, NetShield, and Kill Switch features.</span></p>
+
+
+
+<h3><span style="font-weight: 400">Secure Core</span></h3>
+
+
+
+<p><span style="font-weight: 400">The <strong>lock button</strong> on the left of the <strong>Quick Settings</strong> menu lets you turn Secure Core <strong>on</strong> or <strong>off</strong>. (Available only with a Plus or Visionary plan.)&nbsp;</span></p>
+
+
+
+<p><span style="font-weight: 400">Secure Core routes your online traffic through special, hardened VPN servers housed in countries with strong data-protection laws before sending it on to a second VPN server in your desired country.</span></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img decoding="async" width="1200" height="675"  alt="Screenshot of Secure Core in the Linux app"  data-srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/Secure-Core.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/Secure-Core-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/Secure-Core-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/Secure-Core-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/Secure-Core-50x28.png 50w"  data-src="https://protonvpn.com/support/wp-content/uploads/2021/05/Secure-Core.png" data-sizes="(max-width: 1200px) 100vw, 1200px" class="wp-image-1852 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img decoding="async" width="1200" height="675" src="https://protonvpn.com/support/wp-content/uploads/2021/05/Secure-Core.png" alt="Screenshot of Secure Core in the Linux app" class="wp-image-1852" srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/Secure-Core.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/Secure-Core-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/Secure-Core-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/Secure-Core-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/Secure-Core-50x28.png 50w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></figure></div>
+
+
+
+<p class="has-text-align-center"></p>
+
+
+
+<p><span style="font-weight: 400">Once you turn Secure Core <strong>on</strong>, you will see different options for multi-hop VPN connections.</span></p>
+
+
+
+<p><a href="https://protonvpn.com/support/secure-core-vpn/" target="_blank" rel="noopener noreferrer"><i><span style="font-weight: 400">Learn more about how Secure Core protects your online activity</span></i></a></p>
+
+
+
+<h3><span style="font-weight: 400">NetShield</span></h3>
+
+
+
+<p><span style="font-weight: 400">The shield button in the middle of the <strong>Quick Settings</strong> menu lets you choose your level of NetShield protection. (Available only with a Plus or Visionary plan.)</span></p>
+
+
+
+<p><span style="font-weight: 400">NetShield is our adblocker that uses DNS filtering to prevent your device from loading malware, ads, and trackers, keeping your device safe and speeding up your browsing.</span></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img decoding="async" width="1200" height="675"  alt="Screenshot of NetShield in the Linux app"  data-srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/NetShield.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/NetShield-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/NetShield-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/NetShield-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/NetShield-50x28.png 50w"  data-src="https://protonvpn.com/support/wp-content/uploads/2021/05/NetShield.png" data-sizes="(max-width: 1200px) 100vw, 1200px" class="wp-image-1851 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img decoding="async" width="1200" height="675" src="https://protonvpn.com/support/wp-content/uploads/2021/05/NetShield.png" alt="Screenshot of NetShield in the Linux app" class="wp-image-1851" srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/NetShield.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/NetShield-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/NetShield-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/NetShield-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/NetShield-50x28.png 50w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></figure></div>
+
+
+
+<p class="has-text-align-center"></p>
+
+
+
+<p><a href="https://protonvpn.com/blog/netshield-ad-blocker/" target="_blank" rel="noopener noreferrer"><i><span style="font-weight: 400">Learn more about NetShield</span></i></a></p>
+
+
+
+<h3><span style="font-weight: 400">Kill Switch</span></h3>
+
+
+
+<p><span style="font-weight: 400">The switch button on the right of the <strong>Quick Settings</strong> menu allows you to turn Kill Switch and Permanent Kill Switch <strong>on</strong> or <strong>off</strong>.</span></p>
+
+
+
+<ul><li style="font-weight: 400"><span style="font-weight: 400"><strong>Kill Switch</strong> blocks all external connections from your device if your VPN connection is unintentionally interrupted. It does not block external connections if you manually disconnect the VPN.&nbsp;</span></li><li style="font-weight: 400"><span style="font-weight: 400"><strong>Permanent Kill Switch</strong> blocks all external connections from your device unless you are connected to a VPN. It will continue blocking external connections if you manually disconnect the VPN or restart your computer.</span></li></ul>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img decoding="async" width="1200" height="675"  alt="Screenshot of the Kill Switch menu in the Linux app"  data-srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-50x28.png 50w"  data-src="https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch.png" data-sizes="(max-width: 1200px) 100vw, 1200px" class="wp-image-1850 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img decoding="async" width="1200" height="675" src="https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch.png" alt="Screenshot of the Kill Switch menu in the Linux app" class="wp-image-1850" srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-50x28.png 50w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></figure></div>
+
+
+
+<p class="has-text-align-center"></p>
+
+
+
+<p><span style="font-weight: 400">Note that if you activate Permanent Kill Switch, it will continue blocking external connections even if you log out of Proton VPN.&nbsp;</span></p>
+
+
+
+<p><a href="https://protonvpn.com/support/what-is-kill-switch/" target="_blank" rel="noopener noreferrer"><i><span style="font-weight: 400">Learn more about Kill Switch</span></i></a></p>
+
+
+
+<p><a href="https://protonvpn.com/blog/permanent-kill-switch-windows/" target="_blank" rel="noopener noreferrer"><i><span style="font-weight: 400">Learn more about Permanent Kill Switch</span></i></a></p>
+
+
+
+<h3><span style="font-weight: 400">Logging out</span></h3>
+
+
+
+<p><span style="font-weight: 400">To log out of Proton VPN, click the arrow button on the status bar and select <strong>Log out</strong>.</span></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img decoding="async" width="1200" height="675"  alt="Screenshot of Kill Switch warning after logging out"  data-srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-after-logout.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-after-logout-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-after-logout-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-after-logout-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-after-logout-50x28.png 50w"  data-src="https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-after-logout.png" data-sizes="(max-width: 1200px) 100vw, 1200px" class="wp-image-1855 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img decoding="async" width="1200" height="675" src="https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-after-logout.png" alt="Screenshot of Kill Switch warning after logging out" class="wp-image-1855" srcset="https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-after-logout.png 1200w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-after-logout-300x169.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-after-logout-1024x576.png 1024w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-after-logout-768x432.png 768w, https://protonvpn.com/support/wp-content/uploads/2021/05/Kill-Switch-after-logout-50x28.png 50w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></figure></div>
+
+
+
+<p class="has-text-align-center"></p>
+
+
+
+<h3><span style="font-weight: 400">System tray icon</span></h3>
+
+
+
+<p><span style="font-weight: 400">Our Linux app can show a<strong> system tray icon</strong> that stays active when you close the main Proton VPN window and allows you to easily <strong>Quick Connect</strong> or <strong>Disconnect the VPN</strong>.</span></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img decoding="async" width="412" height="216"  alt="System tray icon"  data-srcset="https://protonvpn.com/support/wp-content/uploads/2021/07/system-tray-icon.png 412w, https://protonvpn.com/support/wp-content/uploads/2021/07/system-tray-icon-300x157.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/07/system-tray-icon-50x26.png 50w"  data-src="https://protonvpn.com/support/wp-content/uploads/2021/07/system-tray-icon.png" data-sizes="(max-width: 412px) 100vw, 412px" class="wp-image-1930 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img decoding="async" width="412" height="216" src="https://protonvpn.com/support/wp-content/uploads/2021/07/system-tray-icon.png" alt="System tray icon" class="wp-image-1930" srcset="https://protonvpn.com/support/wp-content/uploads/2021/07/system-tray-icon.png 412w, https://protonvpn.com/support/wp-content/uploads/2021/07/system-tray-icon-300x157.png 300w, https://protonvpn.com/support/wp-content/uploads/2021/07/system-tray-icon-50x26.png 50w" sizes="(max-width: 412px) 100vw, 412px" /></noscript></figure></div>
+
+
+
+<p>Instructions for installing this system tray icon can be found in the Linux setup guide for your distro..</p>
+
+
+
+<h2><span style="font-weight: 400">Supported distros</span></h2>
+
+
+
+<p><span style="font-weight: 400">The Proton VPN Linux app is currently officially supported on the following distros:</span></p>
+
+
+
+<ul><li style="font-weight: 400"><span style="font-weight: 400">Debian 10+</span></li><li style="font-weight: 400"><span style="font-weight: 400">Ubuntu 20.04 (LTS)+</span></li><li style="font-weight: 400"><span style="font-weight: 400">Mint 20+</span></li><li style="font-weight: 400"><span style="font-weight: 400">MX Linux 19+</span></li><li>Kali Linux</li><li>Elementary OS 6.0+</li><li style="font-weight: 400"><span style="font-weight: 400">Fedora 34+</span></li><li>Archlinux / Manjaro</li></ul>
+
+
+
+<p><span style="font-weight: 400">We are working on adding official support for more distros. The Debian repository should work on many Debian-based distros, and we invite users to test-run our software on their systems. But we cannot guarantee support if things donâ€™t work on these unsupported systems.</span></p>
+</div>
+
+                        
+        </div>
+
+
+                    </div>
+</div>
+
+</div>
+
+<div class="inlineUpsell">
+	<div class="inlineUpsell-headline">
+        <h2 class="inlineUpsell-title text-6xl serif">Secure<br>your internet</h2>
+		<a href="https://protonvpn.com/pricing" class="btn-gradient-primary font-bold desktop-cta-button d-lg-inline-block">Get Proton VPN</a>
+    </div>
+    <div class="inlineUpsell-content">
+        <ul class="inlineUpsell-list">
+            <li class="inlineUpsell-item text-xl py-1">
+				<img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" height="24" class="mr-2"></noscript></noscript></noscript></noscript></noscript><span>Strict no logs policy</span>
+            </li>
+            <li class="inlineUpsell-item text-xl py-1">
+				<img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" height="24" class="mr-2"></noscript></noscript></noscript></noscript></noscript><span>All apps are open source and audited</span>
+            </li>
+			<li class="inlineUpsell-item text-xl py-1">
+				<img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" height="24" class="mr-2"></noscript></noscript></noscript></noscript></noscript><span>High-speed connections (up to 10 Gbit)</span>
+            </li>
+            <li class="inlineUpsell-item text-xl py-1">
+				<img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" height="24" class="mr-2"></noscript></noscript></noscript></noscript></noscript><span>Based in Switzerland</span>
+            </li>
+            <li class="inlineUpsell-item text-xl py-1">
+				<img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img  height="24"  data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" class="mr-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/check-green.svg" height="24" class="mr-2"></noscript></noscript></noscript></noscript></noscript><span>30-day money-back guarantee</span>
+            </li>
+        </ul>
+    </div>
+	<a href="https://protonvpn.com/pricing" class="btn-gradient-primary font-bold mobile-cta-button mt-5" >Get Proton VPN</a>
+</div>
+
+<div id="footer" class="bg-purple-25">
+    <div class="container">
+        <div class="row text-nowrap">
+
+            <div class="col">
+                <h2 class="font-heavy text-uppercase">Features</h2>
+                <ul>
+                    <li>
+                        <a href="https://protonvpn.com/free-vpn">Free VPN</a>
+                    </li>
+                    <li>
+                        <a href="https://protonvpn.com/vpn-servers">VPN Servers</a>
+                    </li>
+                    <li>
+                        <a href="https://protonvpn.com/streaming">
+                            VPN for Streaming
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://protonvpn.com/streaming/netflix">
+                            Netflix VPN
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://protonvpn.com/support/secure-core-vpn/">
+                            Secure Core VPN
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://protonvpn.com/support/protonvpn-setup-guide/">
+                            Getting Started
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h2 class="font-heavy text-uppercase">Platforms</h2>
+                <ul>
+					<li>
+						<a href="https://protonvpn.com/download/">
+							Download VPN
+						</a>
+					</li>
+                    <li>
+                        <a href="https://protonvpn.com/download-windows/">
+                            VPN for Windows
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://protonvpn.com/download-macos/">
+                            VPN for Mac
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://protonvpn.com/download-android/">
+                            VPN for Android
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://protonvpn.com/download-ios/">
+                            VPN for iOS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://protonvpn.com/download-linux/">
+                            VPN for Linux
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h2 class="font-heavy text-uppercase">Legal</h2>
+                <ul>
+                    <li>
+                        <a
+                            href="https://ge.ch/hrcintapp/companyReport.action?rcentId=20225307300000066031025&lang=FR&showHeader=true">
+                            Imprint
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://protonvpn.com/privacy-policy">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="https://protonvpn.com/terms-and-conditions">
+                            Terms &amp; Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/blog/transparency-report">
+                            Transparency Report
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/blog/threat-model">Threat Model</a>
+                    </li>
+                    <li>
+                        <a data-em="abuse" href="mailto:abuse@protonvpn.com">Report Abuse</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h2 class="font-heavy text-uppercase">Company</h2>
+                <ul>
+                    <li>
+                        <a href="https://protonvpn.com/about">About</a>
+                    </li>
+                    <li>
+                        <a href="https://protonstatus.com/">Proton VPN Status</a>
+                    </li>
+                    <li>
+                        <a href="https://protonvpn.com/support/">Support</a>
+                    </li>
+                    <li>
+                        <a href="https://careers.proton.me?source=pvpncom">Careers</a>
+                    </li>
+                    <li>
+                        <a href="https://protonvpn.com/blog/open-source/">
+                            Open Source
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://proton.me/media?ref=pvpncom">Press/Media kit</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col">
+                <h2 class="font-heavy text-uppercase">Social</h2>
+                <ul>
+                    <li class="tw">
+                        <a target="_blank" rel="noreferrer nofollow noopener" href="https://twitter.com/ProtonVPN">
+                            <i class="fa fa-twitter"></i><span>Twitter</span>
+                        </a>
+                    </li>
+                    <li class="reddit">
+                        <a target="_blank" rel="noreferrer nofollow noopener" href="https://www.reddit.com/r/ProtonVPN/">
+                            <i class="fa fa-reddit-alien"></i><span>Reddit</span>
+                        </a>
+                    </li>
+                    <li class="linkedin">
+                        <a target="_blank" rel="noreferrer nofollow noopener" href="https://www.linkedin.com/company/protonprivacy/">
+                            <i class="fa fa-linkedin"></i><span>LinkedIn</span>
+                        </a>
+                    </li>
+                    <li class="insta">
+                        <a target="_blank" rel="noreferrer nofollow noopener" href="https://www.instagram.com/protonprivacy/">
+                            <i class="fa fa-instagram"></i><span>Instagram</span>
+                        </a>
+                    </li>
+                    <li class="fb">
+                        <a target="_blank" rel="noreferrer nofollow noopener" href="https://www.facebook.com/Proton">
+                            <i class="fa fa-facebook-official"></i><span>Facebook</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col col-lg-3 col-md-5">
+                <h2 class="font-heavy text-uppercase">Contact</h2>
+                <p class="mb-3">
+                    <span>Support</span>:
+                    <a class="general-contact-modal text-success" href="#">
+                        Show Details
+                    </a>
+                    <br>
+					<span>Business</span>:
+                    <a href="https://proton.me/business/contact?ref=pvpncom" class="text-success" target="_blank">Contact our Sales team</a>
+                    <br>
+                    <span>Partnership</span>:
+                    <a href="https://proton.me/partners?ref=pvpncom" class="text-success">proton.me/partners</a>
+                    <br>
+                    <span>Media</span>:
+                    <a data-em="media" class="text-success" href="mailto:media@protonvpn.com">media@protonvpn.com</a>
+                    <br>
+                    <span>Abuse</span>:
+                    <a data-em="abuse" class="text-success" href="mailto:abuse@protonvpn.com">abuse@protonvpn.com</a>
+                </p>
+				<h2 class="font-heavy text-uppercase">SITEMAP</h2>
+                <p>
+                    <a class="text-success" href="/sitemap" target="_blank">Proton VPN Sitemap</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contactModal">
+    <div class="bg"></div>
+    <div class="window window-mobile"> <i class="fa fa-times fa-2x close"></i>
+		<p>
+            <span>For customer support inquiries, please submit the following form for the fastest response:</span>
+            <br>
+            <a href="https://protonvpn.com/support-form" target="_blank" class="btn btn-success">Support Form </a>
+        <p>
+            <span>For all other inquiries:</span>
+            <br>
+            <button aria-label="PGP Public Key" title="PGP Public Key" class="btn btn-default btn-xs" data-toggle="collapse" data-target="#conPubKey"><i class="fa fa-key security-icon" data-toggle="collapse" aria-hidden="true"></i></button>
+            <a data-em="contact" class="text-success" href="mailto:%63&#111;&#110;&#116;ac&#116;&#64;%70%72&#111;&#116;&#111;&#110;v%70%6e%2ec&#111;m">contact&#64;protonvpn.com</a>
+		</p>
+		<pre id="conPubKey" class="collapse">
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: OpenPGP.js v4.10.10
+Comment: https://openpgpjs.org
+
+xsBNBFiYeeIBCACpwuYcTsACyjQaqY3tOUonokamGZf3VDuLvcA9nQnu4vlB
+n1RFFUJa5Pmf2yZ9EjJFSldTl5lreE3tFf53CcZ9wKa1R6aMnN/0VqURJho0
+ZTqevQlCvuJ9kKHkDck3Em0/1WWnhDJgabp+fOa5HAHoAvcNy5gVPuexTT/N
+wp6QcfB7w+qFhf73s0bcSn5RC+FAYlQxZVFhFtA7/7LthBVatDJrYLYP9XJd
+zOZqz9AX0XZwKal25RcVeGHkNKgloo0bTgro4D88MR7saqXFHTRhy3+Wss7c
+uqrh0uIkVmqtadoK/rAbqOyFXQ2DlvSMVrEMLUvwlZbC0taqcKDfNA+FABEB
+AAHNLWNvbnRhY3RAcHJvdG9udnBuLmNvbSA8Y29udGFjdEBwcm90b252cG4u
+Y29tPsLAfwQQAQgAKQUCWJh54wYLCQcIAwIJEN4dfnhhw11TBBUIAgoDFgIB
+AhkBAhsDAh4BAAoJEN4dfnhhw11T6PwIAKgIHTUaEcCFQ5WfmwGpdhRgFe7H
+gnHR8UOFPrRKnbCOQgTVPGwCFt8UVFhEgbmtroThU89DpxFSYUOD6nZ2k1X3
+X4Q9OsItFUUuhPtLJrkz5ghtZLmsAH/edTRbVU1Ew1E8KbylLFI1J5yId7zR
+GdnaTXv/E7P3po5X/b08TFAhXSyYYUbMeQuthbJajtpFygr53lm47cOWa4N8
+udqLhmpheaQj04DuqYXOGC08JQn+XbHzhFl5Yvlt9Idk8+7c2UJ0qgWKQ5ZV
+mquRAw5HDCQM5OqF1MoImDxOH+tK3PUlvFDsLZ1WPEOHK/EN12sPBx0x1R04
+fcPTPdbMwgISGM3OwE0EWJh54gEIALqhrLUpvarPc0nkuHpyJC/MsrIDPLuV
+qMc49tgjgDBsyIKJFEP9qCnkSOEixaFi+nTljUSpkHGR+PvEGecmcOdW6djN
+QGxon/nwBT9d8HbtxJesaEIzwRAxmqQW9MqNq4UsfNQ0VvUYqV9wEbYfdDT/
+jZfz9N0hjFELF1sg3UPcCRijhf162bp+rLQdO9vWVUbOdMQvsM/kyUJ6JMXR
+xUtyKC05ddxii2SMr4XUW45ostPbxJybOF5oSZpEb1EIlrTLLPAe/498XlBW
+hpRAPe+9ZfNs7drMvUEFnnOXahrXAuaaZpyaS/XBaloqSb1+v2AkUep3dbSF
+PaRtbXRMS+kAEQEAAcLAaAQYAQgAEwUCWJh54wkQ3h1+eGHDXVMCGwwACgkQ
+3h1+eGHDXVMZ4Qf4hu5N8/uYNDqJMFRIWSCpPGxmyIVXGARG4hgR8gwPZY9K
+fReAUndX3uODBNIgZU7I3YntawU1DlP6GpP6yyR/8lfUMNCAXPDmd+zTFYIJ
+UDHD8sw2GRrFVzFOKUpAapWFOI4XjSMP2UiK4HgrpUjAhe1wSaa7nEjtAuYT
+zFx1QSuQD1iYcOF/FAm7EuhBIfWITjYAobGM6gonPbp3IPHM52rUbulllcdV
+vCLs+blcyiVCGZlNcmlg3eibAJJL19TQLqT2DbQvQ/SyVBJGjoT+y4TTRtmZ
+cebEjt2KJcc4x2lzPq3z2KJNyJTOTMB+aYD9Ma9IObDds+M/+5XDWi7f
+=ueTT
+-----END PGP PUBLIC KEY BLOCK-----
+
+</pre>
+        <p>
+			<span>You can also Tweet to us:</span>
+            <br>
+			<a target="_blank" href="https://twitter.com/protonvpn" class="text-success"> @ProtonVPN </a>
+		</p>
+    </div>
+</div>
+
+<div id="foot">
+    <div class="container">
+        <div class="row">
+			<div class="col-md-4 col-lg-3 location">
+                <p>
+                    <img "
+                        onerror="this." alt="Proton VPN Logo" data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/protonvpn-transparent.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/protonvpn-transparent.svg""
+                        onerror="this.src='/assets/img/protonvpn-transparent.png'" alt="Proton VPN Logo" /></noscript>
+                </p>
+                <p><strong>Proton AG</strong></p>
+                <p>
+                    Route de la Galaise 32,<br />
+                    1228 Plan-les-Ouates<br />
+                    Geneva, Switzerland
+                </p>
+            </div>
+			<div class="col-md-2 col-lg-6"></div>
+            <div class="col-md-6 col-lg-3">
+                <h2 class="font-heavy text-uppercase">Built with the Support of</h2>
+				<p>
+                    <a href="https://proton.me?ref=pvpncom" target="_blank" class="protonplain">
+						<img  height="22" onerror="this." alt="Proton AG" data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/proton-new-logo.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/proton-new-logo.svg" height="22" onerror="this.src='/assets/img/proton-plain.png'" alt="Proton AG" /></noscript>
+					</a>
+                </p>
+				<p>
+                    <a href="https://www.innosuisse.ch/inno/en/home.html" rel="nofollow" target="_blank" rel="nofollow noopener noreferrer">
+						<img  alt="Innosuisse - Swiss Innovation Agency" width="220" data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/innosuisse-logo.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/innosuisse-logo.png" alt="Innosuisse - Swiss Innovation Agency" width="220" /></noscript>
+					</a>
+                </p>
+				<p>
+                    <a href="https://ec.europa.eu/programmes/horizon2020/en" target="_blank" rel="nofollow noopener noreferrer" rel="nofollow">
+						<img  alt="This project is supported by the Horizon 2020 Framework Programme of the European Union" width="200" data-src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/logo-gdpr-eu-white.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://protonvpn.com/support/wp-content/themes/protonvpn/img/logo-gdpr-eu-white.svg" alt="This project is supported by the Horizon 2020 Framework Programme of the European Union" width="200" /></noscript></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript' src='https://protonvpn.com/support/wp-content/plugins/ht-knowledge-base/js/jquery.livesearch.js' id='ht-kb-live-search-plugin-js'></script>
+<script type='text/javascript' id='ht-kb-live-search-js-extra'>
+/* <![CDATA[ */
+var framework = {"liveSearchUrl":"https:\/\/protonvpn.com\/support\/?ajax=1&ht-kb-search=1&s="};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://protonvpn.com/support/wp-content/plugins/ht-knowledge-base/js/ht-kb-livesearch.js' id='ht-kb-live-search-js'></script>
+<script type='text/javascript' src='https://protonvpn.com/support/wp-content/themes/protonvpn/js/functions.js?ver=1672737337' id='ht_theme_custom-js'></script>
+<script type='text/javascript' src='https://protonvpn.com/support/wp-content/themes/protonvpn/js/bootstrap.4.3.1.js?ver=4.3.1' id='bootstrap-js'></script>
+<script type='text/javascript' src='https://protonvpn.com/support/wp-content/themes/protonvpn/js/custom.js?ver=1672737337' id='custom-js'></script>
+<script type='text/javascript' src='https://protonvpn.com/support/wp-content/themes/protonvpn/inc/ht-core/js/jquery-picture-min.js' id='jquery-picture-js'></script>
+<script type='text/javascript' src='https://protonvpn.com/support/wp-content/themes/protonvpn/inc/ht-core/js/jquery.appear.js' id='jquery-appear-js'></script>
+<script type='text/javascript' src='https://protonvpn.com/support/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.12.4' id='smush-lazy-load-js'></script>
+
+</body>
+</html>
+¼¾¾ð           cûimEMc5cûim   Z    O^partitionKey=%28https%2Cprotonvpn.com%29,:https://protonvpn.com/support/linux-vpn-setup/ strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+date: Sun, 26 Feb 2023 14:15:09 GMT
+content-type: text/html; charset=UTF-8
+link: <https://protonvpn.com/support/?p=104>; rel=shortlink
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+expect-ct: max-age=2592000, enforce, report-uri="https://reports.proton.me/reports/tls"
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 0
+referrer-policy: strict-origin-when-cross-origin
+x-permitted-cross-domain-policies: none
+ original-response-headers date: Sun, 26 Feb 2023 14:15:09 GMT
+content-type: text/html; charset=UTF-8
+transfer-encoding: chunked
+link: <https://protonvpn.com/support/?p=104>; rel=shortlink
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+expect-ct: max-age=2592000, enforce, report-uri="https://reports.proton.me/reports/tls"
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 0
+referrer-policy: strict-origin-when-cross-origin
+x-permitted-cross-domain-policies: none
+ ctid 1 uncompressed-len 0  :

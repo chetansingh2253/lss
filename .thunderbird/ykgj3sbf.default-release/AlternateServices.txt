@@ -1,0 +1,7 @@
+https:outlook.live.com:443:.::3	0	19394	https:outlook.live.com:443:outlook.live.com:443::n:1675792726:h3:y:1675706299:n::|n:y:
+https:live.thunderbird.net:443:.:^partitionKey=%28https%2Cthunderbird.net%29:3	0	19410	https:live.thunderbird.net:443:live.thunderbird.net:443::n:1677038207:h3:n:1677038189:n:^partitionKey=%28https%2Cthunderbird.net%29:|n:y:
+https:live.thunderbird.net:443:.::3	0	19394	https:live.thunderbird.net:443:live.thunderbird.net:443::n:1675792726:h3:y:1675706299:n::|n:y:
+https:autoconfig.thunderbird.net:443:.::3	0	19394	https:autoconfig.thunderbird.net:443:autoconfig.thunderbird.net:443::n:1675792727:h3:y:1675706299:n::|n:y:
+https:start.thunderbird.net:443:.:^partitionKey=%28https%2Cthunderbird.net%29:3	0	19410	https:start.thunderbird.net:443:start.thunderbird.net:443::n:1677038207:h3:n:1677038189:n:^partitionKey=%28https%2Cthunderbird.net%29:|n:y:
+https:thunderbird-settings.thunderbird.net:443:.::3	0	19396	https:thunderbird-settings.thunderbird.net:443:thunderbird-settings.thunderbird.net:443::n:1675956480:h3:y:1675870079:n::|n:y:
+https:autodiscover-s.outlook.com:443:.::3	0	19394	https:autodiscover-s.outlook.com:443:autodiscover-s.outlook.com:443::n:1675706328:h3:n:1675706299:n::|n:y:

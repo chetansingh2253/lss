@@ -1,0 +1,19 @@
+2023-02-06 23:47:00.647 [info] Starting worker process with pid 10193 (type: fileWatcher, window: 1).
+2023-02-06 23:47:22.621 [info] Getting Manifest... ritwickdey.liveserver
+2023-02-06 23:47:22.628 [info] Installing extension: ritwickdey.liveserver
+2023-02-06 23:47:27.200 [info] Extracted extension to /home/chetan/.vscode/extensions/.f77460c4-0df6-4b67-a6a6-1c7be9eee8ff: ritwickdey.liveserver
+2023-02-06 23:47:27.215 [info] Renamed to /home/chetan/.vscode/extensions/ritwickdey.liveserver-5.7.9
+2023-02-06 23:47:27.219 [info] Extracting completed. ritwickdey.liveserver
+2023-02-06 23:47:27.233 [info] Extension installed successfully: ritwickdey.liveserver
+2023-02-06 23:47:35.725 [info] Getting Manifest... nikhilmjeby.black-box
+2023-02-06 23:47:35.732 [info] Installing extension: nikhilmjeby.black-box
+2023-02-06 23:47:39.648 [info] Extracted extension to /home/chetan/.vscode/extensions/.356dd3ce-dd2c-4a3c-80d8-9fb08a58456a: nikhilmjeby.black-box
+2023-02-06 23:47:39.653 [info] Renamed to /home/chetan/.vscode/extensions/nikhilmjeby.black-box-1.0.4
+2023-02-06 23:47:39.655 [info] Extracting completed. nikhilmjeby.black-box
+2023-02-06 23:47:39.663 [info] Extension installed successfully: nikhilmjeby.black-box
+2023-02-06 23:48:09.523 [info] Getting Manifest... ecmel.vscode-html-css
+2023-02-06 23:48:09.531 [info] Installing extension: ecmel.vscode-html-css
+2023-02-06 23:48:11.461 [info] Extracted extension to /home/chetan/.vscode/extensions/.e7e78743-e169-4adb-944d-dd6727871670: ecmel.vscode-html-css
+2023-02-06 23:48:11.465 [info] Renamed to /home/chetan/.vscode/extensions/ecmel.vscode-html-css-1.13.1
+2023-02-06 23:48:11.467 [info] Extracting completed. ecmel.vscode-html-css
+2023-02-06 23:48:11.477 [info] Extension installed successfully: ecmel.vscode-html-css

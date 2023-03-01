@@ -1,0 +1,483 @@
+// <!-- <mdb:mork:z v="1.4"/> -->
+< <(a=c)> // (f=iso-8859-1)
+  (B8=ns:msg:db:row:scope:ops:all)(B9=ns:msg:db:table:kind:ops)
+  (BA=keywords)(BB=prevkeywords)(BC=storeToken)(BD=gloda-id)
+  (BE=gloda-dirty)(BF=junkscore)(80=ns:msg:db:row:scope:msgs:all)
+  (81=subject)(82=sender)(83=message-id)(84=references)(85=recipients)
+  (86=date)(87=size)(88=flags)(89=priority)(8A=label)(8B=statusOfset)
+  (8C=numLines)(8D=ccList)(8E=bccList)(8F=msgThreadId)(90=threadId)
+  (91=threadFlags)(92=threadNewestMsgDate)(93=children)
+  (94=unreadChildren)(95=threadSubject)(96=msgCharSet)
+  (97=ns:msg:db:table:kind:msgs)(98=ns:msg:db:table:kind:thread)
+  (99=ns:msg:db:table:kind:allthreads)
+  (9A=ns:msg:db:row:scope:threads:all)(9B=threadParent)(9C=threadRoot)
+  (9D=msgOffset)(9E=offlineMsgSize)
+  (9F=ns:msg:db:row:scope:dbfolderinfo:all)
+  (A0=ns:msg:db:table:kind:dbfolderinfo)(A1=numMsgs)(A2=numNewMsgs)
+  (A3=folderSize)(A4=expungedBytes)(A5=folderDate)(A6=highWaterKey)
+  (A7=mailboxName)(A8=UIDValidity)(A9=totPendingMsgs)
+  (AA=unreadPendingMsgs)(AB=expiredMark)(AC=version)(AD=forceReparse)
+  (AE=fixedBadRefThreading)(AF=onlineName)(B0=highestModSeq)
+  (B1=imapFlags)(B2=highestRecordedUID)
+  (B3=ns:msg:db:row:scope:pending:all)(B4=ns:msg:db:table:kind:pending)
+  (B5=dateReceived)(B6=ProtoThreadFlags)(B7=folderName)>
+<(10D=59)(10B=62a96c9a)(81=0)(80=1)>
+[14:m(^9C=59)(^90=59)(^92^10B)(^91=0)(^93=1)]
+<(112=5d)(110=62c1c781)>[15:m(^9C=5d)(^90=5d)(^92^110)(^91=0)(^93=1)]
+<(117=61)(115=62c1c793)>[16:m(^9C=61)(^90=61)(^92^115)(^91=0)(^93=1)]
+<(11C=65)(11A=62c1c7d2)>[17:m(^9C=65)(^90=65)(^92^11A)(^91=0)(^93=1)]
+<(121=69)(11F=62c2f888)>[18:m(^9C=69)(^90=69)(^92^11F)(^91=0)(^93=1)]
+<(127=6d)(125=62cd3895)>[19:m(^9C=6d)(^90=6d)(^92^125)(^91=0)(^93=1)]
+<(12C=71)(12A=62e8a828)>[1A:m(^9C=71)(^90=71)(^92^12A)(^91=0)(^93=1)]
+<(131=75)(12F=62fbe884)>[1B:m(^9C=75)(^90=75)(^92^12F)(^91=0)(^93=1)]
+<(137=79)(135=634bade7)>[1C:m(^9C=79)(^90=79)(^92^135)(^91=0)(^93=1)]
+<(13E=7d)(13C=63899bbe)>[1D:m(^9C=7d)(^90=7d)(^92^13C)(^91=0)(^93=1)]
+<(144=81)(142=63919cf4)>[1E:m(^9C=81)(^90=81)(^92^142)(^91=0)(^93=1)]
+<(14B=85)(149=63aea94d)>[1F:m(^9C=85)(^90=85)(^92^149)(^91=0)(^93=1)]
+<(151=89)(14F=63d3c6cc)>[20:m(^9C=89)(^90=89)(^92^14F)(^91=0)(^93=1)]
+<(158=8e)(156=63d9daf4)>[21:m(^9C=8e)(^90=8e)(^92^156)(^91=0)(^93=1)]
+<(8F=fffffffe)(8A=5e72425c)>[1:m(^9C=1)(^90^8F)(^92^8A)(^91=0)(^93=1)]
+<(94=5)(92=5e724260)>[2:m(^9C=5)(^90=5)(^92^92)(^91=0)(^93=1)]
+<(9A=9)(98=5e7242d7)>[3:m(^9C=9)(^90=9)(^92^98)(^91=0)(^93=1)]
+<(A0=d)(9E=5e724380)>[4:m(^9C=d)(^90=d)(^92^9E)(^91=0)(^93=1)]
+<(A5=f)(A3=5e7243c0)>[5:m(^9C=f)(^90=f)(^92^A3)(^91=0)(^93=1)]
+<(AB=16)(A9=5e7dfff9)>[6:m(^9C=16)(^90=16)(^92^A9)(^91=0)(^93=1)]
+<(B1=1a)(AF=5ec7c466)>[7:m(^9C=1a)(^90=1a)(^92^AF)(^91=0)(^93=1)]
+<(B7=1d)(B5=5ec7ca5d)>[8:m(^9C=1d)(^90=1d)(^92^B5)(^91=0)(^93=1)]
+<(BE=21)(BC=5ecbe388)>[9:m(^9C=21)(^90=21)(^92^BC)(^91=0)(^93=1)]
+<(C3=25)(C1=5ecd409a)>[A:m(^9C=25)(^90=25)(^92^C1)(^91=0)(^93=1)]
+<(C9=29)(C7=5ed9f7cb)>[B:m(^9C=29)(^90=29)(^92^C7)(^91=0)(^93=1)]
+<(CD=2d)(CB=5f66315d)>[C:m(^9C=2d)(^90=2d)(^92^CB)(^91=0)(^93=1)]
+<(D3=32)(D1=5fd6138f)>[D:m(^9C=32)(^90=32)(^92^D1)(^91=0)(^93=1)]
+<(D8=36)(D6=5fd8e8c5)>[E:m(^9C=36)(^90=36)(^92^D6)(^91=0)(^93=1)]
+<(DE=3a)(DC=60c0f7d5)>[F:m(^9C=3a)(^90=3a)(^92^DC)(^91=0)(^93=1)]
+<(E3=3e)(E1=6128a7c6)>[10:m(^9C=3e)(^90=3e)(^92^E1)(^91=0)(^93=1)]
+<(EB=42)(E8=61bd703f)>[11:m(^9C=42)(^90=42)(^92^E8)(^91=0)(^93=1)]
+<(F2=46)(F0=6299a668)>[12:m(^9C=46)(^90=46)(^92^F0)(^91=0)(^93=1)]
+<(F9=4b)(104=629dd76a)(9B=3)>[13:m(^9C=4b)(^90=4b)(^92^104)(^91=0)(^93=3)]
+
+<(1CF=10000091)(AD=Chetan Singh <chetansingh2341@hotmail.com>)(F4
+    =MCA Admissions RV College of Engineering <mca_admission@rvce.edu.in>)
+  (146=Regarding KMAT and PGCET Score Card / Rank)(147
+    =SG2PR06MB333855970930921EA611FEC2A5F09@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(148
+    =<CADbvYyBYTn-zr_fh9RX8mZgvWhcngkbivfuWbM99seGo8ZhJ+w@mail.gmail.com>)
+  (1D9=280ea)(8E=ffffffff)(86=)(1D7=1553fb)(1D8=1397755)(1DA=2813d)
+  (1DB=883)>
+{85:^80 {(k^98:c)(s=9)1F:m } [85(^88^1CF)(^82^AD)(^85^F4)(^81^146)(^83^147)
+    (^84^148)(^B5^149)(^86^149)(^89=1)(^87^1D9)(^9B^8E)(^8F=85)(^B6=0)
+    (^BB=)(^BA=)(^9D^1D7)(^BC^1D8)(^9E^1DA)(^8C=883)]}
+
+<(87
+    =Chetan Singh <IMCEAEX-_O=FIRST+20ORGANIZATION_OU=EXCHANGE+20ADMINISTRATIV\
+E+20GROUP+28FYDIBOHF23SPDLT+29_CN=RECIPIENTS_CN=00060000FD18E4C2@sct-15-20-475\
+5-11-msonline-outlook-3208f.templateTenant>)(96
+    =Ankit Singh <ankitsingh2341@gmail.com>)(10A
+    =SG2PR06MB33383F145F19423119C163A3A5AD9@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(E9=us-ascii)(169=3d1)(167=180d)(168=6157)(16A=424)(152=22)(16B=37)>
+{59:^80 {(k^98:c)(s=9)14:m } [59(^88=81)(^82^87)(^85^96)(^81=)(^83^10A)
+    (^B5^10B)(^86^10B)(^89=1)(^96^E9)(^87=3d1)(^9B^8E)(^8F=59)(^B6=0)
+    (^BB=)(^BA=)(^9D^167)(^BC^168)(^9E=424)(^8C=22)(^BD=37)]}
+
+<(8D=10000001)(CA
+    =SG2PR06MB3338B7B409DB320792B2C27BA53C0@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(CC=1e3214)>
+{2D:^80 {(k^98:c)(s=9)C:m } [2D(^88^8D)(^82^AD)(^85^96)(^81=)(^83^CA)(^B5^CB)
+    (^86^CB)(^89=1)(^87^CC)(^9B^8E)(^8F=2d)(^B6=0)(^BB=)(^BA=)]}
+
+<(175=10000081)(88
+    ="Simrran.sidhu@presidency.edu.in" <Simrran.sidhu@presidency.edu.in>)
+  (89
+    =TY2PR06MB3344AA9E74A1D05323A91082A5F70@TY2PR06MB3344.apcprd06.prod.outloo\
+k.com)(18E=78cf)(18C=1f27a)(18D=127610)(18F=7922)(190=1a8)(90=ASSIGNMENT)
+  (91
+    =TY2PR06MB3344F2069BF55831BEC05BBDA5F70@TY2PR06MB3344.apcprd06.prod.outloo\
+k.com)(18A=76a4)(188=17b83)(189=97155)(18B=76f7)(182=19f)(97
+    =TY2PR06MB3344B93B21A56AB7D828A17FA5F70@TY2PR06MB3344.apcprd06.prod.outloo\
+k.com)(199=7695)(197=295e2)(198=169442)(19A=76e8)(19B=19d)(9C=Assignment)
+  (9D
+    =TY2PR06MB33440A3DF3732A05D0C2B0CCA5F70@TY2PR06MB3344.apcprd06.prod.outloo\
+k.com)(19E=76bc)(19C=30cca)(19D=199882)(19F=770f)(1A0=19e)(A2
+    =TY2PR06MB3344337D7668EFC30504E598A5F70@TY2PR06MB3344.apcprd06.prod.outloo\
+k.com)(180=7687)(17E=8dbe)(17F=36286)(181=76da)(183=4c)(A6
+    ="simrransidhu2@gmail.com" <simrransidhu2@gmail.com>)(A7=ASSIGNMENT-II)
+  (A8
+    =SG2PR06MB3338839AB982DEC059AE62F3A5CC0@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(186=7698)(184=10498)(185=66712)(187=76eb)(AE
+    =SG2PR06MB3338F570CE5B27F285013871A5B40@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(B0=496b2)(B3="noreenalexeena@gmail.com" <noreenalexeena@gmail.com>)
+  (B4
+    =SG2PR06MB3338BBFDCE329B8ADBD4BCC3A5B40@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(1C5=27de7)(1C3=bd546)(1C4=775494)(1C6=27e3a)(1C7=852)(B9
+    ="sheetal-coll@presidency.edu.in" <sheetal-coll@presidency.edu.in>)
+  (BA=Rotaract Report-R1911622)(BB
+    =SG2PR06MB3338A5FEA54F92C7791599D8A5B30@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(1CA=27e08)(1C8=e5380)(1C9=938880)(1CB=27e5b)(BF
+    =Name: Chetan Singh Shekhawat, Class: II Sem. BCA / A , Reg. No: R1911622)
+  (C0
+    =SG2PR06MB33388941732F2C1FCA42F949A5B00@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(1C0=27b91)(1BE=95962)(1BF=612706)(1C1=27be4)(1C2=840)(C5
+    =Rotaract Report- R1911622)(C6
+    =SG2PR06MB3338CD275321E49B11B65EE8A5860@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(C8=4791a)(CF="racpc3190@gmail.com" <racpc3190@gmail.com>)(D0
+    =TY2PR06MB3344A282289E2D5EA6A4A792A5C80@TY2PR06MB3344.apcprd06.prod.outloo\
+k.com)(1A8=c677)(1A6=3cdca)(1A7=249290)(1A9=c6ca)(1AA=2af)(D4
+    =Chetan Singh Shekhawat(R1911622\) III BCA 'A')(D5
+    =SG2PR06MB33382AB1D7BB9B3D9616B318A5C60@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(1AD=c767)(1AB=49494)(1AC=300180)(1AE=c7ba)(1AF=2b1)(DA
+    =Abhishek Anil kumar <jithuaakabhishek123@gmail.com>)(DB
+    =TY2PR06MB33446A66FCABEE109DC2B7BCA5369@TY2PR06MB3344.apcprd06.prod.outloo\
+k.com)(17A=17b5)(178=75b6)(179=30134)(17B=1808)(17C=78)(17D=47)(DF
+    ==?Windows-1252?Q?EC_&_CC=5FCHETAN_SINGH_SHEKHAWAT(R1911622\)-_IV_BCA_=91A\
+?= =?Windows-1252?Q?=92_?=)(E0
+    =SG2PR06MB3338BF5935E90D19F195BF48A5C89@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(E2=45844)(E5="orders@nuskhebyparas.com" <orders@nuskhebyparas.com>)
+  (E6=CANCEL THE ORDER)(E7
+    =SG2PR06MB3338E54AA5467AB2D9F669AAA5799@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(16E=54a)(16C=1c31)(16D=7217)(16F=59d)(170=24)(171=3c)(ED
+    ="mca_admission@rvce.edu.in" <mca_admission@rvce.edu.in>)(EE
+    =For MCA Admission 2022)(EF
+    =TY2PR06MB33442A207B288F1858D0D4C3A5A19@TY2PR06MB3344.apcprd06.prod.outloo\
+k.com)(F1=14ce72)(194=91)(F5
+    =SG2PR06MB3338A6209CB63D781CAAC894A5A19@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(F6=6299ffc8)(F7=iso-8859-1)(193=29f3)(191=26b9c)(192=158620)
+  (195=2a46)(196=db)(FB
+    =SG2PR06MB3338339192EE68575D0C145DA5A09@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(FC
+    =<SG2PR06MB3338A6209CB63D781CAAC894A5A19@SG2PR06MB3338.apcprd06.prod.outlo\
+ok.com> <CADbvYyAJSKBvhfxo76_oExpxj_cZv3jnFuvn_A6waNBaWiK22Q@mail.gmail.com>)
+  (FD=629ae9c6)(FE=Windows-1252)(1A3=499e)(1A1=383d9)(1A2=230361)(1A4=49f1)
+  (1A5=16e)(102
+    =SG2PR06MB333824450567EEBF9D1B0188A5A29@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(103
+    =<SG2PR06MB3338A6209CB63D781CAAC894A5A19@SG2PR06MB3338.apcprd06.prod.outlo\
+ok.com> <CADbvYyAJSKBvhfxo76_oExpxj_cZv3jnFuvn_A6waNBaWiK22Q@mail.gmail.com> <\
+SG2PR06MB3338339192EE68575D0C145DA5A09@SG2PR06MB3338.apcprd06.prod.outlook.com\
+> <CADbvYyDwrXznx4tvBBBaVzJ_Bm9wfQOKgsMHHHbCSAiEuEUvkA@mail.gmail.com>)
+  (1CE=22f72)(101=4f)(1CC=10d1db)(1CD=1102299)(1D0=22fc5)(1D1=7d9)(10E
+    ="unzilnaik@gmail.com" <unzilnaik@gmail.com>)(10F
+    =SG2PR06MB33382FF4F5751C06EB47FE71A5BF9@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(111=1f2588)(114
+    =SG2PR06MB333845A70C282475D1CD774BA5BF9@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(1B7=147d6)(1B5=6a45f)(1B6=435295)(1B8=14829)(1B4=45a)(119
+    =SG2PR06MB33388F0A216DC753666A5D4AA5BF9@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(1B2=147be)(1B0=55c4e)(1B1=351310)(1B3=14811)(11E
+    =SG2PR06MB3338C0BE702D9F24D60A9187A5BE9@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(120=1c37e0)(122=Anand Choudhary <raschoudhary879@gmail.com>)
+  (123=You've got files on Wormhole)(124
+    =SG2PR06MB33382F9ACCFE3BAD66F757D5A5869@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(164=85c)(162=f5e)(163=3934)(165=8af)(166=38)(129
+    =SG2PR06MB3338C3B3D9FF372A308AD9F5A59D9@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(174=5395)(172=21ce)(173=8654)(176=53e8)(177=138)(12E
+    =SG2PR06MB3338F7C567FC1814703173B0A56B9@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(1BB=16c87)(1B9=7ec88)(1BA=519304)(1BC=16cda)(1BD=4d1)(132
+    ="anitha@presidency.edu.in" <anitha@presidency.edu.in>)(133
+    =For The Issuing Of Attested Result Copy By HOD)(134
+    =SG2PR06MB33388AA1E25A046B0A4E90F5A5269@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(1D4=25208)(1D2=1301a0)(1D3=1245600)(1D5=2525b)(1D6=7cc)(139
+    =Devanandagupta.sa Devanandagupta.sa <Devanandagupta.sa@rvce.edu.in>)
+  (13A=About The Admit Card)(13B
+    =SG2PR06MB333882EA57BF43848B7A3F47A5179@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(13D=b6ccb)(140
+    ="rameshxeroxcenter@gmail.com" <rameshxeroxcenter@gmail.com>)(141
+    =SG2PR06MB33381D5B15B1D664BB25C169A51D9@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(143=ed7f3)(14C="registrar@bcu.ac.in" <registrar@bcu.ac.in>)(14D
+    =About the original marks card)(14E
+    =SG2PR06MB33381C18E0BCCDF302C6708FA5CC9@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(15E=62f)(15B=8dc)(15D=2268)(15F=682)(160=2b)(161=35)(153
+    ="registrarevlubcu@gmail.com" <registrarevlubcu@gmail.com>)(154
+    =For Marks-Card)(155
+    =SG2PR06MB33389B87618FD55C117D8162A5D19@SG2PR06MB3338.apcprd06.prod.outloo\
+k.com)(15A=889)(15C=34)>
+{1:^80 {(k^97:c)(s=9)} 
+  [1(^88^175)(^82^87)(^85^88)(^81=)(^83^89)(^B5^8A)(^86^8A)(^89=1)(^87^18E)
+    (^9B^8E)(^8F^8F)(^B6=0)(^BB=)(^BA=)(^9D^18C)(^BC^18D)(^9E^18F)(^8C=1a8)]
+  [5(^88^175)(^82^87)(^85^88)(^81^90)(^83^91)(^B5^92)(^86^92)(^89=1)
+    (^87^18A)(^9B^8E)(^8F=5)(^B6=0)(^BB=)(^BA=)(^9D^188)(^BC^189)(^9E^18B)
+    (^8C=19f)]
+  [9(^88^175)(^82^87)(^85^96)(^81=)(^83^97)(^B5^98)(^86^98)(^89=1)(^87^199)
+    (^9B^8E)(^8F=9)(^B6=0)(^BB=)(^BA=)(^9D^197)(^BC^198)(^9E^19A)(^8C=19d)]
+  [D(^88^175)(^82^87)(^85^96)(^81^9C)(^83^9D)(^B5^9E)(^86^9E)(^89=1)
+    (^87^19E)(^9B^8E)(^8F=d)(^B6=0)(^BB=)(^BA=)(^9D^19C)(^BC^19D)(^9E^19F)
+    (^8C=19e)]
+  [F(^88^175)(^82^87)(^85^96)(^81^9C)(^83^A2)(^B5^A3)(^86^A3)(^89=1)
+    (^87^180)(^9B^8E)(^8F=f)(^B6=0)(^BB=)(^BA=)(^9D^17E)(^BC^17F)(^9E^181)
+    (^8C=19f)(^BD=4c)]
+  [16(^88^175)(^82^87)(^85^A6)(^81^A7)(^83^A8)(^B5^A9)(^86^A9)(^89=1)
+    (^87^186)(^9B^8E)(^8F=16)(^B6=0)(^BB=)(^BA=)(^9D^184)(^BC^185)(^9E^187)
+    (^8C=19f)]
+  [1A(^88^8D)(^82^AD)(^85^AD)(^81=)(^83^AE)(^B5^AF)(^86^AF)(^89=1)(^87^B0)
+    (^9B^8E)(^8F=1a)(^B6=0)(^BB=)(^BA=)]
+  [1D(^88^175)(^82^87)(^85^B3)(^81=)(^83^B4)(^B5^B5)(^86^B5)(^89=1)
+    (^87^1C5)(^9B^8E)(^8F=1d)(^B6=0)(^BB=)(^BA=)(^9D^1C3)(^BC^1C4)(^9E^1C6)
+    (^8C=852)]
+  [21(^88^175)(^82^87)(^85^B9)(^81^BA)(^83^BB)(^B5^BC)(^86^BC)(^89=1)
+    (^87^1CA)(^9B^8E)(^8F=21)(^B6=0)(^BB=)(^BA=)(^9D^1C8)(^BC^1C9)(^9E^1CB)
+    (^8C=852)]
+  [25(^88^175)(^82^87)(^85^B3)(^81^BF)(^83^C0)(^B5^C1)(^86^C1)(^89=1)
+    (^87^1C0)(^9B^8E)(^8F=25)(^B6=0)(^BB=)(^BA=)(^9D^1BE)(^BC^1BF)(^9E^1C1)
+    (^8C=840)]
+  [29(^88^8D)(^82^87)(^85^B9)(^81^C5)(^83^C6)(^B5^C7)(^86^C7)(^89=1)
+    (^87^C8)(^9B^8E)(^8F=29)(^B6=0)(^BB=)(^BA=)]2D 
+  [32(^88^175)(^82^87)(^85^CF)(^81=)(^83^D0)(^B5^D1)(^86^D1)(^89=1)
+    (^87^1A8)(^9B^8E)(^8F=32)(^B6=0)(^BB=)(^BA=)(^9D^1A6)(^BC^1A7)(^9E^1A9)
+    (^8C=2af)]
+  [36(^88^175)(^82^87)(^85^CF)(^81^D4)(^83^D5)(^B5^D6)(^86^D6)(^89=1)
+    (^87^1AD)(^9B^8E)(^8F=36)(^B6=0)(^BB=)(^BA=)(^9D^1AB)(^BC^1AC)(^9E^1AE)
+    (^8C=2b1)]
+  [3A(^88^175)(^82^87)(^85^DA)(^81=)(^83^DB)(^B5^DC)(^86^DC)(^89=1)
+    (^87^17A)(^9B^8E)(^8F=3a)(^B6=0)(^BB=)(^BA=)(^9D^178)(^BC^179)(^9E^17B)
+    (^8C=78)(^BD=47)]
+  [3E(^88^8D)(^82^AD)(^85^CF)(^81^DF)(^83^E0)(^B5^E1)(^86^E1)(^89=1)
+    (^87^E2)(^9B^8E)(^8F=3e)(^B6=0)(^BB=)(^BA=)]
+  [42(^88=81)(^82^87)(^85^E5)(^81^E6)(^83^E7)(^B5^E8)(^86^E8)(^89=1)
+    (^96^E9)(^87=54a)(^9B^8E)(^8F=42)(^B6=0)(^BB=)(^BA=)(^9D^16C)(^BC^16D)
+    (^9E=59d)(^8C=24)(^BD=3c)]
+  [46(^88^8D)(^82^87)(^85^ED)(^81^EE)(^83^EF)(^B5^F0)(^86^F0)(^89=1)
+    (^87^F1)(^9B^8E)(^8F=46)(^B6=0)(^BB=)(^BA=)]
+  [4B(^88=91)(^82^87)(^85^F4)(^81^EE)(^83^F5)(^B5^F6)(^86^F6)(^89=1)
+    (^96^F7)(^87^193)(^9B^8E)(^8F=4b)(^B6=0)(^BB=)(^BA=)(^9D^191)(^BC^192)
+    (^9E^195)(^8C=db)]
+  [4F(^88=91)(^82^AD)(^85^F4)(^81^EE)(^83^FB)(^84^FC)(^B5^FD)(^86^FD)
+    (^89=1)(^96^FE)(^87^1A3)(^9B=4b)(^8F=4b)(^B6=0)(^BB=)(^BA=)(^9D^1A1)
+    (^BC^1A2)(^9E^1A4)(^8C=16e)]
+  [54(^88^1CF)(^82^AD)(^85^F4)(^81^EE)(^83^102)(^84^103)(^B5^104)(^86^104)
+    (^89=1)(^87^1CE)(^9B=4f)(^8F=4b)(^B6=0)(^BB=)(^BA=)(^9D^1CC)(^BC^1CD)
+    (^9E^1D0)(^8C=7d9)]59 
+  [5D(^88^8D)(^82^87)(^85^10E)(^81=)(^83^10F)(^B5^110)(^86^110)(^89=1)
+    (^87^111)(^9B^8E)(^8F=5d)(^B6=0)(^BB=)(^BA=)]
+  [61(^88^175)(^82^87)(^85^96)(^81=)(^83^114)(^B5^115)(^86^115)(^89=1)
+    (^87^1B7)(^9B^8E)(^8F=61)(^B6=0)(^BB=)(^BA=)(^9D^1B5)(^BC^1B6)(^9E^1B8)
+    (^8C=45a)]
+  [65(^88^175)(^82^87)(^85^96)(^81=)(^83^119)(^B5^11A)(^86^11A)(^89=1)
+    (^87^1B2)(^9B^8E)(^8F=65)(^B6=0)(^BB=)(^BA=)(^9D^1B0)(^BC^1B1)(^9E^1B3)
+    (^8C=45a)]
+  [69(^88^8D)(^82^87)(^85^96)(^81=)(^83^11E)(^B5^11F)(^86^11F)(^89=1)
+    (^87^120)(^9B^8E)(^8F=69)(^B6=0)(^BB=)(^BA=)]
+  [6D(^88=81)(^82^87)(^85^122)(^81^123)(^83^124)(^B5^125)(^86^125)(^89=1)
+    (^96^E9)(^87=85c)(^9B^8E)(^8F=6d)(^B6=0)(^BB=)(^BA=)(^9D=f5e)(^BC^163)
+    (^9E=8af)(^8C=38)(^BD=36)]
+  [71(^88^175)(^82^87)(^85^122)(^81=)(^83^129)(^B5^12A)(^86^12A)(^89=1)
+    (^87^174)(^9B^8E)(^8F=71)(^B6=0)(^BB=)(^BA=)(^9D^172)(^BC^173)(^9E^176)
+    (^8C=138)(^BD=42)]
+  [75(^88^175)(^82^87)(^85^AD)(^81=)(^83^12E)(^B5^12F)(^86^12F)(^89=1)
+    (^87^1BB)(^9B^8E)(^8F=75)(^B6=0)(^BB=)(^BA=)(^9D^1B9)(^BC^1BA)(^9E^1BC)
+    (^8C=4d1)]
+  [79(^88^175)(^82^87)(^85^132)(^81^133)(^83^134)(^B5^135)(^86^135)
+    (^89=1)(^87^1D4)(^9B^8E)(^8F=79)(^B6=0)(^BB=)(^BA=)(^9D^1D2)(^BC^1D3)
+    (^9E^1D5)(^8C=7cc)]
+  [7D(^88^8D)(^82^87)(^85^139)(^81^13A)(^83^13B)(^B5^13C)(^86^13C)(^89=1)
+    (^87^13D)(^9B^8E)(^8F=7d)(^B6=0)(^BB=)(^BA=)]
+  [81(^88^8D)(^82^87)(^85^140)(^81=)(^83^141)(^B5^142)(^86^142)(^89=1)
+    (^87^143)(^9B^8E)(^8F=81)(^B6=0)(^BB=)(^BA=)]85 
+  [89(^88=81)(^82^87)(^85^14C)(^81^14D)(^83^14E)(^B5^14F)(^86^14F)(^89=1)
+    (^96^E9)(^87=62f)(^9B^8E)(^8F=89)(^B6=0)(^BB=)(^BA=)(^9D=8dc)(^BC^15D)
+    (^9E=682)(^8C=2b)(^BD=35)]
+  [8E(^88=81)(^82^87)(^85^153)(^81^154)(^83^155)(^B5^156)(^86^156)(^89=1)
+    (^96^E9)(^87=889)(^9B^8E)(^8F=8e)(^B6=0)(^BB=)(^BA=)(^9D=0)(^BC=0)
+    (^9E=8dc)(^8C=36)(^BD=34)]}
+{FFFFFFFE:^80 {(k^98:c)(s=9)1:m } 1 }
+{89:^80 {(k^98:c)(s=9)20:m } 89 }
+{5D:^80 {(k^98:c)(s=9)15:m } 5D }
+{5:^80 {(k^98:c)(s=9)2:m } 5 }
+{32:^80 {(k^98:c)(s=9)D:m } 32 }
+{61:^80 {(k^98:c)(s=9)16:m } 61 }
+{9:^80 {(k^98:c)(s=9)3:m } 9 }
+{8E:^80 {(k^98:c)(s=9)21:m } 8E }
+{36:^80 {(k^98:c)(s=9)E:m } 36 }
+{65:^80 {(k^98:c)(s=9)17:m } 65 }
+{D:^80 {(k^98:c)(s=9)4:m } D }
+{3A:^80 {(k^98:c)(s=9)F:m } 3A }
+{F:^80 {(k^98:c)(s=9)5:m } F }
+{69:^80 {(k^98:c)(s=9)18:m } 69 }
+{3E:^80 {(k^98:c)(s=9)10:m } 3E }
+{6D:^80 {(k^98:c)(s=9)19:m } 6D }
+{42:^80 {(k^98:c)(s=9)11:m } 42 }
+{16:^80 {(k^98:c)(s=9)6:m } 16 }
+{71:^80 {(k^98:c)(s=9)1A:m } 71 }
+{46:^80 {(k^98:c)(s=9)12:m } 46 }
+{1A:^80 {(k^98:c)(s=9)7:m } 1A }
+{75:^80 {(k^98:c)(s=9)1B:m } 75 }
+{1D:^80 {(k^98:c)(s=9)8:m } 1D }
+{4B:^80 {(k^98:c)(s=9)13:m } 4B 4F 54 }
+{79:^80 {(k^98:c)(s=9)1C:m } 79 }
+{21:^80 {(k^98:c)(s=9)9:m } 21 }
+{7D:^80 {(k^98:c)(s=9)1D:m } 7D }
+{25:^80 {(k^98:c)(s=9)A:m } 25 }
+{81:^80 {(k^98:c)(s=9)1E:m } 81 }
+{29:^80 {(k^98:c)(s=9)B:m } 29 }
+{FFFFFFFD:^9A {(k^99:c)(s=9)} [FFFFFFFE(^95=)]
+  [5(^95^90)]
+  [9(^95=)]
+  [D(^95^9C)]
+  [F(^95^9C)]
+  [16(^95^A7)]
+  [1A(^95=)]
+  [1D(^95=)]
+  [21(^95^BA)]
+  [25(^95^BF)]
+  [29(^95^C5)]
+  [2D(^95=)]
+  [32(^95=)]
+  [36(^95^D4)]
+  [3A(^95=)]
+  [3E(^95^DF)]
+  [42(^95^E6)]
+  [46(^95^EE)]
+  [4B(^95^EE)]
+  [59(^95=)]
+  [5D(^95=)]
+  [61(^95=)]
+  [65(^95=)]
+  [69(^95=)]
+  [6D(^95^123)]
+  [71(^95=)]
+  [75(^95=)]
+  [79(^95^133)]
+  [7D(^95^13A)]
+  [81(^95=)]
+  [85(^95^146)]
+  [89(^95^14D)]
+  [8E(^95^154)]}
+
+<(82=Sent)(83=8082214)(84=2000)(85=b)(159=23)>
+{1:^9F {(k^A0:c)(s=9)} 
+  [1(^AC=1)(^AD=0)(^AE=1)(^AF^82)(^88^83)(^A7^82)(^B0=0)(^B1^84)(^A8=b)
+    (^B2=8e)(^A1=23)(^A6=8e)]}
+
+@$${3B{@
+<(1DE=4f899)(1DC=17d538)(1DD=1561912)(1DF=4f8ec)(1E0=1070)>
+[-3E:^80(^88^175)(^82^AD)(^85^CF)(^81^DF)(^83^E0)(^B5^E1)(^86^E1)(^89=1)
+    (^87^1DE)(^9B^8E)(^8F=3e)(^B6=0)(^BB=)(^BA=)(^9D^1DC)(^BC^1DD)(^9E^1DF)
+    (^8C^1E0)]
+@$$}3B}@
+
+@$${3C{@
+@$$}3C}@
+
+@$${3D{@
+<(1E3=53686)(1E1=1cce24)(1E2=1887780)(1E4=536d9)(1E5=1140)>
+[-29:^80(^88^175)(^82^87)(^85^B9)(^81^C5)(^83^C6)(^B5^C7)(^86^C7)(^89=1)
+    (^87^1E3)(^9B^8E)(^8F=29)(^B6=0)(^BB=)(^BA=)(^9D^1E1)(^BC^1E2)(^9E^1E4)
+    (^8C^1E5)]
+@$$}3D}@
+
+@$${3E{@
+@$$}3E}@
+
+@$${3F{@
+<(1E8=5375b)(1E6=2204fd)(1E7=2229501)(1E9=537ae)(1EA=1139)>
+[-1A:^80(^88^175)(^82^AD)(^85^AD)(^81=)(^83^AE)(^B5^AF)(^86^AF)(^89=1)
+    (^87^1E8)(^9B^8E)(^8F=1a)(^B6=0)(^BB=)(^BA=)(^9D^1E6)(^BC^1E7)(^9E^1E9)
+    (^8C^1EA)]
+@$$}3F}@
+
+@$${40{@
+@$$}40}@
+
+@$${41{@
+<(1ED=e938c)(1EB=273cab)(1EC=2571435)(1EE=e93df)(1EF=2fff)>
+[-7D:^80(^88^175)(^82^87)(^85^139)(^81^13A)(^83^13B)(^B5^13C)(^86^13C)
+    (^89=1)(^87^1ED)(^9B^8E)(^8F=7d)(^B6=0)(^BB=)(^BA=)(^9D^1EB)(^BC^1EC)
+    (^9E^1EE)(^8C^1EF)]
+@$$}41}@
+
+@$${42{@
+@$$}42}@
+
+@$${43{@
+<(1F2=12b273)(1F0=35d08a)(1F1=3526794)(1F3=12b2c6)(1F4=3d7a)>
+[-81:^80(^88^175)(^82^87)(^85^140)(^81=)(^83^141)(^B5^142)(^86^142)
+    (^89=1)(^87^1F2)(^9B^8E)(^8F=81)(^B6=0)(^BB=)(^BA=)(^9D^1F0)(^BC^1F1)
+    (^9E^1F3)(^8C^1F4)]
+@$$}43}@
+
+@$${44{@
+@$$}44}@
+
+@$${45{@
+<(1F7=1b3e82)(1F5=488350)(1F6=4752208)(1F8=1b3ed5)(1F9=598f)>
+[-46:^80(^88^175)(^82^87)(^85^ED)(^81^EE)(^83^EF)(^B5^F0)(^86^F0)(^89=1)
+    (^87^1F7)(^9B^8E)(^8F=46)(^B6=0)(^BB=)(^BA=)(^9D^1F5)(^BC^1F6)(^9E^1F8)
+    (^8C^1F9)]
+@$$}45}@
+
+@$${46{@
+@$$}46}@
+
+@$${47{@
+<(1FC=24bf11)(1FA=63c225)(1FB=6537765)(1FD=24bf64)(1FE=78c4)>
+[-69:^80(^88^175)(^82^87)(^85^96)(^81=)(^83^11E)(^B5^11F)(^86^11F)
+    (^89=1)(^87^1FC)(^9B^8E)(^8F=69)(^B6=0)(^BB=)(^BA=)(^9D^1FA)(^BC^1FB)
+    (^9E^1FD)(^8C^1FE)]
+@$$}47}@
+
+@$${48{@
+@$$}48}@
+
+@$${49{@
+<(201=265514)(1FF=888189)(200=8946057)(202=265567)(203=7dea)>
+[-2D:^80(^88^175)(^82^AD)(^85^96)(^81=)(^83^CA)(^B5^CB)(^86^CB)(^89=1)
+    (^87^201)(^9B^8E)(^8F=2d)(^B6=0)(^BB=)(^BA=)(^9D^1FF)(^BC^200)(^9E^202)
+    (^8C^203)]
+@$$}49}@
+
+@$${4A{@
+@$$}4A}@
+
+@$${4B{@
+<(212=af)>[7D:^80(^BD=af)]
+<(20A=87)>[25:^80(^BD=87)]
+<(20C=95)>[54:^80(^BD=95)]
+<(213=b6)>[81:^80(^BD=b6)]
+<(210=a5)>[29:^80(^BD=a5)]
+<(20E=9d)>[85:^80(^BD=9d)]
+<(216=d2)>[2D:^80(^BD=d2)]
+[1:^80(^BD=59)]
+<(109=54)>[5:^80(^BD=54)]
+<(206=6e)>[32:^80(^BD=6e)]
+<(208=7e)>[61:^80(^BD=7e)]
+[9:^80(^BD=61)]
+<(207=74)>[36:^80(^BD=74)]
+[65:^80(^BD=78)]
+<(205=66)>[D:^80(^BD=66)]
+<(215=c9)>[69:^80(^BD=c9)]
+<(20F=a0)>[3E:^80(^BD=a0)]
+<(204=50)>[16:^80(^BD=50)]
+<(214=c0)>[46:^80(^BD=c0)]
+<(211=a8)>[1A:^80(^BD=a8)]
+<(209=82)>[75:^80(^BD=82)]
+<(20B=8b)>[1D:^80(^BD=8b)]
+[4B:^80(^BD=5d)]
+<(20D=99)>[79:^80(^BD=99)]
+[21:^80(^BD=91)]
+[4F:^80(^BD=69)]
+@$$}4B}@
+
+@$${4C{@
+<(219=2995e5)(217=aed6f0)(218=11458288)(21A=299638)(21B=88a2)>
+[-5D:^80(^88^175)(^82^87)(^85^10E)(^81=)(^83^10F)(^B5^110)(^86^110)
+    (^89=1)(^87^219)(^9B^8E)(^8F=5d)(^B6=0)(^BB=)(^BA=)(^9D^217)(^BC^218)
+    (^9E^21A)(^8C^21B)]
+@$$}4C}@
+
+@$${4D{@
+@$$}4D}@
+
+@$${4E{@
+@$$}4E}@
+
+@$${4F{@
+<(21C=dc)>[5D:^80(^BD=dc)]
+@$$}4F}@
+
+@$${51{@
+< <(a=c)> // (f=iso-8859-1)
+  (C0=retainBy)(C1=daysToKeepHdrs)(C2=numHdrsToKeep)(C3=daysToKeepBodies)
+  (C4=useServerDefaults)(C5=cleanupBodies)(C6=applyToFlaggedMessages)
+  (C7=useServerRetention)>
+[1:^9F(^C7=1)]
+@$$}51}@
+
+@$${52{@
+@$$}52}@

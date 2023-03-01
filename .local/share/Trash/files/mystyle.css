@@ -1,0 +1,14 @@
+*{
+  margin:"0px";
+  padding:"0px";
+}
+
+table th,table td
+{
+ padding:"8px";
+}
+
+header
+{
+  background-color:"pink";
+}
